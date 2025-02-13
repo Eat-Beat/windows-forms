@@ -1,9 +1,11 @@
+using Eat_Beat.Forms;
+
 namespace Eat_Beat
 {
     public partial class FormLogin : Form
     {
 
-        //public FormRestaurantUsers restaurantUsers;
+        public FormRestaurantsUsers restaurantUsers;
         //public FormMusicianUsers musicianUsers;
         //public FormNewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
@@ -21,6 +23,7 @@ namespace Eat_Beat
             InitializeComponent();
             InitializeForms();
             panelMain.Visible = false;
+            pictureBoxLogoSmall.Visible = false;
         }
 
         /// <summary>
@@ -30,7 +33,7 @@ namespace Eat_Beat
         {
             //            var formTypes = new List<Type>
             //{
-            //    typeof(FormRestaurantUsers),
+            //    typeof(FormRestaurantsUsers),
             //    typeof(FormMusicianUsers),
             //    typeof(FormNewRestaurant),
             //    typeof(FormNewRestaurant2),
@@ -64,7 +67,7 @@ namespace Eat_Beat
             {
                 //Grant Acces to App
                 panelMain.Visible = true;
-
+                pictureBoxLogoSmall.Visible= t;
             }
 
         }
