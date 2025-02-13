@@ -73,7 +73,7 @@ namespace Eat_Beat
         /// This function is responsible for loading the selected form into the panel
         /// </summary>
         /// <param name="childFormName">This parameter is the name of the form that will be loaded into the panel</param>
-        /// <param name="formIsBig">This parameter will tell us the size of the form</param>
+        /// <param name="formIsBig">This parameter will tell us the size of the form if its false the for is samll</param>
         public void LoadFormIntoPanel(String childFormName, bool formIsBig)
         {
             bool foundForm = false;
