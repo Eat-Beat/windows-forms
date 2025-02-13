@@ -37,8 +37,10 @@
             buttonLogIn = new Button();
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
+            pictureBoxLogoSmall = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogoSmall).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxBackground
@@ -115,7 +117,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(369, 68);
+            pictureBox1.Location = new Point(369, 71);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(542, 129);
             pictureBox1.TabIndex = 6;
@@ -128,6 +130,17 @@
             panelMain.Size = new Size(1164, 568);
             panelMain.TabIndex = 7;
             // 
+            // pictureBoxLogoSmall
+            // 
+            pictureBoxLogoSmall.BackColor = Color.Transparent;
+            pictureBoxLogoSmall.BackgroundImage = (Image)resources.GetObject("pictureBoxLogoSmall.BackgroundImage");
+            pictureBoxLogoSmall.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBoxLogoSmall.Location = new Point(515, 8);
+            pictureBoxLogoSmall.Name = "pictureBoxLogoSmall";
+            pictureBoxLogoSmall.Size = new Size(293, 51);
+            pictureBoxLogoSmall.TabIndex = 8;
+            pictureBoxLogoSmall.TabStop = false;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +149,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 681);
             Controls.Add(panelMain);
+            Controls.Add(pictureBoxLogoSmall);
             Controls.Add(pictureBox1);
             Controls.Add(buttonLogIn);
             Controls.Add(textBoxPassword);
@@ -148,6 +162,7 @@
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogoSmall).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,5 +177,6 @@
         private Button buttonLogIn;
         private PictureBox pictureBox1;
         private Panel panelMain;
+        private PictureBox pictureBoxLogoSmall;
     }
 }
