@@ -36,6 +36,7 @@
             labelPassword = new Label();
             buttonLogIn = new Button();
             pictureBox1 = new PictureBox();
+            panelMain = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -107,6 +108,7 @@
             buttonLogIn.TabIndex = 5;
             buttonLogIn.Text = "Log in";
             buttonLogIn.UseVisualStyleBackColor = false;
+            buttonLogIn.Click += buttonLogIn_Click;
             // 
             // pictureBox1
             // 
@@ -119,6 +121,13 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // panelMain
+            // 
+            panelMain.Location = new Point(50, 70);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1164, 568);
+            panelMain.TabIndex = 7;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -126,6 +135,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 681);
+            Controls.Add(panelMain);
             Controls.Add(pictureBox1);
             Controls.Add(buttonLogIn);
             Controls.Add(textBoxPassword);
@@ -151,5 +161,6 @@
         private Label labelPassword;
         private Button buttonLogIn;
         private PictureBox pictureBox1;
+        private Panel panelMain;
     }
 }
