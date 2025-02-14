@@ -6,7 +6,7 @@ namespace Eat_Beat
     {
 
         public FormRestaurantsUsers restaurantUsers;
-        //public FormMusicianUsers musicianUsers;
+        //public FormMusicianUsers musicianUsers;a
         //public FormNewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
         //public FormMidifyRestaurant modifyRestaurant;
@@ -67,7 +67,7 @@ namespace Eat_Beat
             {
                 //Grant Acces to App
                 panelMain.Visible = true;
-                pictureBoxLogoSmall.Visible= t;
+                pictureBoxLogoSmall.Visible= true;
             }
 
         }
