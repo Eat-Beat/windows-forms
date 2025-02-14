@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Eat_Beat.Forms
 {
-     public partial class BaseFormBig : Form
+    public partial class FormMusicianUsers : Form
     {
-        public BaseFormBig()
+        public FormMusicianUsers()
         {
             InitializeComponent();
-            this.Size = new Size(1164, 568);
-            this.BackColor = Color.FromArgb(32, 32, 31);
         }
     }
 }

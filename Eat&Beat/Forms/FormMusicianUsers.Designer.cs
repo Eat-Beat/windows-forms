@@ -1,6 +1,6 @@
 ﻿namespace Eat_Beat.Forms
 {
-    partial class FormRestaurantsUsers
+    partial class FormMusicianUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,9 @@
             labelRestaurants = new Label();
             labelMusicians = new Label();
             roundedButtonOpen = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
-            roundedButtonDelete = new Controls.RoundedButton();
             roundedButtonEdit = new Controls.RoundedButton();
+            roundedButtonDelete = new Controls.RoundedButton();
+            roundedButtonCreate = new Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
@@ -47,28 +47,28 @@
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.Size = new Size(1145, 465);
-            dataGridViewUsers.TabIndex = 0;
+            dataGridViewUsers.TabIndex = 1;
             // 
             // labelRestaurants
             // 
             labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Barlow Medium", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelRestaurants.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
             labelRestaurants.Location = new Point(12, 21);
             labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(133, 24);
-            labelRestaurants.TabIndex = 1;
+            labelRestaurants.Size = new Size(121, 24);
+            labelRestaurants.TabIndex = 2;
             labelRestaurants.Text = "Restaurantes";
             // 
             // labelMusicians
             // 
             labelMusicians.AutoSize = true;
-            labelMusicians.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelMusicians.Font = new Font("Barlow Medium", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelMusicians.ForeColor = Color.FromArgb(239, 230, 220);
             labelMusicians.Location = new Point(206, 21);
             labelMusicians.Name = "labelMusicians";
-            labelMusicians.Size = new Size(77, 24);
-            labelMusicians.TabIndex = 2;
+            labelMusicians.Size = new Size(84, 24);
+            labelMusicians.TabIndex = 3;
             labelMusicians.Text = "Músicos";
             // 
             // roundedButtonOpen
@@ -81,37 +81,9 @@
             roundedButtonOpen.Location = new Point(660, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
-            roundedButtonOpen.TabIndex = 4;
+            roundedButtonOpen.TabIndex = 5;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
-            // 
-            // roundedButtonCreate
-            // 
-            roundedButtonCreate.BackColor = Color.FromArgb(252, 158, 79);
-            roundedButtonCreate.FlatAppearance.BorderSize = 0;
-            roundedButtonCreate.FlatStyle = FlatStyle.Flat;
-            roundedButtonCreate.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(904, 12);
-            roundedButtonCreate.Name = "roundedButtonCreate";
-            roundedButtonCreate.Size = new Size(115, 45);
-            roundedButtonCreate.TabIndex = 5;
-            roundedButtonCreate.Text = "Crear";
-            roundedButtonCreate.UseVisualStyleBackColor = false;
-            // 
-            // roundedButtonDelete
-            // 
-            roundedButtonDelete.BackColor = Color.FromArgb(252, 158, 79);
-            roundedButtonDelete.FlatAppearance.BorderSize = 0;
-            roundedButtonDelete.FlatStyle = FlatStyle.Flat;
-            roundedButtonDelete.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roundedButtonDelete.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonDelete.Location = new Point(1021, 12);
-            roundedButtonDelete.Name = "roundedButtonDelete";
-            roundedButtonDelete.Size = new Size(115, 45);
-            roundedButtonDelete.TabIndex = 7;
-            roundedButtonDelete.Text = "Eliminar";
-            roundedButtonDelete.UseVisualStyleBackColor = false;
             // 
             // roundedButtonEdit
             // 
@@ -123,25 +95,53 @@
             roundedButtonEdit.Location = new Point(777, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
-            roundedButtonEdit.TabIndex = 6;
+            roundedButtonEdit.TabIndex = 7;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
             // 
-            // FormRestaurantsUsers
+            // roundedButtonDelete
+            // 
+            roundedButtonDelete.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonDelete.FlatAppearance.BorderSize = 0;
+            roundedButtonDelete.FlatStyle = FlatStyle.Flat;
+            roundedButtonDelete.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonDelete.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonDelete.Location = new Point(1021, 12);
+            roundedButtonDelete.Name = "roundedButtonDelete";
+            roundedButtonDelete.Size = new Size(115, 45);
+            roundedButtonDelete.TabIndex = 9;
+            roundedButtonDelete.Text = "Eliminar";
+            roundedButtonDelete.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonCreate
+            // 
+            roundedButtonCreate.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonCreate.FlatAppearance.BorderSize = 0;
+            roundedButtonCreate.FlatStyle = FlatStyle.Flat;
+            roundedButtonCreate.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonCreate.Location = new Point(904, 12);
+            roundedButtonCreate.Name = "roundedButtonCreate";
+            roundedButtonCreate.Size = new Size(115, 45);
+            roundedButtonCreate.TabIndex = 8;
+            roundedButtonCreate.Text = "Crear";
+            roundedButtonCreate.UseVisualStyleBackColor = false;
+            // 
+            // FormMusicianUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
             Controls.Add(roundedButtonDelete);
-            Controls.Add(roundedButtonEdit);
             Controls.Add(roundedButtonCreate);
+            Controls.Add(roundedButtonEdit);
             Controls.Add(roundedButtonOpen);
             Controls.Add(labelMusicians);
             Controls.Add(labelRestaurants);
             Controls.Add(dataGridViewUsers);
-            Name = "FormRestaurantsUsers";
-            Text = "FormRestaurantsUsers";
+            Name = "FormMusicianUsers";
+            Text = "FormMusicianUsers";
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -153,8 +153,8 @@
         private Label labelRestaurants;
         private Label labelMusicians;
         private Controls.RoundedButton roundedButtonOpen;
-        private Controls.RoundedButton roundedButtonCreate;
-        private Controls.RoundedButton roundedButtonDelete;
         private Controls.RoundedButton roundedButtonEdit;
+        private Controls.RoundedButton roundedButtonDelete;
+        private Controls.RoundedButton roundedButtonCreate;
     }
 }
