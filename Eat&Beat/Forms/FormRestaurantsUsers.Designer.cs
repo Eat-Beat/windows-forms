@@ -46,7 +46,7 @@
             dataGridViewUsers.Location = new Point(3, 63);
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
-            dataGridViewUsers.Size = new Size(800, 387);
+            dataGridViewUsers.Size = new Size(1145, 465);
             dataGridViewUsers.TabIndex = 0;
             // 
             // labelRestaurants
@@ -78,7 +78,7 @@
             roundedButtonOpen.FlatStyle = FlatStyle.Flat;
             roundedButtonOpen.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpen.Location = new Point(374, 12);
+            roundedButtonOpen.Location = new Point(724, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(93, 45);
             roundedButtonOpen.TabIndex = 4;
@@ -92,7 +92,7 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(594, 12);
+            roundedButtonCreate.Location = new Point(944, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(93, 45);
             roundedButtonCreate.TabIndex = 5;
@@ -106,7 +106,7 @@
             roundedButtonDelete.FlatStyle = FlatStyle.Flat;
             roundedButtonDelete.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonDelete.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonDelete.Location = new Point(693, 12);
+            roundedButtonDelete.Location = new Point(1043, 12);
             roundedButtonDelete.Name = "roundedButtonDelete";
             roundedButtonDelete.Size = new Size(93, 45);
             roundedButtonDelete.TabIndex = 7;
@@ -120,7 +120,7 @@
             roundedButtonEdit.FlatStyle = FlatStyle.Flat;
             roundedButtonEdit.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonEdit.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonEdit.Location = new Point(473, 12);
+            roundedButtonEdit.Location = new Point(823, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(93, 45);
             roundedButtonEdit.TabIndex = 6;
@@ -131,7 +131,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(32, 32, 31);
+            ClientSize = new Size(1148, 529);
             Controls.Add(roundedButtonDelete);
             Controls.Add(roundedButtonEdit);
             Controls.Add(roundedButtonCreate);

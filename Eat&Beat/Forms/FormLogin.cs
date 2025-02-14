@@ -67,7 +67,7 @@ namespace Eat_Beat
             {
                 //Grant Acces to App
                 panelMain.Visible = true;
-                pictureBoxLogoSmall.Visible= t;
+                pictureBoxLogoSmall.Visible= true;
             }
 
         }
