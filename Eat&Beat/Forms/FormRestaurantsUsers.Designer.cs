@@ -48,7 +48,6 @@
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.Size = new Size(1145, 465);
             dataGridViewUsers.TabIndex = 0;
-            dataGridViewUsers.CellContentClick += dataGridViewUsers_CellContentClick;
             // 
             // labelRestaurants
             // 
@@ -60,7 +59,6 @@
             labelRestaurants.Size = new Size(133, 24);
             labelRestaurants.TabIndex = 1;
             labelRestaurants.Text = "Restaurantes";
-            labelRestaurants.Click += this.labelRestaurants_Click;
             // 
             // labelMusicians
             // 
@@ -72,7 +70,6 @@
             labelMusicians.Size = new Size(77, 24);
             labelMusicians.TabIndex = 2;
             labelMusicians.Text = "Músicos";
-            labelMusicians.Click += this.labelMusicians_Click;
             // 
             // roundedButtonOpen
             // 
@@ -87,7 +84,6 @@
             roundedButtonOpen.TabIndex = 4;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
-            roundedButtonOpen.Click += this.roundedButtonOpen_Click;
             // 
             // roundedButtonCreate
             // 
@@ -102,7 +98,6 @@
             roundedButtonCreate.TabIndex = 5;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
-            roundedButtonCreate.Click += this.roundedButtonCreate_Click;
             // 
             // roundedButtonDelete
             // 
@@ -117,7 +112,6 @@
             roundedButtonDelete.TabIndex = 7;
             roundedButtonDelete.Text = "Eliminar";
             roundedButtonDelete.UseVisualStyleBackColor = false;
-            roundedButtonDelete.Click += this.roundedButtonDelete_Click;
             // 
             // roundedButtonEdit
             // 
@@ -132,7 +126,6 @@
             roundedButtonEdit.TabIndex = 6;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
-            roundedButtonEdit.Click += this.roundedButtonEdit_Click;
             // 
             // FormRestaurantsUsers
             // 
@@ -149,7 +142,6 @@
             Controls.Add(dataGridViewUsers);
             Name = "FormRestaurantsUsers";
             Text = "FormRestaurantsUsers";
-            Load += this.FormRestaurantsUsers_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();

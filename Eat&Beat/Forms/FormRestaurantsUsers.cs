@@ -18,10 +18,5 @@ namespace Eat_Beat.Forms
             InitializeComponent();
             this.formLogin = formLogin;
         }
-
-        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
