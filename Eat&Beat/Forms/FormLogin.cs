@@ -6,7 +6,7 @@ namespace Eat_Beat
     {
 
         public FormRestaurantsUsers restaurantUsers;
-        //public FormMusicianUsers musicianUsers;a
+        //public FormMusicianUsers musicianUsers;
         //public FormNewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
         //public FormMidifyRestaurant modifyRestaurant;
