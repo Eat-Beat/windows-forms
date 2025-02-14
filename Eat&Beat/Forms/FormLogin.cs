@@ -6,7 +6,7 @@ namespace Eat_Beat
     {
 
         public FormRestaurantsUsers restaurantUsers;
-        //public FormMusicianUsers musicianUsers;a
+        //public FormMusicianUsers musicianUsers;
         //public FormNewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
         //public FormMidifyRestaurant modifyRestaurant;
@@ -16,7 +16,7 @@ namespace Eat_Beat
         //public FormModifyMusician modifyMusician;
         //public FormopenMusician openMusician;
         private List<Form> allForms = new List<Form>();
-        private bool panelSizeBig = true; // If set to false the panel is int's smaller form
+        private bool panelSizeBig = true; // If set to false the panel is in it's smaller form
 
         public FormLogin()
         {
@@ -31,25 +31,25 @@ namespace Eat_Beat
         /// </summary>
         private void InitializeForms()
         {
-            //            var formTypes = new List<Type>
-            //{
-            //    typeof(FormRestaurantsUsers),
-            //    typeof(FormMusicianUsers),
-            //    typeof(FormNewRestaurant),
-            //    typeof(FormNewRestaurant2),
-            //    typeof(FormMidifyRestaurant),
-            //    typeof(FormOpenRestaurant),
-            //    typeof(FormNewMusician),
-            //    typeof(FormNewMusician2),
-            //    typeof(FormModifyMusician),
-            //    typeof(FormopenMusician)
-            //};
+            var formTypes = new List<Type>
+            {
+                typeof(FormRestaurantsUsers)
+                //typeof(FormMusicianUsers),
+                //typeof(FormNewRestaurant),
+                //typeof(FormNewRestaurant2),
+                //typeof(FormMidifyRestaurant),
+                //typeof(FormOpenRestaurant),
+                //typeof(FormNewMusician),
+                //typeof(FormNewMusician2),
+                //typeof(FormModifyMusician),
+                //typeof(FormopenMusician)
+            };
 
-            //            foreach (var formType in formTypes)
-            //            {
-            //                var formInstance = (Form)Activator.CreateInstance(formType, this);
-            //                allForms.Add(formInstance);
-            //            }
+            foreach (var formType in formTypes)
+            {
+                var formInstance = (Form)Activator.CreateInstance(formType, this);
+                allForms.Add(formInstance);
+            }
         }
 
 
@@ -68,6 +68,7 @@ namespace Eat_Beat
                 //Grant Acces to App
                 panelMain.Visible = true;
                 pictureBoxLogoSmall.Visible= true;
+                LoadFormIntoPanel("FormRestaurantsUsers", true);
             }
 
         }
@@ -114,11 +115,18 @@ namespace Eat_Beat
             }
         }
 
+        
+        /// <summary>
+        /// Changes the panel size depending on which size we need
+        /// </summary>
         public void changePanelSize() {
             if (panelSizeBig)
             {
                 panelSizeBig = false;
                 //Make the panel smaller
+                panelMain.Location = new Point(110, 84);
+                panelMain.Height = 511;
+                panelMain.Width = 1051;
             }
             else {
                 panelSizeBig = true;

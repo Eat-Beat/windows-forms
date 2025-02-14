@@ -125,9 +125,9 @@
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(50, 70);
+            panelMain.Location = new Point(110, 84);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1164, 568);
+            panelMain.Size = new Size(1051, 511);
             panelMain.TabIndex = 7;
             // 
             // pictureBoxLogoSmall
@@ -135,9 +135,9 @@
             pictureBoxLogoSmall.BackColor = Color.Transparent;
             pictureBoxLogoSmall.BackgroundImage = (Image)resources.GetObject("pictureBoxLogoSmall.BackgroundImage");
             pictureBoxLogoSmall.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBoxLogoSmall.Location = new Point(515, 8);
+            pictureBoxLogoSmall.Location = new Point(528, 4);
             pictureBoxLogoSmall.Name = "pictureBoxLogoSmall";
-            pictureBoxLogoSmall.Size = new Size(293, 51);
+            pictureBoxLogoSmall.Size = new Size(252, 60);
             pictureBoxLogoSmall.TabIndex = 8;
             pictureBoxLogoSmall.TabStop = false;
             // 

@@ -63,7 +63,7 @@
             // labelMusicians
             // 
             labelMusicians.AutoSize = true;
-            labelMusicians.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelMusicians.Font = new Font("Barlow Medium", 14.25F);
             labelMusicians.ForeColor = Color.FromArgb(239, 230, 220);
             labelMusicians.Location = new Point(206, 21);
             labelMusicians.Name = "labelMusicians";
