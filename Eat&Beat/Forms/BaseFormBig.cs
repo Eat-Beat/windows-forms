@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Eat_Beat.Forms
 {
-    public partial class FormRestaurantsUsers : BaseFormBig
+     public partial class BaseFormBig : Form
     {
-        private FormLogin formLogin;
-        public FormRestaurantsUsers(FormLogin formLogin)
-        { 
+        public BaseFormBig()
+        {
             InitializeComponent();
-            this.formLogin = formLogin;
+            this.Size = new Size(1164, 568);
+            this.BackColor = Color.FromArgb(32, 32, 31);
         }
     }
 }
