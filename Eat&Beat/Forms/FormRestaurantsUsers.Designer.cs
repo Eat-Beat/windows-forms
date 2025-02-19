@@ -99,6 +99,7 @@
             roundedButtonCreate.TabIndex = 5;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
+            roundedButtonCreate.Click += roundedButtonCreate_Click;
             // 
             // roundedButtonDelete
             // 

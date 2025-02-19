@@ -127,6 +127,7 @@
             roundedButtonCreate.TabIndex = 8;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
+            roundedButtonCreate.Click += roundedButtonCreate_Click;
             // 
             // FormMusicianUsers
             // 
