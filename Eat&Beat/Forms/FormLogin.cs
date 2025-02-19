@@ -6,7 +6,7 @@ namespace Eat_Beat
     {
 
         public FormRestaurantsUsers restaurantUsers;
-        //public FormMusicianUsers musicianUsers;
+        public FormMusicianUsers musicianUsers;
         //public FormNewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
         //public FormMidifyRestaurant modifyRestaurant;
@@ -31,25 +31,25 @@ namespace Eat_Beat
         /// </summary>
         private void InitializeForms()
         {
-            //            var formTypes = new List<Type>
-            //{
-            //    typeof(FormRestaurantsUsers),
-            //    typeof(FormMusicianUsers),
-            //    typeof(FormNewRestaurant),
-            //    typeof(FormNewRestaurant2),
-            //    typeof(FormMidifyRestaurant),
-            //    typeof(FormOpenRestaurant),
-            //    typeof(FormNewMusician),
-            //    typeof(FormNewMusician2),
-            //    typeof(FormModifyMusician),
-            //    typeof(FormopenMusician)
-            //};
+            var formTypes = new List<Type>
+            {
+                    typeof(FormRestaurantsUsers),
+                    typeof(FormMusicianUsers)
+                //    typeof(FormNewRestaurant),
+                //    typeof(FormNewRestaurant2),
+                //    typeof(FormMidifyRestaurant),
+                //    typeof(FormOpenRestaurant),
+                //    typeof(FormNewMusician),
+                //    typeof(FormNewMusician2),
+                //    typeof(FormModifyMusician),
+                //    typeof(FormopenMusician)
+            };
 
-            //            foreach (var formType in formTypes)
-            //            {
-            //                var formInstance = (Form)Activator.CreateInstance(formType, this);
-            //                allForms.Add(formInstance);
-            //            }
+            foreach (var formType in formTypes)
+            {
+                var formInstance = (Form)Activator.CreateInstance(formType, this);
+                allForms.Add(formInstance);
+            }
         }
 
 
@@ -68,6 +68,7 @@ namespace Eat_Beat
                 //Grant Acces to App
                 panelMain.Visible = true;
                 pictureBoxLogoSmall.Visible= true;
+                LoadFormIntoPanel("FormRestaurantsUsers", true);
             }
 
         }
@@ -119,6 +120,9 @@ namespace Eat_Beat
             {
                 panelSizeBig = false;
                 //Make the panel smaller
+                panelMain.Location = new Point(50, 70);
+                panelMain.Height = 454;
+                panelMain.Width = 931;
             }
             else {
                 panelSizeBig = true;
