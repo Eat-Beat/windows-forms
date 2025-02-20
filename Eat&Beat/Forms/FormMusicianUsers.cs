@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Eat_Beat.Forms
 {
-    public partial class FormRestaurantsUsers : Form
+    public partial class FormMusicianUsers : Form
     {
-        private FormLogin formLogin;
-        public FormRestaurantsUsers(FormLogin formLogin)
+        public FormMusicianUsers()
         {
             InitializeComponent();
-            this.formLogin = formLogin;
         }
     }
 }
