@@ -68,6 +68,7 @@
             roundedButtonOpen.TabIndex = 23;
             roundedButtonOpen.Text = "Cancelar";
             roundedButtonOpen.UseVisualStyleBackColor = false;
+            roundedButtonOpen.Click += roundedButtonOpen_Click;
             // 
             // textBox4
             // 

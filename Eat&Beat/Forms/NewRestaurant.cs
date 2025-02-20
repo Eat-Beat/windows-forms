@@ -12,9 +12,16 @@ namespace Eat_Beat.Forms
 {
     public partial class NewRestaurant : Form
     {
-        public NewRestaurant()
+        private FormLogin formLogin;
+        public NewRestaurant(FormLogin formLogin)
         {
             InitializeComponent();
+            this.formLogin = formLogin;
+        }
+
+        private void roundedButtonOpen_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
     }
 }
