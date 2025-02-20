@@ -6,12 +6,12 @@ namespace Eat_Beat
     {
 
         public FormRestaurantsUsers restaurantUsers;
-        //public FormMusicianUsers musicianUsers;
-        //public FormNewRestaurant newRestaurant;
+        public FormMusicianUsers musicianUsers;
+        public NewRestaurant newRestaurant;
         //public FormNewRestaurant2 newRestaurant2;
         //public FormMidifyRestaurant modifyRestaurant;
         //public FormOpenRestaurant openRestaurant;
-        //public FormNewMusician newMusician;
+        public NewMusician newMusician;
         //public FormNewMusician2 newMusician2;
         //public FormModifyMusician modifyMusician;
         //public FormopenMusician openMusician;
@@ -33,16 +33,16 @@ namespace Eat_Beat
         {
             var formTypes = new List<Type>
             {
-                typeof(FormRestaurantsUsers)
-                //typeof(FormMusicianUsers),
-                //typeof(FormNewRestaurant),
-                //typeof(FormNewRestaurant2),
-                //typeof(FormMidifyRestaurant),
-                //typeof(FormOpenRestaurant),
-                //typeof(FormNewMusician),
-                //typeof(FormNewMusician2),
-                //typeof(FormModifyMusician),
-                //typeof(FormopenMusician)
+                    typeof(FormRestaurantsUsers),
+                    typeof(FormMusicianUsers),
+                    typeof(NewRestaurant),
+                //    typeof(FormNewRestaurant2),
+                //    typeof(FormMidifyRestaurant),
+                //    typeof(FormOpenRestaurant),
+                    typeof(NewMusician)
+                //    typeof(FormNewMusician2),
+                //    typeof(FormModifyMusician),
+                //    typeof(FormopenMusician)
             };
 
             foreach (var formType in formTypes)
@@ -68,6 +68,7 @@ namespace Eat_Beat
                 //Grant Acces to App
                 panelMain.Visible = true;
                 pictureBoxLogoSmall.Visible= true;
+                pictureBox1.Visible = false;
                 LoadFormIntoPanel("FormRestaurantsUsers", true);
             }
 
