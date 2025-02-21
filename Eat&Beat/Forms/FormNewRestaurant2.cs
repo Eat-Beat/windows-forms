@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Eat_Beat.Forms
 {
-    public partial class NewMusician : Form
+    public partial class FormNewRestaurant2 : Form
     {
         private FormLogin formLogin;
-        public NewMusician(FormLogin formLogin)
+        public FormNewRestaurant2(FormLogin formLogin)
         {
             InitializeComponent();
             this.formLogin = formLogin;
         }
 
-        private void roundedButtonOpen_Click(object sender, EventArgs e)
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
-            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+            formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
     }
 }

@@ -125,9 +125,9 @@
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(110, 84);
+            panelMain.Location = new Point(50, 70);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1051, 511);
+            panelMain.Size = new Size(1164, 568);
             panelMain.TabIndex = 7;
             // 
             // pictureBoxLogoSmall
@@ -148,7 +148,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 681);
-            Controls.Add(panelMain);
             Controls.Add(pictureBoxLogoSmall);
             Controls.Add(pictureBox1);
             Controls.Add(buttonLogIn);
@@ -157,6 +156,7 @@
             Controls.Add(textBoxUser);
             Controls.Add(labelUser);
             Controls.Add(pictureBoxBackground);
+            Controls.Add(panelMain);
             DoubleBuffered = true;
             Name = "FormLogin";
             Text = "Login";

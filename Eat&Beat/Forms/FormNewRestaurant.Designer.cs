@@ -1,6 +1,6 @@
 ﻿namespace Eat_Beat.Forms
 {
-    partial class NewRestaurant
+    partial class FormNewRestaurant
     {
         /// <summary>
         /// Required designer variable.
@@ -33,12 +33,12 @@
             label2 = new Label();
             label3 = new Label();
             labelRestaurants = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            roundedButtonOpen = new Controls.RoundedButton();
-            roundedButton1 = new Controls.RoundedButton();
+            textBoxName = new TextBox();
+            textBoxEmail = new TextBox();
+            textBoxPassword = new TextBox();
+            textBoxConfirmPassword = new TextBox();
+            roundedButtonCancel = new Controls.RoundedButton();
+            roundedButtonContinue = new Controls.RoundedButton();
             SuspendLayout();
             // 
             // labelMusicians
@@ -96,85 +96,86 @@
             labelRestaurants.TabIndex = 7;
             labelRestaurants.Text = "NUEVO RESTAURANTE:";
             // 
-            // textBox1
+            // textBoxName
             // 
-            textBox1.BackColor = Color.FromArgb(32, 32, 31);
-            textBox1.Location = new Point(301, 113);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(483, 23);
-            textBox1.TabIndex = 8;
+            textBoxName.BackColor = Color.FromArgb(32, 32, 31);
+            textBoxName.Location = new Point(301, 113);
+            textBoxName.Name = "textBoxName";
+            textBoxName.Size = new Size(483, 23);
+            textBoxName.TabIndex = 8;
             // 
-            // textBox2
+            // textBoxEmail
             // 
-            textBox2.BackColor = Color.FromArgb(32, 32, 31);
-            textBox2.Location = new Point(301, 152);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(483, 23);
-            textBox2.TabIndex = 9;
+            textBoxEmail.BackColor = Color.FromArgb(32, 32, 31);
+            textBoxEmail.Location = new Point(301, 152);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(483, 23);
+            textBoxEmail.TabIndex = 9;
             // 
-            // textBox3
+            // textBoxPassword
             // 
-            textBox3.BackColor = Color.FromArgb(32, 32, 31);
-            textBox3.Location = new Point(301, 197);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(483, 23);
-            textBox3.TabIndex = 10;
+            textBoxPassword.BackColor = Color.FromArgb(32, 32, 31);
+            textBoxPassword.Location = new Point(301, 197);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(483, 23);
+            textBoxPassword.TabIndex = 10;
             // 
-            // textBox4
+            // textBoxConfirmPassword
             // 
-            textBox4.BackColor = Color.FromArgb(32, 32, 31);
-            textBox4.Location = new Point(301, 244);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(483, 23);
-            textBox4.TabIndex = 11;
+            textBoxConfirmPassword.BackColor = Color.FromArgb(32, 32, 31);
+            textBoxConfirmPassword.Location = new Point(301, 244);
+            textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            textBoxConfirmPassword.Size = new Size(483, 23);
+            textBoxConfirmPassword.TabIndex = 11;
             // 
-            // roundedButtonOpen
+            // roundedButtonCancel
             // 
-            roundedButtonOpen.BackColor = Color.FromArgb(252, 158, 79);
-            roundedButtonOpen.FlatAppearance.BorderSize = 0;
-            roundedButtonOpen.FlatStyle = FlatStyle.Flat;
-            roundedButtonOpen.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpen.Location = new Point(648, 358);
-            roundedButtonOpen.Name = "roundedButtonOpen";
-            roundedButtonOpen.Size = new Size(115, 45);
-            roundedButtonOpen.TabIndex = 12;
-            roundedButtonOpen.Text = "Cancelar";
-            roundedButtonOpen.UseVisualStyleBackColor = false;
-            roundedButtonOpen.Click += roundedButtonOpen_Click;
+            roundedButtonCancel.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonCancel.FlatAppearance.BorderSize = 0;
+            roundedButtonCancel.FlatStyle = FlatStyle.Flat;
+            roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonCancel.Location = new Point(648, 358);
+            roundedButtonCancel.Name = "roundedButtonCancel";
+            roundedButtonCancel.Size = new Size(115, 45);
+            roundedButtonCancel.TabIndex = 12;
+            roundedButtonCancel.Text = "Cancelar";
+            roundedButtonCancel.UseVisualStyleBackColor = false;
+            roundedButtonCancel.Click += roundedButtonCancel_Click;
             // 
-            // roundedButton1
+            // roundedButtonContinue
             // 
-            roundedButton1.BackColor = Color.FromArgb(252, 158, 79);
-            roundedButton1.FlatAppearance.BorderSize = 0;
-            roundedButton1.FlatStyle = FlatStyle.Flat;
-            roundedButton1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roundedButton1.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButton1.Location = new Point(769, 358);
-            roundedButton1.Name = "roundedButton1";
-            roundedButton1.Size = new Size(115, 45);
-            roundedButton1.TabIndex = 13;
-            roundedButton1.Text = "Continuar";
-            roundedButton1.UseVisualStyleBackColor = false;
+            roundedButtonContinue.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonContinue.FlatAppearance.BorderSize = 0;
+            roundedButtonContinue.FlatStyle = FlatStyle.Flat;
+            roundedButtonContinue.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonContinue.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonContinue.Location = new Point(769, 358);
+            roundedButtonContinue.Name = "roundedButtonContinue";
+            roundedButtonContinue.Size = new Size(115, 45);
+            roundedButtonContinue.TabIndex = 13;
+            roundedButtonContinue.Text = "Continuar";
+            roundedButtonContinue.UseVisualStyleBackColor = false;
+            roundedButtonContinue.Click += roundedButtonContinue_Click;
             // 
-            // NewRestaurant
+            // FormNewRestaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(915, 415);
-            Controls.Add(roundedButton1);
-            Controls.Add(roundedButtonOpen);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(roundedButtonContinue);
+            Controls.Add(roundedButtonCancel);
+            Controls.Add(textBoxConfirmPassword);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxEmail);
+            Controls.Add(textBoxName);
             Controls.Add(labelRestaurants);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(labelMusicians);
-            Name = "NewRestaurant";
+            Name = "FormNewRestaurant";
             Text = "NewRestaurant";
             ResumeLayout(false);
             PerformLayout();
@@ -187,11 +188,11 @@
         private Label label2;
         private Label label3;
         private Label labelRestaurants;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Controls.RoundedButton roundedButtonOpen;
-        private Controls.RoundedButton roundedButton1;
+        private TextBox textBoxName;
+        private TextBox textBoxEmail;
+        private TextBox textBoxPassword;
+        private TextBox textBoxConfirmPassword;
+        private Controls.RoundedButton roundedButtonCancel;
+        private Controls.RoundedButton roundedButtonContinue;
     }
 }

@@ -67,7 +67,7 @@
             labelMusicians.ForeColor = Color.FromArgb(239, 230, 220);
             labelMusicians.Location = new Point(206, 21);
             labelMusicians.Name = "labelMusicians";
-            labelMusicians.Size = new Size(80, 24);
+            labelMusicians.Size = new Size(77, 24);
             labelMusicians.TabIndex = 2;
             labelMusicians.Text = "Músicos";
             labelMusicians.Click += labelMusicians_Click;
@@ -128,6 +128,7 @@
             roundedButtonEdit.TabIndex = 6;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
+            roundedButtonEdit.Click += roundedButtonEdit_Click;
             // 
             // FormRestaurantsUsers
             // 

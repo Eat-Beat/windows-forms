@@ -7,16 +7,15 @@ namespace Eat_Beat
 
         public FormRestaurantsUsers restaurantUsers;
         public FormMusicianUsers musicianUsers;
-        public NewRestaurant newRestaurant;
-        //public FormNewRestaurant2 newRestaurant2;
-        //public FormMidifyRestaurant modifyRestaurant;
+        public FormNewRestaurant newRestaurant;
+        public FormNewRestaurant2 newRestaurant2;
+        public FormModifyRestaurant modifyRestaurant;
         //public FormOpenRestaurant openRestaurant;
-        public NewMusician newMusician;
+        public FormNewMusician newMusician;
         //public FormNewMusician2 newMusician2;
-        //public FormModifyMusician modifyMusician;
+        public FormModifyMusician modifyMusician;
         //public FormopenMusician openMusician;
         private List<Form> allForms = new List<Form>();
-        private bool panelSizeBig = true; // If set to false the panel is in it's smaller form
 
         public FormLogin()
         {
@@ -35,13 +34,13 @@ namespace Eat_Beat
             {
                     typeof(FormRestaurantsUsers),
                     typeof(FormMusicianUsers),
-                    typeof(NewRestaurant),
-                //    typeof(FormNewRestaurant2),
-                //    typeof(FormMidifyRestaurant),
+                    typeof(FormNewRestaurant),
+                    typeof(FormNewRestaurant2),
+                    typeof(FormModifyRestaurant),
                 //    typeof(FormOpenRestaurant),
-                    typeof(NewMusician)
+                    typeof(FormNewMusician),
                 //    typeof(FormNewMusician2),
-                //    typeof(FormModifyMusician),
+                    typeof(FormModifyMusician)
                 //    typeof(FormopenMusician)
             };
 
@@ -90,9 +89,7 @@ namespace Eat_Beat
                 if (form.Name == childFormName)
                 {
                     childForm = form;
-                    if (!(panelSizeBig && formIsBig)) {
-                        changePanelSize();
-                    }
+                    changePanelSize(formIsBig);
                     foundForm = true;
                 }
             }
@@ -120,17 +117,14 @@ namespace Eat_Beat
         /// <summary>
         /// Changes the panel size depending on which size we need
         /// </summary>
-        public void changePanelSize() {
-            if (panelSizeBig)
+        public void changePanelSize(bool desiredPanelSizeBig) {
+            if (!desiredPanelSizeBig)
             {
-                panelSizeBig = false;
-                //Make the panel smaller
                 panelMain.Location = new Point(110, 84);
                 panelMain.Height = 511;
                 panelMain.Width = 1051;
             }
             else {
-                panelSizeBig = true;
                 panelMain.Location = new Point(50, 70);
                 panelMain.Height = 568;
                 panelMain.Width= 1164;

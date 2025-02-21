@@ -99,6 +99,7 @@
             roundedButtonEdit.TabIndex = 7;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
+            roundedButtonEdit.Click += roundedButtonEdit_Click;
             // 
             // roundedButtonDelete
             // 
