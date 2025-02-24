@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,15 @@ namespace Eat_Beat.Controls
         private int borderSize = 2;
         private bool underlineedStyle = false;
 
+        private int borderRadius = 0;
+
         public RoundedTextBox()
         {
             InitializeComponent();
         }
 
         public event EventHandler _TextChanged;
+
 
         public Color BorderColor
         {
@@ -129,25 +133,97 @@ namespace Eat_Beat.Controls
 
             }
         }
+
+        public int BorderRadius 
+        { 
+            get
+            {
+                return BorderRadius;
+            }
+
+            set
+            {
+                if(value > 0)
+                {
+                    borderRadius = value;
+                    this.Invalidate();
+                }
+                
+            }
+        }
+       
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Graphics graph = e.Graphics;
 
-            using (Pen penBorder = new Pen(borderColor, borderSize))
+            if (borderRadius > 1)
             {
-                penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+                var rectBorderSmooth = this.ClientRectangle;
+                var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
+                int smoothSize = borderSize > 0 ? borderSize : 1;
 
-                if (underlineedStyle)
+                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
+                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius-borderSize))
+                using (Pen penBorderSmooth=new Pen(this.Parent.BackColor,smoothSize))
+                using (Pen penBorder=new Pen(borderColor, borderSize))
                 {
-                    graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                    this.Region = new Region(pathBorderSmooth);
+                    if (borderRadius > 15) SetTextBoxRoundedRegion();
+                    graph.SmoothingMode = SmoothingMode.AntiAlias;
+                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+
+                    if (underlineedStyle)
+                    {
+                        graph.DrawPath(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        graph.SmoothingMode = SmoothingMode.None;
+                        graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                    }
+                    else
+                    {
+                        graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                    }
                 }
-                else
+            }
+            else
+            {
+                
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                    this.Region = new Region(this.ClientRectangle);
+                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+
+                    if (underlineedStyle)
+                    {
+                        graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                    }
+                    else
+                    {
+                        graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                    }
                 }
             }
         }
+
+        private void SetTextBoxRoundedRegion()
+        {
+            throw new NotImplementedException();
+        }
+
+        private GraphicsPath GetFigurePath(RectangleF rect, float radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
+            path.AddArc(rect.Width - radius, rect.Y, radius, radius, 270, 90);
+            path.AddArc(rect.Width - radius, rect.Height - radius, radius, radius, 0, 90);
+            path.AddArc(rect.X, rect.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            return path;
+        }
+
 
         protected override void OnResize(EventArgs e)
         {
