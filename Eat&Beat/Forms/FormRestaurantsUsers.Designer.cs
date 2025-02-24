@@ -70,6 +70,7 @@
             labelMusicians.Size = new Size(77, 24);
             labelMusicians.TabIndex = 2;
             labelMusicians.Text = "Músicos";
+            labelMusicians.Click += labelMusicians_Click;
             // 
             // roundedButtonOpen
             // 

@@ -59,6 +59,7 @@
             labelRestaurants.Size = new Size(121, 24);
             labelRestaurants.TabIndex = 2;
             labelRestaurants.Text = "Restaurantes";
+            labelRestaurants.Click += labelRestaurants_Click;
             // 
             // labelMusicians
             // 

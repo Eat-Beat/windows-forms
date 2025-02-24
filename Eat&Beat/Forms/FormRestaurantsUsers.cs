@@ -18,5 +18,10 @@ namespace Eat_Beat.Forms
             InitializeComponent();
             this.formLogin = formLogin;
         }
+
+        private void labelMusicians_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+        }
     }
 }
