@@ -14,7 +14,8 @@ namespace Eat_Beat
         public FormNewMusician newMusician;
         //public FormNewMusician2 newMusician2;
         public FormModifyMusician modifyMusician;
-        //public FormopenMusician openMusician;
+        public FormOpenMusician openMusician;
+        public CalendarPopup calendarPopup;
         private List<Form> allForms = new List<Form>();
 
         public FormLogin()
@@ -40,8 +41,9 @@ namespace Eat_Beat
                 //    typeof(FormOpenRestaurant),
                     typeof(FormNewMusician),
                 //    typeof(FormNewMusician2),
-                    typeof(FormModifyMusician)
-                //    typeof(FormopenMusician)
+                    typeof(FormModifyMusician),
+                    typeof(FormOpenMusician),
+                    typeof(CalendarPopup)
             };
 
             foreach (var formType in formTypes)

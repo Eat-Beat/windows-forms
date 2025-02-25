@@ -85,6 +85,7 @@
             roundedButtonOpen.TabIndex = 5;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
+            roundedButtonOpen.Click += roundedButtonOpen_Click;
             // 
             // roundedButtonEdit
             // 

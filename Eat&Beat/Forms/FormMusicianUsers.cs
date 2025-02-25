@@ -33,5 +33,10 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormModifyMusician", false);
         }
+
+        private void roundedButtonOpen_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormOpenMusician", true);
+        }
     }
 }
