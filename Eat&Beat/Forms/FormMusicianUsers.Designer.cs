@@ -31,10 +31,10 @@
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Controls.RoundedButton();
-            roundedButtonEdit = new Controls.RoundedButton();
-            roundedButtonDelete = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
+            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
@@ -121,12 +121,13 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(904, 12);
+            roundedButtonCreate.Location = new Point(894, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
             roundedButtonCreate.TabIndex = 8;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
+            roundedButtonCreate.Click += roundedButtonCreate_Click;
             // 
             // FormMusicianUsers
             // 

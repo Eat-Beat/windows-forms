@@ -12,7 +12,7 @@ namespace Eat_Beat
         //public FormMidifyRestaurant modifyRestaurant;
         //public FormOpenRestaurant openRestaurant;
         //public FormNewMusician newMusician;
-        //public FormNewMusician2 newMusician2;
+        public FormNewMusician2 newMusician2;
         //public FormModifyMusician modifyMusician;
         //public FormopenMusician openMusician;
         private List<Form> allForms = new List<Form>();
@@ -34,13 +34,13 @@ namespace Eat_Beat
             var formTypes = new List<Type>
             {
                 typeof(FormRestaurantsUsers),
-                typeof(FormMusicianUsers)
+                typeof(FormMusicianUsers),
             //    typeof(FormNewRestaurant),
             //    typeof(FormNewRestaurant2),
             //    typeof(FormMidifyRestaurant),
             //    typeof(FormOpenRestaurant),
             //    typeof(FormNewMusician),
-            //    typeof(FormNewMusician2),
+                typeof(FormNewMusician2)
             //    typeof(FormModifyMusician),
             //    typeof(FormopenMusician)
             };

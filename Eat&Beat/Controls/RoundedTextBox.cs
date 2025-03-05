@@ -14,20 +14,34 @@ namespace Eat_Beat.Controls
     [DefaultEvent("_TextChanged")]
     public partial class RoundedTextBox : UserControl
     {
+        /// <summary>
+        /// Fields
+        /// </summary>
         private Color borderColor = Color.FromArgb(255, 255, 255);
         private int borderSize = 2;
         private bool underlineedStyle = false;
+        private Color borderFocusColor = Color.FromArgb(252, 158, 79);
+        private bool isFocused = false;
 
         private int borderRadius = 0;
 
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public RoundedTextBox()
         {
             InitializeComponent();
+            if (this.DesignMode)
+                UpdateControlHeight();
         }
 
+        /// <summary>
+        /// Events
+        /// </summary>
         public event EventHandler _TextChanged;
 
-
+        [Category("Code Advance")]
         public Color BorderColor
         {
             get
@@ -41,6 +55,7 @@ namespace Eat_Beat.Controls
             }
         }
 
+        [Category("Code Advance")]
         public int BorderSize
         {
             get
@@ -55,6 +70,7 @@ namespace Eat_Beat.Controls
             }
         }
 
+        [Category("Code Advance")]
         public bool UnderlineedStyle
         {
             get
@@ -69,17 +85,24 @@ namespace Eat_Beat.Controls
             }
         }
 
+        [Category("Code Advance")]
         public bool PasswordChar
         {
             get { return textBox1.UseSystemPasswordChar; }
             set { textBox1.UseSystemPasswordChar = value; }
         }
 
+        [Category("Code Advance")]
         public bool Multiline
         {
             get { return textBox1.Multiline; }
             set { textBox1.Multiline = value; }
         }
+
+        /// <summary>
+        /// Asign the back color to the text box
+        /// </summary>
+        [Category("Code Advance")]
         public override Color BackColor
         {
             get
@@ -93,6 +116,10 @@ namespace Eat_Beat.Controls
             }
         }
 
+        /// <summary>
+        /// Asign the fore color to the text box
+        /// </summary>
+        [Category("Code Advance")]
         public override Color ForeColor
         {
             get
@@ -106,6 +133,11 @@ namespace Eat_Beat.Controls
             }
         }
 
+
+        /// <summary>
+        /// Asign the font to the text box
+        /// </summary>
+        [Category("Code Advance")]
         public override Font Font
         {
             get
@@ -121,6 +153,11 @@ namespace Eat_Beat.Controls
             }
         }
 
+
+        /// <summary>
+        /// Asign the text to the text box
+        /// </summary>
+        [Category("Code Advance")]
         public string Texts
         {
             get
@@ -134,8 +171,27 @@ namespace Eat_Beat.Controls
             }
         }
 
-        public int BorderRadius 
-        { 
+        /// <summary>
+        /// Change the color of the border when the control is focused
+        /// </summary>
+        [Category("Code Advance")]
+        public Color BorderFocusColor
+        {
+            get
+            {
+                return borderFocusColor;
+            }
+            set
+            {
+                borderFocusColor = value;
+            }
+        }
+
+        /// <summary>
+        /// Change the border radius of the control
+        /// </summary>
+        public int BorderRadius
+        {
             get
             {
                 return BorderRadius;
@@ -143,16 +199,19 @@ namespace Eat_Beat.Controls
 
             set
             {
-                if(value > 0)
+                if (value > 0)
                 {
                     borderRadius = value;
                     this.Invalidate();
                 }
-                
+
             }
         }
-       
 
+        /// <summary>
+        /// Draw the border of the control anf check the border radius
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -165,9 +224,9 @@ namespace Eat_Beat.Controls
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
                 using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
-                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius-borderSize))
-                using (Pen penBorderSmooth=new Pen(this.Parent.BackColor,smoothSize))
-                using (Pen penBorder=new Pen(borderColor, borderSize))
+                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
+                using (Pen penBorderSmooth = new Pen(this.Parent?.BackColor ?? Color.Transparent, smoothSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(pathBorderSmooth);
                     if (borderRadius > 15) SetTextBoxRoundedRegion();
@@ -176,31 +235,47 @@ namespace Eat_Beat.Controls
 
                     if (underlineedStyle)
                     {
-                        graph.DrawPath(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        graph.DrawPath(penBorderSmooth, pathBorderSmooth);
                         graph.SmoothingMode = SmoothingMode.None;
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     }
                     else
                     {
-                        graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                        graph.DrawPath(penBorderSmooth, pathBorderSmooth);
+                        graph.DrawPath(penBorder, pathBorder);
                     }
                 }
             }
             else
             {
-                
+
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(this.ClientRectangle);
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
 
-                    if (underlineedStyle)
+                    if (!isFocused)
                     {
-                        graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        if (underlineedStyle)
+                        {
+                            graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        }
+                        else
+                        {
+                            graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                        }
                     }
                     else
                     {
-                        graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                        penBorder.Color = borderFocusColor;
+                        if (underlineedStyle)
+                        {
+                            graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        }
+                        else
+                        {
+                            graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                        }
                     }
                 }
             }
@@ -208,7 +283,17 @@ namespace Eat_Beat.Controls
 
         private void SetTextBoxRoundedRegion()
         {
-            throw new NotImplementedException();
+            GraphicsPath pathTxt;
+            if (Multiline)
+            {
+                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius - borderSize);
+                textBox1.Region = new Region(pathTxt);
+            }
+            else
+            {
+                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderSize * 2);
+                textBox1.Region = new Region(pathTxt);
+            }
         }
 
         private GraphicsPath GetFigurePath(RectangleF rect, float radius)
@@ -225,6 +310,10 @@ namespace Eat_Beat.Controls
         }
 
 
+        /// <summary>
+        /// Call the update control height method
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
@@ -232,12 +321,19 @@ namespace Eat_Beat.Controls
                 UpdateControlHeight();
         }
 
+        /// <summary>
+        /// Cal the update control height method
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             UpdateControlHeight();
         }
 
+        /// <summary>
+        /// Update the height of the control
+        /// </summary>
         private void UpdateControlHeight()
         {
             if (textBox1.Multiline == false)
@@ -275,6 +371,18 @@ namespace Eat_Beat.Controls
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.OnKeyPress(e);
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            isFocused = true;
+            this.Invalidate();
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            isFocused = false;
+            this.Invalidate();
         }
     }
 }
