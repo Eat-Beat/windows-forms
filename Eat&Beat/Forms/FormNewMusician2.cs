@@ -49,10 +49,11 @@ namespace Eat_Beat.Forms
         }
 
         public class Coordenadas
-    {
-        public string latitude { get; set; }
-        public string longitude { get; set; }
-    }
+        {
+            public string latitude { get; set; }
+            public string longitude { get; set; }
+        }
 
+        
     }
 }
