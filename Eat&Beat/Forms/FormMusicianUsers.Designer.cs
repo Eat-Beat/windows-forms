@@ -52,11 +52,11 @@
             // labelRestaurants
             // 
             labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelRestaurants.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
             labelRestaurants.Location = new Point(12, 21);
             labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(121, 24);
+            labelRestaurants.Size = new Size(119, 24);
             labelRestaurants.TabIndex = 2;
             labelRestaurants.Text = "Restaurantes";
             labelRestaurants.Click += labelRestaurants_Click;
@@ -64,11 +64,11 @@
             // labelMusicians
             // 
             labelMusicians.AutoSize = true;
-            labelMusicians.Font = new Font("Barlow Medium", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelMusicians.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelMusicians.ForeColor = Color.FromArgb(239, 230, 220);
             labelMusicians.Location = new Point(206, 21);
             labelMusicians.Name = "labelMusicians";
-            labelMusicians.Size = new Size(84, 24);
+            labelMusicians.Size = new Size(87, 24);
             labelMusicians.TabIndex = 3;
             labelMusicians.Text = "Músicos";
             // 
@@ -77,7 +77,7 @@
             roundedButtonOpen.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonOpen.FlatAppearance.BorderSize = 0;
             roundedButtonOpen.FlatStyle = FlatStyle.Flat;
-            roundedButtonOpen.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonOpen.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonOpen.Location = new Point(660, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
@@ -85,13 +85,14 @@
             roundedButtonOpen.TabIndex = 5;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
+            roundedButtonOpen.Click += roundedButtonOpen_Click;
             // 
             // roundedButtonEdit
             // 
             roundedButtonEdit.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonEdit.FlatAppearance.BorderSize = 0;
             roundedButtonEdit.FlatStyle = FlatStyle.Flat;
-            roundedButtonEdit.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonEdit.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonEdit.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonEdit.Location = new Point(777, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
@@ -99,13 +100,14 @@
             roundedButtonEdit.TabIndex = 7;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
+            roundedButtonEdit.Click += roundedButtonEdit_Click;
             // 
             // roundedButtonDelete
             // 
             roundedButtonDelete.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonDelete.FlatAppearance.BorderSize = 0;
             roundedButtonDelete.FlatStyle = FlatStyle.Flat;
-            roundedButtonDelete.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonDelete.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonDelete.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonDelete.Location = new Point(1021, 12);
             roundedButtonDelete.Name = "roundedButtonDelete";
@@ -119,7 +121,7 @@
             roundedButtonCreate.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonCreate.FlatAppearance.BorderSize = 0;
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
-            roundedButtonCreate.Font = new Font("Barlow Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonCreate.Location = new Point(894, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";

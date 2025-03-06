@@ -12,7 +12,9 @@ namespace Eat_Beat.Forms
 {
     public partial class FormMusicianUsers : Form
     {
-        private FormLogin formLogin;
+
+        FormLogin formLogin;
+
         public FormMusicianUsers(FormLogin formLogin)
         {
             InitializeComponent();
@@ -26,7 +28,18 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
-            
+
+            formLogin.LoadFormIntoPanel("FormNewMusician", false);
+        }
+
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormModifyMusician", false);
+        }
+
+        private void roundedButtonOpen_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormOpenMusician", true);
         }
     }
 }
