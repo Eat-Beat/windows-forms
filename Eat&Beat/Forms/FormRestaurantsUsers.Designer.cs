@@ -31,10 +31,10 @@
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonOpen = new Controls.RoundedButton();
+            roundedButtonCreate = new Controls.RoundedButton();
+            roundedButtonDelete = new Controls.RoundedButton();
+            roundedButtonEdit = new Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
@@ -85,6 +85,7 @@
             roundedButtonOpen.TabIndex = 4;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
+            roundedButtonOpen.Click += roundedButtonOpen_Click;
             // 
             // roundedButtonCreate
             // 

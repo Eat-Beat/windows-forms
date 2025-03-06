@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             webView2MapBox = new Microsoft.Web.WebView2.WinForms.WebView2();
-            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonContinue = new Controls.RoundedButton();
+            roundedButtonCancel = new Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             webView2MapBox.DefaultBackgroundColor = Color.White;
             webView2MapBox.Location = new Point(0, 83);
             webView2MapBox.Name = "webView2MapBox";
-            webView2MapBox.Size = new Size(1154, 362);
+            webView2MapBox.Size = new Size(1168, 362);
             webView2MapBox.TabIndex = 0;
             webView2MapBox.ZoomFactor = 1D;
             // 
@@ -58,6 +58,7 @@
             roundedButtonContinue.TabIndex = 9;
             roundedButtonContinue.Text = "Continuar";
             roundedButtonContinue.UseVisualStyleBackColor = false;
+            roundedButtonContinue.Click += roundedButtonContinue_Click;
             // 
             // roundedButtonCancel
             // 
@@ -72,6 +73,7 @@
             roundedButtonCancel.TabIndex = 8;
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
+            roundedButtonCancel.Click += roundedButtonCancel_Click;
             // 
             // FormNewMusician2
             // 

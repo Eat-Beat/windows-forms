@@ -15,10 +15,12 @@ namespace Eat_Beat.Forms
 {
     public partial class FormNewMusician2 : Form
     {
+        private FormLogin formLogin;
         public FormNewMusician2(FormLogin formLogin)
         {
             InitializeComponent();
             InitializeWebView();
+            this.formLogin = formLogin;
         }
 
         private async void InitializeWebView()
@@ -49,10 +51,19 @@ namespace Eat_Beat.Forms
         }
 
         public class Coordenadas
-    {
-        public string latitude { get; set; }
-        public string longitude { get; set; }
-    }
+        {
+            public string latitude { get; set; }
+            public string longitude { get; set; }
+        }
 
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+        }
+
+        private void roundedButtonContinue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
