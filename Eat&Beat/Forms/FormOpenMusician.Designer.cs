@@ -32,8 +32,9 @@
             roundedButtonBack = new Controls.RoundedButton();
             pictureBoxMainProfile = new PictureBox();
             labelMusicianName = new Label();
-            richTextBox1 = new RichTextBox();
+            richTextBoxDescription = new RichTextBox();
             roundedButtonOpenCalendar = new Controls.RoundedButton();
+            flowLayoutPanelImages = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainProfile).BeginInit();
             SuspendLayout();
             // 
@@ -70,17 +71,17 @@
             labelMusicianName.TabIndex = 19;
             labelMusicianName.Text = "Nombre Musico";
             // 
-            // richTextBox1
+            // richTextBoxDescription
             // 
-            richTextBox1.BackColor = Color.FromArgb(32, 32, 31);
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Font = new Font("Barlow Medium", 9F);
-            richTextBox1.ForeColor = Color.FromArgb(239, 230, 220);
-            richTextBox1.Location = new Point(232, 79);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(485, 114);
-            richTextBox1.TabIndex = 22;
-            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            richTextBoxDescription.BackColor = Color.FromArgb(32, 32, 31);
+            richTextBoxDescription.BorderStyle = BorderStyle.None;
+            richTextBoxDescription.Font = new Font("Barlow Medium", 9F);
+            richTextBoxDescription.ForeColor = Color.FromArgb(239, 230, 220);
+            richTextBoxDescription.Location = new Point(232, 79);
+            richTextBoxDescription.Name = "richTextBoxDescription";
+            richTextBoxDescription.Size = new Size(485, 114);
+            richTextBoxDescription.TabIndex = 22;
+            richTextBoxDescription.Text = resources.GetString("richTextBoxDescription.Text");
             // 
             // roundedButtonOpenCalendar
             // 
@@ -89,7 +90,7 @@
             roundedButtonOpenCalendar.FlatStyle = FlatStyle.Flat;
             roundedButtonOpenCalendar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpenCalendar.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpenCalendar.Location = new Point(872, 472);
+            roundedButtonOpenCalendar.Location = new Point(872, 12);
             roundedButtonOpenCalendar.Name = "roundedButtonOpenCalendar";
             roundedButtonOpenCalendar.Size = new Size(143, 45);
             roundedButtonOpenCalendar.TabIndex = 23;
@@ -97,14 +98,25 @@
             roundedButtonOpenCalendar.UseVisualStyleBackColor = false;
             roundedButtonOpenCalendar.Click += roundedButtonOpenCalendar_Click;
             // 
+            // flowLayoutPanelImages
+            // 
+            flowLayoutPanelImages.AutoScroll = true;
+            flowLayoutPanelImages.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelImages.Location = new Point(12, 227);
+            flowLayoutPanelImages.Margin = new Padding(0);
+            flowLayoutPanelImages.Name = "flowLayoutPanelImages";
+            flowLayoutPanelImages.Size = new Size(299, 290);
+            flowLayoutPanelImages.TabIndex = 32;
+            // 
             // FormOpenMusician
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
+            Controls.Add(flowLayoutPanelImages);
             Controls.Add(roundedButtonOpenCalendar);
-            Controls.Add(richTextBox1);
+            Controls.Add(richTextBoxDescription);
             Controls.Add(labelMusicianName);
             Controls.Add(pictureBoxMainProfile);
             Controls.Add(roundedButtonBack);
@@ -122,7 +134,8 @@
         private Controls.RoundedButton roundedButtonBack;
         private PictureBox pictureBoxMainProfile;
         private Label labelMusicianName;
-        private RichTextBox richTextBox1;
+        private RichTextBox richTextBoxDescription;
         private Controls.RoundedButton roundedButtonOpenCalendar;
+        private FlowLayoutPanel flowLayoutPanelImages;
     }
 }

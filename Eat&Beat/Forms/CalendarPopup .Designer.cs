@@ -42,6 +42,8 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             roundedButtonBackToMusician = new Controls.RoundedButton();
+            richTextBoxDayDescription = new RichTextBox();
+            labelFullDateDisplay = new Label();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -181,9 +183,29 @@
             roundedButtonBackToMusician.Name = "roundedButtonBackToMusician";
             roundedButtonBackToMusician.Size = new Size(340, 45);
             roundedButtonBackToMusician.TabIndex = 24;
-            roundedButtonBackToMusician.Text = "Back to Musician";
+            roundedButtonBackToMusician.Text = "Volver al Musico";
             roundedButtonBackToMusician.UseVisualStyleBackColor = false;
             roundedButtonBackToMusician.Click += roundedButtonBackToMusician_Click;
+            // 
+            // richTextBoxDayDescription
+            // 
+            richTextBoxDayDescription.BackColor = Color.FromArgb(31, 31, 32);
+            richTextBoxDayDescription.BorderStyle = BorderStyle.None;
+            richTextBoxDayDescription.Location = new Point(796, 130);
+            richTextBoxDayDescription.Name = "richTextBoxDayDescription";
+            richTextBoxDayDescription.Size = new Size(340, 352);
+            richTextBoxDayDescription.TabIndex = 25;
+            richTextBoxDayDescription.Text = "";
+            // 
+            // labelFullDateDisplay
+            // 
+            labelFullDateDisplay.AutoSize = true;
+            labelFullDateDisplay.Font = new Font("Barlow Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFullDateDisplay.ForeColor = Color.FromArgb(239, 230, 220);
+            labelFullDateDisplay.Location = new Point(901, 96);
+            labelFullDateDisplay.Name = "labelFullDateDisplay";
+            labelFullDateDisplay.Size = new Size(0, 31);
+            labelFullDateDisplay.TabIndex = 26;
             // 
             // CalendarPopup
             // 
@@ -191,6 +213,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 641);
+            Controls.Add(labelFullDateDisplay);
+            Controls.Add(richTextBoxDayDescription);
             Controls.Add(roundedButtonBackToMusician);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -228,5 +252,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Controls.RoundedButton roundedButtonBackToMusician;
+        private RichTextBox richTextBoxDayDescription;
+        private Label labelFullDateDisplay;
     }
 }

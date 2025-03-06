@@ -12,7 +12,9 @@ namespace Eat_Beat.Forms
 {
     public partial class ucDay : UserControl
     {
-        string _day, date, weekday;
+        public string _day;
+        string date, weekday;
+
         private CalendarPopup _parentForm;
 
         public ucDay(string day, CalendarPopup parentForm)
@@ -22,6 +24,7 @@ namespace Eat_Beat.Forms
             _parentForm = parentForm;
             labelDay.Text = day;
             checkBox1.Hide();
+            pictureBoxTasksInDay.Hide();
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -29,6 +32,7 @@ namespace Eat_Beat.Forms
             _parentForm.SetSelectedUcDay(this); // Notify parent form about the selection
             SelectUcDay();
         }
+
         public void SelectUcDay()
         {
             checkBox1.Checked = true;

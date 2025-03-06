@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDay));
             panel1 = new Panel();
+            pictureBoxTasksInDay = new PictureBox();
             checkBox1 = new CheckBox();
             labelDay = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTasksInDay).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(pictureBoxTasksInDay);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(labelDay);
             panel1.Dock = DockStyle.Fill;
@@ -45,6 +49,16 @@
             panel1.Size = new Size(103, 82);
             panel1.TabIndex = 0;
             panel1.Click += panel1_Click;
+            // 
+            // pictureBoxTasksInDay
+            // 
+            pictureBoxTasksInDay.Image = (Image)resources.GetObject("pictureBoxTasksInDay.Image");
+            pictureBoxTasksInDay.Location = new Point(46, 60);
+            pictureBoxTasksInDay.Name = "pictureBoxTasksInDay";
+            pictureBoxTasksInDay.Size = new Size(10, 10);
+            pictureBoxTasksInDay.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBoxTasksInDay.TabIndex = 3;
+            pictureBoxTasksInDay.TabStop = false;
             // 
             // checkBox1
             // 
@@ -78,6 +92,7 @@
             Load += ucDay_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTasksInDay).EndInit();
             ResumeLayout(false);
         }
 
@@ -86,5 +101,6 @@
         private Panel panel1;
         private Label labelDay;
         private CheckBox checkBox1;
+        private PictureBox pictureBoxTasksInDay;
     }
 }
