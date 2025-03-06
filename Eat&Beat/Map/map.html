@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapa con Mapbox</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaXZhbmZsb2wiLCJhIjoiY203bnBzNnM0MDNrajJtc2xhdDZod2w0NyJ9.oHnjBUX7mK8R9CVgVdAKpA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [2.17328, 41.38868], // Coordenadas iniciales
+            zoom: 12
+        });
+
+        // Variable global para almacenar el marcador
+        var currentMarker = null;
+
+        // Detectar clics en el mapa
+        map.on('click', function (e) {
+            var latitude = e.lngLat.lat;  // Latitud
+            var longitude = e.lngLat.lng;  // Longitud
+
+            // Si ya existe un marcador, elim�nalo
+            if (currentMarker) {
+                currentMarker.remove();
+            }
+
+            // Crear un nuevo marcador y agregarlo al mapa
+            currentMarker = new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
+
+            // Enviar coordenadas a C#
+            if (window.chrome && window.chrome.webview) {
+                // Aseg�rate de que el JSON est� bien formado
+                var message = { latitude: latitude, longitude: longitude };
+                window.chrome.webview.postMessage(message);  // Usa las coordenadas correctamente
+            }
+        });
+
+    </script>
+</body>
+</html>

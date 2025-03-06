@@ -31,10 +31,10 @@
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
-            roundedButtonDelete = new Controls.RoundedButton();
-            roundedButtonEdit = new Controls.RoundedButton();
+            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             roundedButtonOpen.FlatStyle = FlatStyle.Flat;
             roundedButtonOpen.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpen.Location = new Point(660, 12);
+            roundedButtonOpen.Location = new Point(655, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
             roundedButtonOpen.TabIndex = 4;
@@ -93,7 +93,7 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(904, 12);
+            roundedButtonCreate.Location = new Point(892, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
             roundedButtonCreate.TabIndex = 5;
@@ -122,7 +122,7 @@
             roundedButtonEdit.FlatStyle = FlatStyle.Flat;
             roundedButtonEdit.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonEdit.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonEdit.Location = new Point(777, 12);
+            roundedButtonEdit.Location = new Point(773, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
             roundedButtonEdit.TabIndex = 6;
