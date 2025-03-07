@@ -34,11 +34,12 @@
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Dock = DockStyle.Fill;
+            textBox1.Dock = DockStyle.Top;
             textBox1.Location = new Point(7, 10);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(236, 16);
             textBox1.TabIndex = 0;
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // RoundedTextBox
             // 
@@ -49,7 +50,7 @@
             Margin = new Padding(4);
             Name = "RoundedTextBox";
             Padding = new Padding(7, 10, 7, 10);
-            Size = new Size(250, 20);
+            Size = new Size(250, 30);
             ResumeLayout(false);
             PerformLayout();
         }

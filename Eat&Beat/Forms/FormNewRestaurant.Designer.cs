@@ -28,62 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelMusicians = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             labelRestaurants = new Label();
-            textBoxName = new TextBox();
-            textBoxEmail = new TextBox();
-            textBoxPassword = new TextBox();
-            textBoxConfirmPassword = new TextBox();
-            roundedButtonCancel = new Controls.RoundedButton();
-            roundedButtonContinue = new Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
+            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
+            labelConfPassword = new Label();
+            labelPassword = new Label();
+            labelEmail = new Label();
+            labelName = new Label();
             SuspendLayout();
-            // 
-            // labelMusicians
-            // 
-            labelMusicians.AutoSize = true;
-            labelMusicians.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelMusicians.ForeColor = Color.FromArgb(239, 230, 220);
-            labelMusicians.Location = new Point(88, 108);
-            labelMusicians.Name = "labelMusicians";
-            labelMusicians.Size = new Size(84, 24);
-            labelMusicians.TabIndex = 3;
-            labelMusicians.Text = "Nombre:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(239, 230, 220);
-            label1.Location = new Point(88, 151);
-            label1.Name = "label1";
-            label1.Size = new Size(173, 24);
-            label1.TabIndex = 4;
-            label1.Text = "Correo Electronico:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(239, 230, 220);
-            label2.Location = new Point(88, 196);
-            label2.Name = "label2";
-            label2.Size = new Size(111, 24);
-            label2.TabIndex = 5;
-            label2.Text = "Contraseña:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(239, 230, 220);
-            label3.Location = new Point(88, 243);
-            label3.Name = "label3";
-            label3.Size = new Size(197, 24);
-            label3.TabIndex = 6;
-            label3.Text = "Confirmar Contraseña:";
             // 
             // labelRestaurants
             // 
@@ -95,38 +51,6 @@
             labelRestaurants.Size = new Size(406, 37);
             labelRestaurants.TabIndex = 7;
             labelRestaurants.Text = "NUEVO RESTAURANTE:";
-            // 
-            // textBoxName
-            // 
-            textBoxName.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxName.Location = new Point(301, 113);
-            textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(483, 23);
-            textBoxName.TabIndex = 8;
-            // 
-            // textBoxEmail
-            // 
-            textBoxEmail.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxEmail.Location = new Point(301, 152);
-            textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(483, 23);
-            textBoxEmail.TabIndex = 9;
-            // 
-            // textBoxPassword
-            // 
-            textBoxPassword.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxPassword.Location = new Point(301, 197);
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(483, 23);
-            textBoxPassword.TabIndex = 10;
-            // 
-            // textBoxConfirmPassword
-            // 
-            textBoxConfirmPassword.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxConfirmPassword.Location = new Point(301, 244);
-            textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            textBoxConfirmPassword.Size = new Size(483, 23);
-            textBoxConfirmPassword.TabIndex = 11;
             // 
             // roundedButtonCancel
             // 
@@ -158,23 +82,151 @@
             roundedButtonContinue.UseVisualStyleBackColor = false;
             roundedButtonContinue.Click += roundedButtonContinue_Click;
             // 
+            // roundedTextBoxConfPassword
+            // 
+            roundedTextBoxConfPassword.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxConfPassword.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxConfPassword.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxConfPassword.BorderRadius = 10;
+            roundedTextBoxConfPassword.BorderSize = 2;
+            roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 8F);
+            roundedTextBoxConfPassword.Location = new Point(280, 245);
+            roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxConfPassword.Multiline = false;
+            roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
+            roundedTextBoxConfPassword.Padding = new Padding(6, 9, 6, 9);
+            roundedTextBoxConfPassword.PasswordChar = false;
+            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxConfPassword.PlaceholderText = "";
+            roundedTextBoxConfPassword.Size = new Size(483, 33);
+            roundedTextBoxConfPassword.TabIndex = 65;
+            roundedTextBoxConfPassword.Texts = "";
+            roundedTextBoxConfPassword.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxPassword
+            // 
+            roundedTextBoxPassword.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxPassword.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPassword.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPassword.BorderRadius = 10;
+            roundedTextBoxPassword.BorderSize = 2;
+            roundedTextBoxPassword.Font = new Font("Barlow Medium", 8F);
+            roundedTextBoxPassword.Location = new Point(280, 201);
+            roundedTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxPassword.Multiline = false;
+            roundedTextBoxPassword.Name = "roundedTextBoxPassword";
+            roundedTextBoxPassword.Padding = new Padding(6, 9, 6, 9);
+            roundedTextBoxPassword.PasswordChar = false;
+            roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPassword.PlaceholderText = "";
+            roundedTextBoxPassword.Size = new Size(483, 33);
+            roundedTextBoxPassword.TabIndex = 64;
+            roundedTextBoxPassword.Texts = "";
+            roundedTextBoxPassword.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxEmail
+            // 
+            roundedTextBoxEmail.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxEmail.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxEmail.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxEmail.BorderRadius = 10;
+            roundedTextBoxEmail.BorderSize = 2;
+            roundedTextBoxEmail.Font = new Font("Barlow Medium", 8F);
+            roundedTextBoxEmail.Location = new Point(280, 156);
+            roundedTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxEmail.Multiline = false;
+            roundedTextBoxEmail.Name = "roundedTextBoxEmail";
+            roundedTextBoxEmail.Padding = new Padding(6, 9, 6, 9);
+            roundedTextBoxEmail.PasswordChar = false;
+            roundedTextBoxEmail.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxEmail.PlaceholderText = "";
+            roundedTextBoxEmail.Size = new Size(483, 33);
+            roundedTextBoxEmail.TabIndex = 63;
+            roundedTextBoxEmail.Texts = "";
+            roundedTextBoxEmail.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxName
+            // 
+            roundedTextBoxName.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxName.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxName.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxName.BorderRadius = 10;
+            roundedTextBoxName.BorderSize = 2;
+            roundedTextBoxName.Font = new Font("Barlow Medium", 8F);
+            roundedTextBoxName.Location = new Point(280, 112);
+            roundedTextBoxName.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxName.Multiline = false;
+            roundedTextBoxName.Name = "roundedTextBoxName";
+            roundedTextBoxName.Padding = new Padding(6, 9, 6, 9);
+            roundedTextBoxName.PasswordChar = false;
+            roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxName.PlaceholderText = "";
+            roundedTextBoxName.Size = new Size(483, 33);
+            roundedTextBoxName.TabIndex = 62;
+            roundedTextBoxName.Texts = "";
+            roundedTextBoxName.UnderlinedStyle = false;
+            // 
+            // labelConfPassword
+            // 
+            labelConfPassword.AutoSize = true;
+            labelConfPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
+            labelConfPassword.Location = new Point(67, 248);
+            labelConfPassword.Name = "labelConfPassword";
+            labelConfPassword.Size = new Size(202, 24);
+            labelConfPassword.TabIndex = 61;
+            labelConfPassword.Text = "Confirmar Contraseña:";
+            // 
+            // labelPassword
+            // 
+            labelPassword.AutoSize = true;
+            labelPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPassword.ForeColor = Color.FromArgb(239, 230, 220);
+            labelPassword.Location = new Point(67, 201);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(113, 24);
+            labelPassword.TabIndex = 60;
+            labelPassword.Text = "Contraseña:";
+            // 
+            // labelEmail
+            // 
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEmail.ForeColor = Color.FromArgb(239, 230, 220);
+            labelEmail.Location = new Point(67, 156);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(176, 24);
+            labelEmail.TabIndex = 59;
+            labelEmail.Text = "Correo Electronico:";
+            // 
+            // labelName
+            // 
+            labelName.AutoSize = true;
+            labelName.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelName.ForeColor = Color.FromArgb(239, 230, 220);
+            labelName.Location = new Point(67, 113);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(84, 24);
+            labelName.TabIndex = 58;
+            labelName.Text = "Nombre:";
+            // 
             // FormNewRestaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(915, 415);
+            Controls.Add(roundedTextBoxConfPassword);
+            Controls.Add(roundedTextBoxPassword);
+            Controls.Add(roundedTextBoxEmail);
+            Controls.Add(roundedTextBoxName);
+            Controls.Add(labelConfPassword);
+            Controls.Add(labelPassword);
+            Controls.Add(labelEmail);
+            Controls.Add(labelName);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(textBoxConfirmPassword);
-            Controls.Add(textBoxPassword);
-            Controls.Add(textBoxEmail);
-            Controls.Add(textBoxName);
             Controls.Add(labelRestaurants);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(labelMusicians);
             Name = "FormNewRestaurant";
             Text = "NewRestaurant";
             ResumeLayout(false);
@@ -182,17 +234,16 @@
         }
 
         #endregion
-
-        private Label labelMusicians;
-        private Label label1;
-        private Label label2;
-        private Label label3;
         private Label labelRestaurants;
-        private TextBox textBoxName;
-        private TextBox textBoxEmail;
-        private TextBox textBoxPassword;
-        private TextBox textBoxConfirmPassword;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedButton roundedButtonContinue;
+        private Controls.RoundedTextBox roundedTextBoxConfPassword;
+        private Controls.RoundedTextBox roundedTextBoxPassword;
+        private Controls.RoundedTextBox roundedTextBoxEmail;
+        private Controls.RoundedTextBox roundedTextBoxName;
+        private Label labelConfPassword;
+        private Label labelPassword;
+        private Label labelEmail;
+        private Label labelName;
     }
 }

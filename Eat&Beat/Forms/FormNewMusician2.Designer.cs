@@ -31,8 +31,7 @@
             webView2MapBox = new Microsoft.Web.WebView2.WinForms.WebView2();
             roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            roundedTextBox2 = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBox1 = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxLongitut = new Eat_Beat.Controls.RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
             // 
@@ -75,45 +74,25 @@
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
             // 
-            // roundedTextBox2
+            // roundedTextBoxLongitut
             // 
-            roundedTextBox2.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBox2.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBox2.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox2.BorderRadius = 10;
-            roundedTextBox2.BorderSize = 2;
-            roundedTextBox2.Location = new Point(13, 26);
-            roundedTextBox2.Margin = new Padding(4);
-            roundedTextBox2.Multiline = false;
-            roundedTextBox2.Name = "roundedTextBox2";
-            roundedTextBox2.Padding = new Padding(7, 10, 7, 10);
-            roundedTextBox2.PasswordChar = false;
-            roundedTextBox2.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox2.PlaceholderText = "";
-            roundedTextBox2.Size = new Size(318, 36);
-            roundedTextBox2.TabIndex = 11;
-            roundedTextBox2.Texts = "";
-            roundedTextBox2.UnderlinedStyle = false;
-            // 
-            // roundedTextBox1
-            // 
-            roundedTextBox1.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBox1.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBox1.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox1.BorderRadius = 18;
-            roundedTextBox1.BorderSize = 2;
-            roundedTextBox1.Location = new Point(339, 26);
-            roundedTextBox1.Margin = new Padding(4);
-            roundedTextBox1.Multiline = false;
-            roundedTextBox1.Name = "roundedTextBox1";
-            roundedTextBox1.Padding = new Padding(7, 10, 7, 10);
-            roundedTextBox1.PasswordChar = false;
-            roundedTextBox1.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox1.PlaceholderText = "";
-            roundedTextBox1.Size = new Size(250, 36);
-            roundedTextBox1.TabIndex = 12;
-            roundedTextBox1.Texts = "";
-            roundedTextBox1.UnderlinedStyle = false;
+            roundedTextBoxLongitut.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxLongitut.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxLongitut.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLongitut.BorderRadius = 10;
+            roundedTextBoxLongitut.BorderSize = 2;
+            roundedTextBoxLongitut.Location = new Point(187, 28);
+            roundedTextBoxLongitut.Margin = new Padding(4);
+            roundedTextBoxLongitut.Multiline = false;
+            roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
+            roundedTextBoxLongitut.Padding = new Padding(7, 10, 7, 10);
+            roundedTextBoxLongitut.PasswordChar = false;
+            roundedTextBoxLongitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLongitut.PlaceholderText = "";
+            roundedTextBoxLongitut.Size = new Size(279, 36);
+            roundedTextBoxLongitut.TabIndex = 12;
+            roundedTextBoxLongitut.Texts = "";
+            roundedTextBoxLongitut.UnderlinedStyle = false;
             // 
             // FormNewMusician2
             // 
@@ -121,8 +100,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
-            Controls.Add(roundedTextBox1);
-            Controls.Add(roundedTextBox2);
+            Controls.Add(roundedTextBoxLongitut);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
             Controls.Add(webView2MapBox);
@@ -138,6 +116,7 @@
         private Controls.RoundedButton roundedButtonContinue;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedTextBox roundedTextBox2;
-        private Controls.RoundedTextBox roundedTextBox1;
+        private Controls.RoundedTextBox roundedTextBoxLongitut;
+        private Controls.RoundedTextBox roundedTextBox3;
     }
 }
