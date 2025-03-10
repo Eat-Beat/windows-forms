@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOpenMusician));
-            roundedButtonBack = new Controls.RoundedButton();
+            roundedButtonBack = new Eat_Beat.Controls.RoundedButton();
             pictureBoxMainProfile = new PictureBox();
             labelMusicianName = new Label();
             richTextBoxDescription = new RichTextBox();
-            roundedButtonOpenCalendar = new Controls.RoundedButton();
+            roundedButtonOpenCalendar = new Eat_Beat.Controls.RoundedButton();
             flowLayoutPanelImages = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainProfile).BeginInit();
             SuspendLayout();
@@ -65,7 +65,7 @@
             labelMusicianName.AutoSize = true;
             labelMusicianName.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelMusicianName.ForeColor = Color.FromArgb(239, 230, 220);
-            labelMusicianName.Location = new Point(232, 12);
+            labelMusicianName.Location = new Point(232, 15);
             labelMusicianName.Name = "labelMusicianName";
             labelMusicianName.Size = new Size(247, 40);
             labelMusicianName.TabIndex = 19;
