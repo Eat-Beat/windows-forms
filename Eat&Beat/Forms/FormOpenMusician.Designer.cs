@@ -80,7 +80,7 @@
             richTextBoxDescription.BorderStyle = BorderStyle.None;
             richTextBoxDescription.Font = new Font("Barlow Medium", 9F);
             richTextBoxDescription.ForeColor = Color.FromArgb(239, 230, 220);
-            richTextBoxDescription.Location = new Point(232, 90);
+            richTextBoxDescription.Location = new Point(232, 109);
             richTextBoxDescription.Name = "richTextBoxDescription";
             richTextBoxDescription.Size = new Size(485, 114);
             richTextBoxDescription.TabIndex = 22;
