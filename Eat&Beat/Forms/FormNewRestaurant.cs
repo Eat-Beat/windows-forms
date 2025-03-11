@@ -28,5 +28,10 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormNewRestaurant2", false);
         }
+
+        private void roundedTextBoxEmail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

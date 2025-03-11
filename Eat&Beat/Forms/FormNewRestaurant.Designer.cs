@@ -134,6 +134,7 @@
             roundedTextBoxPassword.BorderRadius = 10;
             roundedTextBoxPassword.BorderSize = 2;
             roundedTextBoxPassword.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxPassword.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxPassword.Location = new Point(283, 205);
             roundedTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxPassword.Multiline = false;
@@ -155,6 +156,7 @@
             roundedTextBoxConfPassword.BorderRadius = 10;
             roundedTextBoxConfPassword.BorderSize = 2;
             roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxConfPassword.Location = new Point(283, 253);
             roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxConfPassword.Multiline = false;
@@ -176,6 +178,7 @@
             roundedTextBox1.BorderRadius = 10;
             roundedTextBox1.BorderSize = 2;
             roundedTextBox1.Font = new Font("Barlow Medium", 12F);
+            roundedTextBox1.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBox1.Location = new Point(283, 110);
             roundedTextBox1.Margin = new Padding(3, 4, 3, 4);
             roundedTextBox1.Multiline = false;
@@ -197,6 +200,7 @@
             roundedTextBoxEmail.BorderRadius = 10;
             roundedTextBoxEmail.BorderSize = 2;
             roundedTextBoxEmail.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxEmail.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxEmail.Location = new Point(283, 158);
             roundedTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxEmail.Multiline = false;
@@ -209,6 +213,7 @@
             roundedTextBoxEmail.TabIndex = 63;
             roundedTextBoxEmail.Texts = "";
             roundedTextBoxEmail.UnderlinedStyle = false;
+            roundedTextBoxEmail.Load += roundedTextBoxEmail_Load;
             // 
             // FormNewRestaurant
             // 

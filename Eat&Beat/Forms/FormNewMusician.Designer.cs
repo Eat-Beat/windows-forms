@@ -134,6 +134,7 @@
             roundedTextBoxPassword.BorderRadius = 10;
             roundedTextBoxPassword.BorderSize = 2;
             roundedTextBoxPassword.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxPassword.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxPassword.Location = new Point(274, 202);
             roundedTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxPassword.Multiline = false;
@@ -156,6 +157,7 @@
             roundedTextBoxConfPassword.BorderRadius = 10;
             roundedTextBoxConfPassword.BorderSize = 2;
             roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxConfPassword.Location = new Point(274, 250);
             roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxConfPassword.Multiline = false;
@@ -168,7 +170,6 @@
             roundedTextBoxConfPassword.TabIndex = 57;
             roundedTextBoxConfPassword.Texts = "";
             roundedTextBoxConfPassword.UnderlinedStyle = false;
-            roundedTextBoxConfPassword.Load += this.roundedTextBoxConfPassword_Load;
             // 
             // roundedTextBoxName
             // 
@@ -178,6 +179,7 @@
             roundedTextBoxName.BorderRadius = 10;
             roundedTextBoxName.BorderSize = 2;
             roundedTextBoxName.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxName.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxName.Location = new Point(274, 107);
             roundedTextBoxName.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxName.Multiline = false;
@@ -199,6 +201,7 @@
             roundedTextBoxEmail.BorderRadius = 10;
             roundedTextBoxEmail.BorderSize = 2;
             roundedTextBoxEmail.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxEmail.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxEmail.Location = new Point(274, 155);
             roundedTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxEmail.Multiline = false;
@@ -211,7 +214,6 @@
             roundedTextBoxEmail.TabIndex = 55;
             roundedTextBoxEmail.Texts = "";
             roundedTextBoxEmail.UnderlinedStyle = false;
-            roundedTextBoxEmail.Load += this.roundedTextBoxEmail_Load;
             // 
             // FormNewMusician
             // 

@@ -79,7 +79,7 @@
             labelRestaurants.AutoSize = true;
             labelRestaurants.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(272, 24);
+            labelRestaurants.Location = new Point(272, 18);
             labelRestaurants.Name = "labelRestaurants";
             labelRestaurants.Size = new Size(317, 40);
             labelRestaurants.TabIndex = 18;
@@ -90,7 +90,7 @@
             labelPassword.AutoSize = true;
             labelPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelPassword.Location = new Point(59, 176);
+            labelPassword.Location = new Point(58, 169);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(113, 24);
             labelPassword.TabIndex = 16;
@@ -101,7 +101,7 @@
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEmail.ForeColor = Color.FromArgb(239, 230, 220);
-            labelEmail.Location = new Point(59, 131);
+            labelEmail.Location = new Point(58, 124);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(176, 24);
             labelEmail.TabIndex = 15;
@@ -112,7 +112,7 @@
             labelConfPassword.AutoSize = true;
             labelConfPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelConfPassword.Location = new Point(59, 225);
+            labelConfPassword.Location = new Point(58, 218);
             labelConfPassword.Name = "labelConfPassword";
             labelConfPassword.Size = new Size(202, 24);
             labelConfPassword.TabIndex = 17;
@@ -123,7 +123,7 @@
             labelName.AutoSize = true;
             labelName.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelName.ForeColor = Color.FromArgb(239, 230, 220);
-            labelName.Location = new Point(59, 83);
+            labelName.Location = new Point(58, 76);
             labelName.Name = "labelName";
             labelName.Size = new Size(84, 24);
             labelName.TabIndex = 14;
@@ -134,7 +134,7 @@
             labelNumAddress.AutoSize = true;
             labelNumAddress.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelNumAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            labelNumAddress.Location = new Point(59, 318);
+            labelNumAddress.Location = new Point(58, 311);
             labelNumAddress.Name = "labelNumAddress";
             labelNumAddress.Size = new Size(145, 24);
             labelNumAddress.TabIndex = 26;
@@ -145,7 +145,7 @@
             labelAddress.AutoSize = true;
             labelAddress.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            labelAddress.Location = new Point(59, 271);
+            labelAddress.Location = new Point(58, 264);
             labelAddress.Name = "labelAddress";
             labelAddress.Size = new Size(97, 24);
             labelAddress.TabIndex = 25;
@@ -159,7 +159,8 @@
             roundedTextBoxEmail.BorderRadius = 10;
             roundedTextBoxEmail.BorderSize = 2;
             roundedTextBoxEmail.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxEmail.Location = new Point(272, 125);
+            roundedTextBoxEmail.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxEmail.Location = new Point(272, 121);
             roundedTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxEmail.Multiline = false;
             roundedTextBoxEmail.Name = "roundedTextBoxEmail";
@@ -180,7 +181,8 @@
             roundedTextBoxName.BorderRadius = 10;
             roundedTextBoxName.BorderSize = 2;
             roundedTextBoxName.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxName.Location = new Point(272, 77);
+            roundedTextBoxName.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxName.Location = new Point(272, 73);
             roundedTextBoxName.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxName.Multiline = false;
             roundedTextBoxName.Name = "roundedTextBoxName";
@@ -201,7 +203,8 @@
             roundedTextBoxPassword.BorderRadius = 10;
             roundedTextBoxPassword.BorderSize = 2;
             roundedTextBoxPassword.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxPassword.Location = new Point(272, 172);
+            roundedTextBoxPassword.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPassword.Location = new Point(272, 168);
             roundedTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxPassword.Multiline = false;
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
@@ -222,7 +225,8 @@
             roundedTextBoxConfPassword.BorderRadius = 10;
             roundedTextBoxConfPassword.BorderSize = 2;
             roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxConfPassword.Location = new Point(272, 220);
+            roundedTextBoxConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxConfPassword.Location = new Point(272, 216);
             roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxConfPassword.Multiline = false;
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
@@ -243,7 +247,8 @@
             roundedTextBoxAddress.BorderRadius = 10;
             roundedTextBoxAddress.BorderSize = 2;
             roundedTextBoxAddress.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxAddress.Location = new Point(272, 266);
+            roundedTextBoxAddress.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxAddress.Location = new Point(272, 262);
             roundedTextBoxAddress.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxAddress.Multiline = false;
             roundedTextBoxAddress.Name = "roundedTextBoxAddress";
@@ -264,7 +269,8 @@
             roundedTextBoxNumAddress.BorderRadius = 10;
             roundedTextBoxNumAddress.BorderSize = 2;
             roundedTextBoxNumAddress.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxNumAddress.Location = new Point(272, 314);
+            roundedTextBoxNumAddress.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxNumAddress.Location = new Point(272, 310);
             roundedTextBoxNumAddress.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxNumAddress.Multiline = false;
             roundedTextBoxNumAddress.Name = "roundedTextBoxNumAddress";

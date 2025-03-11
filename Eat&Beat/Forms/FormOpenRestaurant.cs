@@ -18,7 +18,7 @@ namespace Eat_Beat.Forms
         public FormOpenRestaurant(FormLogin formLogin)
         {
             this.formLogin = formLogin;
-            InitializeComponent();    
+            InitializeComponent();
             InitializeWebView();
         }
 
@@ -53,6 +53,11 @@ namespace Eat_Beat.Forms
         {
             public string latitude { get; set; }
             public string longitude { get; set; }
+        }
+
+        private void roundedButtonBack_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
     }
 }

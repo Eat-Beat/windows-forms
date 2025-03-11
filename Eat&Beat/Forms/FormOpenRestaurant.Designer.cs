@@ -32,6 +32,8 @@
             pictureBoxMainProfile = new PictureBox();
             labelAddress = new Label();
             webView2MapBox = new Microsoft.Web.WebView2.WinForms.WebView2();
+            roundedButtonOpenCalendar = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonBack = new Eat_Beat.Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainProfile).BeginInit();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
@@ -77,18 +79,49 @@
             webView2MapBox.TabIndex = 23;
             webView2MapBox.ZoomFactor = 1D;
             // 
+            // roundedButtonOpenCalendar
+            // 
+            roundedButtonOpenCalendar.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonOpenCalendar.FlatAppearance.BorderSize = 0;
+            roundedButtonOpenCalendar.FlatStyle = FlatStyle.Flat;
+            roundedButtonOpenCalendar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonOpenCalendar.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonOpenCalendar.Location = new Point(804, 12);
+            roundedButtonOpenCalendar.Name = "roundedButtonOpenCalendar";
+            roundedButtonOpenCalendar.Size = new Size(143, 45);
+            roundedButtonOpenCalendar.TabIndex = 25;
+            roundedButtonOpenCalendar.Text = "Abrir Calendario";
+            roundedButtonOpenCalendar.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonBack
+            // 
+            roundedButtonBack.BackColor = Color.FromArgb(252, 158, 79);
+            roundedButtonBack.FlatAppearance.BorderSize = 0;
+            roundedButtonBack.FlatStyle = FlatStyle.Flat;
+            roundedButtonBack.Font = new Font("Barlow Medium", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonBack.ForeColor = Color.FromArgb(32, 32, 31);
+            roundedButtonBack.Location = new Point(973, 13);
+            roundedButtonBack.Name = "roundedButtonBack";
+            roundedButtonBack.Size = new Size(115, 45);
+            roundedButtonBack.TabIndex = 24;
+            roundedButtonBack.Text = "Atras";
+            roundedButtonBack.UseVisualStyleBackColor = false;
+            roundedButtonBack.Click += roundedButtonBack_Click;
+            // 
             // FormOpenRestaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
+            Controls.Add(roundedButtonOpenCalendar);
+            Controls.Add(roundedButtonBack);
             Controls.Add(webView2MapBox);
             Controls.Add(labelAddress);
             Controls.Add(labelRestaurantName);
             Controls.Add(pictureBoxMainProfile);
             Name = "FormOpenRestaurant";
-            Text = "FormOpenRestaurant";
+            Text = "OpenRestaurant";
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainProfile).EndInit();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).EndInit();
             ResumeLayout(false);
@@ -101,5 +134,7 @@
         private PictureBox pictureBoxMainProfile;
         private Label labelAddress;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView2MapBox;
+        private Controls.RoundedButton roundedButtonOpenCalendar;
+        private Controls.RoundedButton roundedButtonBack;
     }
 }

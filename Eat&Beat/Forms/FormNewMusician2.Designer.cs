@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             webView2MapBox = new Microsoft.Web.WebView2.WinForms.WebView2();
-
-             roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
             labelLongitut = new Label();
             labelLatitut = new Label();
@@ -38,7 +37,6 @@
             roundedTextBoxLongitut = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxLatitut = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxRangeKm = new Eat_Beat.Controls.RoundedTextBox();
-
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
             // 
@@ -124,6 +122,7 @@
             roundedTextBoxLongitut.BorderRadius = 10;
             roundedTextBoxLongitut.BorderSize = 2;
             roundedTextBoxLongitut.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxLongitut.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxLongitut.Location = new Point(116, 27);
             roundedTextBoxLongitut.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxLongitut.Multiline = false;
@@ -145,6 +144,7 @@
             roundedTextBoxLatitut.BorderRadius = 10;
             roundedTextBoxLatitut.BorderSize = 2;
             roundedTextBoxLatitut.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxLatitut.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxLatitut.Location = new Point(525, 27);
             roundedTextBoxLatitut.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxLatitut.Multiline = false;
@@ -166,6 +166,7 @@
             roundedTextBoxRangeKm.BorderRadius = 10;
             roundedTextBoxRangeKm.BorderSize = 2;
             roundedTextBoxRangeKm.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxRangeKm.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxRangeKm.Location = new Point(950, 27);
             roundedTextBoxRangeKm.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxRangeKm.Multiline = false;
@@ -195,7 +196,7 @@
             Controls.Add(roundedButtonCancel);
             Controls.Add(webView2MapBox);
             Name = "FormNewMusician2";
-            Text = "FormNewMusician2";
+            Text = "NewMusician2";
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

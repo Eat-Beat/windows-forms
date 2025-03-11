@@ -120,6 +120,7 @@
             roundedTextBoxAddress.BorderRadius = 10;
             roundedTextBoxAddress.BorderSize = 2;
             roundedTextBoxAddress.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxAddress.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxAddress.Location = new Point(279, 140);
             roundedTextBoxAddress.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxAddress.Multiline = false;
@@ -141,6 +142,7 @@
             roundedTextBoxNum.BorderRadius = 10;
             roundedTextBoxNum.BorderSize = 2;
             roundedTextBoxNum.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxNum.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxNum.Location = new Point(279, 188);
             roundedTextBoxNum.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxNum.Multiline = false;
@@ -162,6 +164,7 @@
             roundedTextBoxPostalCode.BorderRadius = 10;
             roundedTextBoxPostalCode.BorderSize = 2;
             roundedTextBoxPostalCode.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxPostalCode.ForeColor = Color.FromArgb(239, 230, 220);
             roundedTextBoxPostalCode.Location = new Point(279, 235);
             roundedTextBoxPostalCode.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxPostalCode.Multiline = false;
@@ -191,7 +194,7 @@
             Controls.Add(roundedButtonCancel);
             Controls.Add(labelRestaurants);
             Name = "FormNewRestaurant2";
-            Text = "NewRestaurant";
+            Text = "NewRestaurant2";
             ResumeLayout(false);
             PerformLayout();
         }

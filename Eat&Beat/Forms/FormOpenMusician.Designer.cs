@@ -68,9 +68,7 @@
             labelMusicianName.AutoSize = true;
             labelMusicianName.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelMusicianName.ForeColor = Color.FromArgb(239, 230, 220);
-
             labelMusicianName.Location = new Point(232, 15);
-
             labelMusicianName.Name = "labelMusicianName";
             labelMusicianName.Size = new Size(247, 40);
             labelMusicianName.TabIndex = 19;
@@ -138,7 +136,7 @@
             Controls.Add(pictureBoxMainProfile);
             Controls.Add(roundedButtonBack);
             Name = "FormOpenMusician";
-            Text = "FormRestaurantsUsers";
+            Text = "OpenMusician";
             Load += FormOpenMusician_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainProfile).EndInit();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).EndInit();
