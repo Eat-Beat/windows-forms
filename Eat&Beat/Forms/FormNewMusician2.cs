@@ -22,6 +22,7 @@ namespace Eat_Beat.Forms
             this.formLogin = formLogin;
             InitializeWebView();
 
+
         }
 
         private async void InitializeWebView()
