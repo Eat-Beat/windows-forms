@@ -26,7 +26,7 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonContinue_Click(object sender, EventArgs e)
         {
-
+            formLogin.LoadFormIntoPanel("FormNewMusician2", true);
         }
 
         private void roundedTextBoxPassword_Load(object sender, EventArgs e)
