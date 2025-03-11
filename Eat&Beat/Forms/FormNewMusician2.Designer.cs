@@ -31,11 +31,11 @@
             webView2MapBox = new Microsoft.Web.WebView2.WinForms.WebView2();
             roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            roundedTextBoxLongitut = new Eat_Beat.Controls.RoundedTextBox();
             labelLongitut = new Label();
             labelLatitut = new Label();
-            roundedTextBoxLatitut = new Eat_Beat.Controls.RoundedTextBox();
             labelRangeKm = new Label();
+            roundedTextBoxLongitut = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxLatitut = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxRangeKm = new Eat_Beat.Controls.RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
@@ -79,26 +79,6 @@
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
             // 
-            // roundedTextBoxLongitut
-            // 
-            roundedTextBoxLongitut.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBoxLongitut.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxLongitut.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLongitut.BorderRadius = 10;
-            roundedTextBoxLongitut.BorderSize = 2;
-            roundedTextBoxLongitut.Location = new Point(117, 27);
-            roundedTextBoxLongitut.Margin = new Padding(4);
-            roundedTextBoxLongitut.Multiline = false;
-            roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
-            roundedTextBoxLongitut.Padding = new Padding(7, 10, 7, 10);
-            roundedTextBoxLongitut.PasswordChar = false;
-            roundedTextBoxLongitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLongitut.PlaceholderText = "";
-            roundedTextBoxLongitut.Size = new Size(279, 36);
-            roundedTextBoxLongitut.TabIndex = 12;
-            roundedTextBoxLongitut.Texts = "";
-            roundedTextBoxLongitut.UnderlinedStyle = false;
-            // 
             // labelLongitut
             // 
             labelLongitut.AutoSize = true;
@@ -121,26 +101,6 @@
             labelLatitut.TabIndex = 53;
             labelLatitut.Text = "Latitud:";
             // 
-            // roundedTextBoxLatitut
-            // 
-            roundedTextBoxLatitut.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBoxLatitut.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxLatitut.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLatitut.BorderRadius = 10;
-            roundedTextBoxLatitut.BorderSize = 2;
-            roundedTextBoxLatitut.Location = new Point(526, 27);
-            roundedTextBoxLatitut.Margin = new Padding(4);
-            roundedTextBoxLatitut.Multiline = false;
-            roundedTextBoxLatitut.Name = "roundedTextBoxLatitut";
-            roundedTextBoxLatitut.Padding = new Padding(7, 10, 7, 10);
-            roundedTextBoxLatitut.PasswordChar = false;
-            roundedTextBoxLatitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLatitut.PlaceholderText = "";
-            roundedTextBoxLatitut.Size = new Size(279, 36);
-            roundedTextBoxLatitut.TabIndex = 52;
-            roundedTextBoxLatitut.Texts = "";
-            roundedTextBoxLatitut.UnderlinedStyle = false;
-            // 
             // labelRangeKm
             // 
             labelRangeKm.AutoSize = true;
@@ -152,6 +112,48 @@
             labelRangeKm.TabIndex = 55;
             labelRangeKm.Text = "Rango KM:";
             // 
+            // roundedTextBoxLongitut
+            // 
+            roundedTextBoxLongitut.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxLongitut.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxLongitut.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLongitut.BorderRadius = 10;
+            roundedTextBoxLongitut.BorderSize = 2;
+            roundedTextBoxLongitut.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxLongitut.Location = new Point(116, 27);
+            roundedTextBoxLongitut.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxLongitut.Multiline = false;
+            roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
+            roundedTextBoxLongitut.Padding = new Padding(8);
+            roundedTextBoxLongitut.PasswordChar = false;
+            roundedTextBoxLongitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLongitut.PlaceholderText = "";
+            roundedTextBoxLongitut.Size = new Size(307, 37);
+            roundedTextBoxLongitut.TabIndex = 57;
+            roundedTextBoxLongitut.Texts = "";
+            roundedTextBoxLongitut.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxLatitut
+            // 
+            roundedTextBoxLatitut.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxLatitut.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxLatitut.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLatitut.BorderRadius = 10;
+            roundedTextBoxLatitut.BorderSize = 2;
+            roundedTextBoxLatitut.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxLatitut.Location = new Point(525, 27);
+            roundedTextBoxLatitut.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxLatitut.Multiline = false;
+            roundedTextBoxLatitut.Name = "roundedTextBoxLatitut";
+            roundedTextBoxLatitut.Padding = new Padding(8);
+            roundedTextBoxLatitut.PasswordChar = false;
+            roundedTextBoxLatitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLatitut.PlaceholderText = "";
+            roundedTextBoxLatitut.Size = new Size(307, 37);
+            roundedTextBoxLatitut.TabIndex = 58;
+            roundedTextBoxLatitut.Texts = "";
+            roundedTextBoxLatitut.UnderlinedStyle = false;
+            // 
             // roundedTextBoxRangeKm
             // 
             roundedTextBoxRangeKm.BackColor = Color.FromArgb(32, 32, 31);
@@ -159,16 +161,17 @@
             roundedTextBoxRangeKm.BorderFocusColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxRangeKm.BorderRadius = 10;
             roundedTextBoxRangeKm.BorderSize = 2;
-            roundedTextBoxRangeKm.Location = new Point(951, 27);
-            roundedTextBoxRangeKm.Margin = new Padding(4);
+            roundedTextBoxRangeKm.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxRangeKm.Location = new Point(950, 27);
+            roundedTextBoxRangeKm.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxRangeKm.Multiline = false;
             roundedTextBoxRangeKm.Name = "roundedTextBoxRangeKm";
-            roundedTextBoxRangeKm.Padding = new Padding(7, 10, 7, 10);
+            roundedTextBoxRangeKm.Padding = new Padding(8);
             roundedTextBoxRangeKm.PasswordChar = false;
             roundedTextBoxRangeKm.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxRangeKm.PlaceholderText = "";
-            roundedTextBoxRangeKm.Size = new Size(114, 36);
-            roundedTextBoxRangeKm.TabIndex = 54;
+            roundedTextBoxRangeKm.Size = new Size(69, 37);
+            roundedTextBoxRangeKm.TabIndex = 59;
             roundedTextBoxRangeKm.Texts = "";
             roundedTextBoxRangeKm.UnderlinedStyle = false;
             // 
@@ -178,12 +181,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
-            Controls.Add(labelRangeKm);
             Controls.Add(roundedTextBoxRangeKm);
-            Controls.Add(labelLatitut);
             Controls.Add(roundedTextBoxLatitut);
-            Controls.Add(labelLongitut);
             Controls.Add(roundedTextBoxLongitut);
+            Controls.Add(labelRangeKm);
+            Controls.Add(labelLatitut);
+            Controls.Add(labelLongitut);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
             Controls.Add(webView2MapBox);
@@ -199,13 +202,12 @@
         private Microsoft.Web.WebView2.WinForms.WebView2 webView2MapBox;
         private Controls.RoundedButton roundedButtonContinue;
         private Controls.RoundedButton roundedButtonCancel;
-        private Controls.RoundedTextBox roundedTextBox2;
-        private Controls.RoundedTextBox roundedTextBoxLongitut;
+        private Controls.RoundedTextBox roundedTextBoxRangeKm;
         private Controls.RoundedTextBox roundedTextBox3;
         private Label labelLongitut;
         private Label labelLatitut;
-        private Controls.RoundedTextBox roundedTextBoxLatitut;
         private Label labelRangeKm;
-        private Controls.RoundedTextBox roundedTextBoxRangeKm;
+        private Controls.RoundedTextBox roundedTextBoxLongitut;
+        private Controls.RoundedTextBox roundedTextBoxLatitut;
     }
 }

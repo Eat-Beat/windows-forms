@@ -28,5 +28,10 @@ namespace Eat_Beat.Forms
         {
 
         }
+
+        private void roundedTextBoxPassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
