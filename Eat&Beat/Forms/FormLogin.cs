@@ -68,6 +68,7 @@ namespace Eat_Beat
                 //Grant Acces to App
                 panelMain.Visible = true;
                 pictureBoxLogoSmall.Visible= true;
+                pictureBox1.Visible= false;
 
                 LoadFormIntoPanel("FormRestaurantsUsers", true);
             }

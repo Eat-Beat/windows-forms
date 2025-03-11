@@ -22,6 +22,8 @@ namespace Eat_Beat.Forms
             this.formLogin = formLogin;
             InitializeWebView();
 
+
+
         }
 
         private async void InitializeWebView()
@@ -57,6 +59,15 @@ namespace Eat_Beat.Forms
             public string longitude { get; set; }
         }
 
-        
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+        }
+
+        private void roundedButtonContinue_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
