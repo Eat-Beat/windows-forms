@@ -8,7 +8,7 @@ namespace Eat_Beat
         public FormNewRestaurant newRestaurant;
         public FormNewRestaurant2 newRestaurant2;
         public FormModifyRestaurant modifyRestaurant;
-        //public FormOpenRestaurant openRestaurant;
+        public FormOpenRestaurant openRestaurant;
         public FormNewMusician newMusician;
         public FormNewMusician2 newMusician2;
         public FormModifyMusician modifyMusician;
@@ -37,7 +37,7 @@ namespace Eat_Beat
                     typeof(FormNewRestaurant),
                     typeof(FormNewRestaurant2),
                     typeof(FormModifyRestaurant),
-                //    typeof(FormOpenRestaurant),
+                    typeof(FormOpenRestaurant),
                     typeof(FormNewMusician),
                     typeof(FormNewMusician2),
                     typeof(FormModifyMusician),

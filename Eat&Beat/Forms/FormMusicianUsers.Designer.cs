@@ -145,7 +145,7 @@
             Controls.Add(labelRestaurants);
             Controls.Add(dataGridViewUsers);
             Name = "FormMusicianUsers";
-            Text = "FormMusicianUsers";
+            Text = "MusicianUsers";
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();

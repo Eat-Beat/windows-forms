@@ -31,10 +31,10 @@
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
-            roundedButtonDelete = new Controls.RoundedButton();
-            roundedButtonEdit = new Controls.RoundedButton();
+            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
@@ -145,7 +145,7 @@
             Controls.Add(labelRestaurants);
             Controls.Add(dataGridViewUsers);
             Name = "FormRestaurantsUsers";
-            Text = "FormRestaurantsUsers";
+            Text = "RestaurantsUsers";
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
