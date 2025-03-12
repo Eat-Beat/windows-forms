@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Eat_Beat.Forms
+﻿namespace Eat_Beat.Forms
 {
     public partial class ucDay : UserControl
     {
@@ -26,11 +16,18 @@ namespace Eat_Beat.Forms
             checkBox1.Hide();
             pictureBoxTasksInDay.Hide();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel1_Click(object sender, EventArgs e)
         {
-            _parentForm.SetSelectedUcDay(this); // Notify parent form about the selection
-            SelectUcDay();
+            if (!(this._day == ""))
+            {
+                _parentForm.SetSelectedUcDay(this); // Notify parent form about the selection
+                SelectUcDay();
+            }
         }
 
         public void SelectUcDay()

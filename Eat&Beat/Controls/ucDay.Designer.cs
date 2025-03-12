@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDay));
             panel1 = new Panel();
             pictureBoxTasksInDay = new PictureBox();
             checkBox1 = new CheckBox();
@@ -52,11 +51,11 @@
             // 
             // pictureBoxTasksInDay
             // 
-            pictureBoxTasksInDay.Image = (Image)resources.GetObject("pictureBoxTasksInDay.Image");
-            pictureBoxTasksInDay.Location = new Point(46, 60);
+            pictureBoxTasksInDay.Image = Properties.Resources.png_orange_circle2;
+            pictureBoxTasksInDay.Location = new Point(46, 43);
             pictureBoxTasksInDay.Name = "pictureBoxTasksInDay";
             pictureBoxTasksInDay.Size = new Size(10, 10);
-            pictureBoxTasksInDay.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBoxTasksInDay.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxTasksInDay.TabIndex = 3;
             pictureBoxTasksInDay.TabStop = false;
             // 

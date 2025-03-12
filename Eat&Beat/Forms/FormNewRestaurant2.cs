@@ -23,5 +23,10 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
+
+        private void FormNewRestaurant2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -153,6 +153,7 @@
             Controls.Add(label1);
             Name = "FormNewRestaurant2";
             Text = "NewRestaurant";
+            Load += FormNewRestaurant2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
