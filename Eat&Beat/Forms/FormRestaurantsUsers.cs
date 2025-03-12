@@ -37,6 +37,7 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonOpen_Click(object sender, EventArgs e)
         {
+            formLogin.LoadFormIntoPanel("FormOpenRestaurant", true);
 
         }
     }

@@ -9,19 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Eat_Beat.Forms
 {
-    public partial class FormNewMusician2 : Form
+    public partial class FormOpenRestaurant : Form
     {
         private FormLogin formLogin;
-        public FormNewMusician2(FormLogin formLogin)
+        public FormOpenRestaurant(FormLogin formLogin)
         {
-            InitializeComponent();
             this.formLogin = formLogin;
+            InitializeComponent();
             InitializeWebView();
-
         }
 
         private async void InitializeWebView()
@@ -57,15 +55,9 @@ namespace Eat_Beat.Forms
             public string longitude { get; set; }
         }
 
-        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        private void roundedButtonBack_Click(object sender, EventArgs e)
         {
-            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+            formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
-
-        private void roundedButtonContinue_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

@@ -28,49 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             labelRestaurants = new Label();
-            textBoxAddress = new TextBox();
-            textBoxNumber = new TextBox();
-            textBoxPostCode = new TextBox();
-            roundedButtonCancel = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
+            labelPostalCode = new Label();
+            labelNum = new Label();
+            labelAddress = new Label();
+            roundedTextBoxAddress = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxNum = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPostalCode = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(239, 230, 220);
-            label1.Location = new Point(88, 151);
-            label1.Name = "label1";
-            label1.Size = new Size(95, 24);
-            label1.TabIndex = 4;
-            label1.Text = "Dirección:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(239, 230, 220);
-            label2.Location = new Point(88, 196);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 24);
-            label2.TabIndex = 5;
-            label2.Text = "Numero:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(239, 230, 220);
-            label3.Location = new Point(88, 243);
-            label3.Name = "label3";
-            label3.Size = new Size(131, 24);
-            label3.TabIndex = 6;
-            label3.Text = "Codigo Postal:";
             // 
             // labelRestaurants
             // 
@@ -82,30 +49,6 @@
             labelRestaurants.Size = new Size(406, 37);
             labelRestaurants.TabIndex = 7;
             labelRestaurants.Text = "NUEVO RESTAURANTE:";
-            // 
-            // textBoxAddress
-            // 
-            textBoxAddress.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxAddress.Location = new Point(234, 152);
-            textBoxAddress.Name = "textBoxAddress";
-            textBoxAddress.Size = new Size(550, 23);
-            textBoxAddress.TabIndex = 9;
-            // 
-            // textBoxNumber
-            // 
-            textBoxNumber.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxNumber.Location = new Point(234, 197);
-            textBoxNumber.Name = "textBoxNumber";
-            textBoxNumber.Size = new Size(550, 23);
-            textBoxNumber.TabIndex = 10;
-            // 
-            // textBoxPostCode
-            // 
-            textBoxPostCode.BackColor = Color.FromArgb(32, 32, 31);
-            textBoxPostCode.Location = new Point(234, 244);
-            textBoxPostCode.Name = "textBoxPostCode";
-            textBoxPostCode.Size = new Size(550, 23);
-            textBoxPostCode.TabIndex = 11;
             // 
             // roundedButtonCancel
             // 
@@ -136,21 +79,120 @@
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
             // 
+            // labelPostalCode
+            // 
+            labelPostalCode.AutoSize = true;
+            labelPostalCode.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPostalCode.ForeColor = Color.FromArgb(239, 230, 220);
+            labelPostalCode.Location = new Point(67, 243);
+            labelPostalCode.Name = "labelPostalCode";
+            labelPostalCode.Size = new Size(133, 24);
+            labelPostalCode.TabIndex = 60;
+            labelPostalCode.Text = "Código Postal:";
+            // 
+            // labelNum
+            // 
+            labelNum.AutoSize = true;
+            labelNum.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNum.ForeColor = Color.FromArgb(239, 230, 220);
+            labelNum.Location = new Point(67, 193);
+            labelNum.Name = "labelNum";
+            labelNum.Size = new Size(84, 24);
+            labelNum.TabIndex = 59;
+            labelNum.Text = "Número:";
+            // 
+            // labelAddress
+            // 
+            labelAddress.AutoSize = true;
+            labelAddress.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelAddress.ForeColor = Color.FromArgb(239, 230, 220);
+            labelAddress.Location = new Point(67, 146);
+            labelAddress.Name = "labelAddress";
+            labelAddress.Size = new Size(97, 24);
+            labelAddress.TabIndex = 58;
+            labelAddress.Text = "Dirección:";
+            // 
+            // roundedTextBoxAddress
+            // 
+            roundedTextBoxAddress.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxAddress.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxAddress.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxAddress.BorderRadius = 10;
+            roundedTextBoxAddress.BorderSize = 2;
+            roundedTextBoxAddress.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxAddress.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxAddress.Location = new Point(279, 140);
+            roundedTextBoxAddress.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxAddress.Multiline = false;
+            roundedTextBoxAddress.Name = "roundedTextBoxAddress";
+            roundedTextBoxAddress.Padding = new Padding(8);
+            roundedTextBoxAddress.PasswordChar = false;
+            roundedTextBoxAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxAddress.PlaceholderText = "";
+            roundedTextBoxAddress.Size = new Size(485, 37);
+            roundedTextBoxAddress.TabIndex = 66;
+            roundedTextBoxAddress.Texts = "";
+            roundedTextBoxAddress.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxNum
+            // 
+            roundedTextBoxNum.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxNum.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxNum.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxNum.BorderRadius = 10;
+            roundedTextBoxNum.BorderSize = 2;
+            roundedTextBoxNum.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxNum.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxNum.Location = new Point(279, 188);
+            roundedTextBoxNum.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxNum.Multiline = false;
+            roundedTextBoxNum.Name = "roundedTextBoxNum";
+            roundedTextBoxNum.Padding = new Padding(8);
+            roundedTextBoxNum.PasswordChar = false;
+            roundedTextBoxNum.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxNum.PlaceholderText = "";
+            roundedTextBoxNum.Size = new Size(485, 37);
+            roundedTextBoxNum.TabIndex = 65;
+            roundedTextBoxNum.Texts = "";
+            roundedTextBoxNum.UnderlinedStyle = false;
+            // 
+            // roundedTextBoxPostalCode
+            // 
+            roundedTextBoxPostalCode.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxPostalCode.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPostalCode.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPostalCode.BorderRadius = 10;
+            roundedTextBoxPostalCode.BorderSize = 2;
+            roundedTextBoxPostalCode.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxPostalCode.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPostalCode.Location = new Point(279, 235);
+            roundedTextBoxPostalCode.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxPostalCode.Multiline = false;
+            roundedTextBoxPostalCode.Name = "roundedTextBoxPostalCode";
+            roundedTextBoxPostalCode.Padding = new Padding(8);
+            roundedTextBoxPostalCode.PasswordChar = false;
+            roundedTextBoxPostalCode.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPostalCode.PlaceholderText = "";
+            roundedTextBoxPostalCode.Size = new Size(485, 37);
+            roundedTextBoxPostalCode.TabIndex = 67;
+            roundedTextBoxPostalCode.Texts = "";
+            roundedTextBoxPostalCode.UnderlinedStyle = false;
+            // 
             // FormNewRestaurant2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(915, 415);
+            Controls.Add(roundedTextBoxPostalCode);
+            Controls.Add(roundedTextBoxAddress);
+            Controls.Add(roundedTextBoxNum);
+            Controls.Add(labelPostalCode);
+            Controls.Add(labelNum);
+            Controls.Add(labelAddress);
             Controls.Add(roundedButtonCreate);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(textBoxPostCode);
-            Controls.Add(textBoxNumber);
-            Controls.Add(textBoxAddress);
             Controls.Add(labelRestaurants);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "FormNewRestaurant2";
             Text = "NewRestaurant";
             Load += FormNewRestaurant2_Load;
@@ -171,5 +213,13 @@
         private TextBox textBoxPostCode;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedButton roundedButtonCreate;
+        private Controls.RoundedTextBox roundedTextBoxConfPassword;
+        private Controls.RoundedTextBox roundedTextBoxPassword;
+        private Label labelPostalCode;
+        private Label labelNum;
+        private Label labelAddress;
+        private Controls.RoundedTextBox roundedTextBoxAddress;
+        private Controls.RoundedTextBox roundedTextBoxNum;
+        private Controls.RoundedTextBox roundedTextBoxPostalCode;
     }
 }

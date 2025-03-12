@@ -28,5 +28,10 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormNewMusician2", true);
         }
+
+        private void roundedTextBoxPassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
