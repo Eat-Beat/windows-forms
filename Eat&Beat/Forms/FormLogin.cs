@@ -19,6 +19,7 @@ namespace Eat_Beat
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
+        public User selectedUser;
 
         public FormLogin()
         {

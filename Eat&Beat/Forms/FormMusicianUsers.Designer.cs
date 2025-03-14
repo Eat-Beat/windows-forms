@@ -52,8 +52,8 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(252, 158, 79);
             dataGridViewCellStyle1.Font = new Font("Barlow Medium", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(32, 32, 31);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(252, 158, 79);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(32, 32, 31);
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -61,8 +61,8 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(32, 32, 31);
             dataGridViewCellStyle2.Font = new Font("Barlow Medium", 9F);
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(239, 230, 220);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(239, 230, 220);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(32, 32, 31);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewUsers.EnableHeadersVisualStyles = false;
@@ -72,6 +72,7 @@
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.RowHeadersVisible = false;
+            dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(1145, 452);
             dataGridViewUsers.TabIndex = 1;
             // 
@@ -105,7 +106,7 @@
             roundedButtonOpen.FlatStyle = FlatStyle.Flat;
             roundedButtonOpen.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpen.Location = new Point(660, 12);
+            roundedButtonOpen.Location = new Point(665, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
             roundedButtonOpen.TabIndex = 5;
@@ -120,7 +121,7 @@
             roundedButtonEdit.FlatStyle = FlatStyle.Flat;
             roundedButtonEdit.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonEdit.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonEdit.Location = new Point(777, 12);
+            roundedButtonEdit.Location = new Point(784, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
             roundedButtonEdit.TabIndex = 7;
@@ -149,7 +150,7 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(894, 12);
+            roundedButtonCreate.Location = new Point(903, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
             roundedButtonCreate.TabIndex = 8;
