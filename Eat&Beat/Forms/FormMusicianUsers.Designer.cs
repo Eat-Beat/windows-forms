@@ -28,25 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonOpen = new Controls.RoundedButton();
+            roundedButtonEdit = new Controls.RoundedButton();
+            roundedButtonDelete = new Controls.RoundedButton();
+            roundedButtonCreate = new Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewUsers
             // 
+            dataGridViewUsers.AllowUserToAddRows = false;
+            dataGridViewUsers.AllowUserToDeleteRows = false;
+            dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewUsers.BackgroundColor = Color.FromArgb(32, 32, 31);
+            dataGridViewUsers.BorderStyle = BorderStyle.None;
+            dataGridViewUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(252, 158, 79);
+            dataGridViewCellStyle1.Font = new Font("Barlow Medium", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle2.Font = new Font("Barlow Medium", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(239, 230, 220);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewUsers.EnableHeadersVisualStyles = false;
             dataGridViewUsers.GridColor = Color.FromArgb(239, 230, 220);
-            dataGridViewUsers.Location = new Point(2, 63);
+            dataGridViewUsers.Location = new Point(2, 76);
+            dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
-            dataGridViewUsers.Size = new Size(1145, 465);
+            dataGridViewUsers.RowHeadersVisible = false;
+            dataGridViewUsers.Size = new Size(1145, 452);
             dataGridViewUsers.TabIndex = 1;
             // 
             // labelRestaurants
@@ -146,6 +172,7 @@
             Controls.Add(dataGridViewUsers);
             Name = "FormMusicianUsers";
             Text = "MusicianUsers";
+            Load += FormMusicianUsers_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();

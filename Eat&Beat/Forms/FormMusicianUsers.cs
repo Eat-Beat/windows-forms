@@ -41,5 +41,24 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormOpenMusician", true);
         }
+
+        private void FormMusicianUsers_Load(object sender, EventArgs e)
+        {
+            dataGridViewUsers.DataSource = null;
+
+            var musiciansData = formLogin
+                .Musicians
+                .Select(m => new
+                {
+                    m.idUser,
+                    m.name,
+                    m.email,
+                    m.description,
+                    m.rating
+                })
+                .ToList();
+
+            dataGridViewUsers.DataSource = musiciansData;
+        }
     }
 }

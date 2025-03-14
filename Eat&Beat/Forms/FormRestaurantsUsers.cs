@@ -40,5 +40,28 @@ namespace Eat_Beat.Forms
             formLogin.LoadFormIntoPanel("FormOpenRestaurant", true);
 
         }
+
+        private void FormRestaurantsUsers_Load(object sender, EventArgs e)
+        {
+            
+            dataGridViewUsers.DataSource = null;
+
+            
+            var restaurantsData = formLogin
+                .Restaurants
+                .Select(r => new
+                {
+                    r.idUser,
+                    r.name,
+                    r.email,
+                    FullAddress = r.address + " " + r.addressNum,
+                    r.zipCode,
+                    r.rating
+                })
+                .ToList();
+
+           
+            dataGridViewUsers.DataSource = restaurantsData;
+        }
     }
 }
