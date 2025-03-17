@@ -26,6 +26,7 @@ namespace Eat_Beat.Controls
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
+        private String text = "";
         public RoundedTextBox()
         {
             InitializeComponent();

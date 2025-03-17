@@ -36,7 +36,7 @@
             labelRangeKm = new Label();
             roundedTextBoxLongitut = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxLatitut = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxRangeKm = new Eat_Beat.Controls.RoundedTextBox();
+            roundedComboBoxKm = new Eat_Beat.Controls.RoundedComboBox();
             ((System.ComponentModel.ISupportInitialize)webView2MapBox).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             webView2MapBox.DefaultBackgroundColor = Color.White;
             webView2MapBox.Location = new Point(0, 83);
             webView2MapBox.Name = "webView2MapBox";
-            webView2MapBox.Size = new Size(1168, 362);
+            webView2MapBox.Size = new Size(1150, 362);
             webView2MapBox.TabIndex = 0;
             webView2MapBox.ZoomFactor = 1D;
             // 
@@ -86,7 +86,7 @@
             labelLongitut.AutoSize = true;
             labelLongitut.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelLongitut.ForeColor = Color.FromArgb(239, 230, 220);
-            labelLongitut.Location = new Point(22, 32);
+            labelLongitut.Location = new Point(50, 32);
             labelLongitut.Name = "labelLongitut";
             labelLongitut.Size = new Size(91, 24);
             labelLongitut.TabIndex = 51;
@@ -97,7 +97,7 @@
             labelLatitut.AutoSize = true;
             labelLatitut.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelLatitut.ForeColor = Color.FromArgb(239, 230, 220);
-            labelLatitut.Location = new Point(442, 32);
+            labelLatitut.Location = new Point(470, 32);
             labelLatitut.Name = "labelLatitut";
             labelLatitut.Size = new Size(77, 24);
             labelLatitut.TabIndex = 53;
@@ -108,7 +108,7 @@
             labelRangeKm.AutoSize = true;
             labelRangeKm.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelRangeKm.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRangeKm.Location = new Point(845, 32);
+            labelRangeKm.Location = new Point(873, 32);
             labelRangeKm.Name = "labelRangeKm";
             labelRangeKm.Size = new Size(99, 24);
             labelRangeKm.TabIndex = 55;
@@ -123,7 +123,7 @@
             roundedTextBoxLongitut.BorderSize = 2;
             roundedTextBoxLongitut.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxLongitut.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxLongitut.Location = new Point(116, 27);
+            roundedTextBoxLongitut.Location = new Point(144, 27);
             roundedTextBoxLongitut.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxLongitut.Multiline = false;
             roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
@@ -145,7 +145,7 @@
             roundedTextBoxLatitut.BorderSize = 2;
             roundedTextBoxLatitut.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxLatitut.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxLatitut.Location = new Point(525, 27);
+            roundedTextBoxLatitut.Location = new Point(553, 27);
             roundedTextBoxLatitut.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxLatitut.Multiline = false;
             roundedTextBoxLatitut.Name = "roundedTextBoxLatitut";
@@ -158,27 +158,26 @@
             roundedTextBoxLatitut.Texts = "";
             roundedTextBoxLatitut.UnderlinedStyle = false;
             // 
-            // roundedTextBoxRangeKm
+            // roundedComboBoxKm
             // 
-            roundedTextBoxRangeKm.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBoxRangeKm.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxRangeKm.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxRangeKm.BorderRadius = 10;
-            roundedTextBoxRangeKm.BorderSize = 2;
-            roundedTextBoxRangeKm.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxRangeKm.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxRangeKm.Location = new Point(950, 27);
-            roundedTextBoxRangeKm.Margin = new Padding(3, 4, 3, 4);
-            roundedTextBoxRangeKm.Multiline = false;
-            roundedTextBoxRangeKm.Name = "roundedTextBoxRangeKm";
-            roundedTextBoxRangeKm.Padding = new Padding(8);
-            roundedTextBoxRangeKm.PasswordChar = false;
-            roundedTextBoxRangeKm.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxRangeKm.PlaceholderText = "";
-            roundedTextBoxRangeKm.Size = new Size(69, 37);
-            roundedTextBoxRangeKm.TabIndex = 59;
-            roundedTextBoxRangeKm.Texts = "";
-            roundedTextBoxRangeKm.UnderlinedStyle = false;
+            roundedComboBoxKm.BackColor = Color.FromArgb(32, 32, 31);
+            roundedComboBoxKm.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedComboBoxKm.BorderSize = 2;
+            roundedComboBoxKm.DropDownStyle = ComboBoxStyle.DropDown;
+            roundedComboBoxKm.Font = new Font("Barlow Medium", 12F);
+            roundedComboBoxKm.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedComboBoxKm.IconColor = Color.FromArgb(239, 230, 220);
+            roundedComboBoxKm.Items.AddRange(new object[] { "5", "10", "20", "50", "100", "∞" });
+            roundedComboBoxKm.ListBackColor = Color.FromArgb(64, 64, 62);
+            roundedComboBoxKm.ListTextColor = Color.FromArgb(239, 230, 220);
+            roundedComboBoxKm.Location = new Point(977, 27);
+            roundedComboBoxKm.MinimumSize = new Size(100, 30);
+            roundedComboBoxKm.Name = "roundedComboBoxKm";
+            roundedComboBoxKm.Padding = new Padding(2);
+            roundedComboBoxKm.Size = new Size(100, 37);
+            roundedComboBoxKm.TabIndex = 61;
+            roundedComboBoxKm.Texts = "";
+            roundedComboBoxKm.OnSelectedIndexChanged += roundedComboBoxKm_OnSelectedIndexChanged;
             // 
             // FormNewMusician2
             // 
@@ -186,7 +185,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(1148, 529);
-            Controls.Add(roundedTextBoxRangeKm);
+            Controls.Add(roundedComboBoxKm);
             Controls.Add(roundedTextBoxLatitut);
             Controls.Add(roundedTextBoxLongitut);
             Controls.Add(labelRangeKm);
@@ -207,12 +206,12 @@
         private Microsoft.Web.WebView2.WinForms.WebView2 webView2MapBox;
         private Controls.RoundedButton roundedButtonContinue;
         private Controls.RoundedButton roundedButtonCancel;
-        private Controls.RoundedTextBox roundedTextBoxRangeKm;
         private Controls.RoundedTextBox roundedTextBox3;
         private Label labelLongitut;
         private Label labelLatitut;
         private Label labelRangeKm;
         private Controls.RoundedTextBox roundedTextBoxLongitut;
         private Controls.RoundedTextBox roundedTextBoxLatitut;
+        private Controls.RoundedComboBox roundedComboBoxKm;
     }
 }

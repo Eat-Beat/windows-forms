@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eat_Beat.Controls;
 using Microsoft.Web.WebView2.Core;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -21,12 +23,28 @@ namespace Eat_Beat.Forms
             InitializeComponent();
             this.formLogin = formLogin;
             InitializeWebView();
+            roundedComboBoxKm.SelectedIndex = 0;
 
         }
 
         private async void InitializeWebView()
         {
             webView2MapBox.Source = new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Map/map.html"));
+
+            webView2MapBox.CoreWebView2InitializationCompleted += async (sender, args) =>
+            {
+                if (webView2MapBox.CoreWebView2 != null)
+                {
+                    // Esperar a que la navegación termine antes de enviar las coordenadas
+                    webView2MapBox.CoreWebView2.NavigationCompleted += async (s, e) =>
+                    {
+                        await SendCoords(41.38868, 2.17328, 5);
+                        roundedTextBoxLatitut.Texts = "41.38868";
+                        roundedTextBoxLongitut.Texts = "2.17328";
+                    };
+                }
+            };
+
             webView2MapBox.WebMessageReceived += WebView2_WebMessageReceived;
         }
 
@@ -34,15 +52,17 @@ namespace Eat_Beat.Forms
         {
             try
             {
-                JObject data = JObject.Parse(e.WebMessageAsJson);
+                string jsonString = e.WebMessageAsJson;
 
-                Coordenadas coordenadas = data.ToObject<Coordenadas>();
+                jsonString = JsonConvert.DeserializeObject<string>(jsonString);
+
+                Coordenadas coordenadas = JsonConvert.DeserializeObject<Coordenadas>(jsonString);
 
                 if (coordenadas != null)
                 {
                     // Guardar coordenadas en un objeto (muestra en los TextBox)
-                    //textBox1.Text = coordenadas.latitude.ToString();
-                    //textBox2.Text = coordenadas.longitude.ToString();
+                    roundedTextBoxLatitut.Texts = coordenadas.latitude.ToString();
+                    roundedTextBoxLongitut.Texts = coordenadas.longitude.ToString();
                 }
             }
             catch (Exception ex)
@@ -51,6 +71,18 @@ namespace Eat_Beat.Forms
             }
         }
 
+        private async Task SendCoords(double lat, double lng, int rad)
+        {
+            try
+            {
+                string script = $"setMarker({lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {rad.ToString(System.Globalization.CultureInfo.InvariantCulture)});";
+                await webView2MapBox.ExecuteScriptAsync(script);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al enviar coordenadas iniciales: " + ex.Message);
+            }
+        }
         public class Coordenadas
         {
             public string latitude { get; set; }
@@ -67,5 +99,40 @@ namespace Eat_Beat.Forms
 
         }
 
+        private void roundedComboBoxKm_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (roundedComboBoxKm.SelectedItem != null)
+            {
+                int selectedKm;
+
+                // Si el usuario selecciona "∞", asignar radio = 0
+                if (roundedComboBoxKm.SelectedItem.ToString() == "∞")
+                {
+                    selectedKm = 0;
+                }
+                else if (!int.TryParse(roundedComboBoxKm.SelectedItem.ToString(), out selectedKm))
+                {
+                    MessageBox.Show("Error: El valor seleccionado no es un número válido.");
+                    return;
+                }
+
+                // Verificar si los TextBox están vacíos antes de convertir
+                if (string.IsNullOrWhiteSpace(roundedTextBoxLatitut.Texts) || string.IsNullOrWhiteSpace(roundedTextBoxLongitut.Texts))
+                {
+                    return; // No hacer nada hasta que haya coordenadas válidas
+                }
+
+                double lat, lng;
+
+                if (!double.TryParse(roundedTextBoxLatitut.Texts, System.Globalization.CultureInfo.InvariantCulture, out lat) ||
+                    !double.TryParse(roundedTextBoxLongitut.Texts, System.Globalization.CultureInfo.InvariantCulture, out lng))
+                {
+                    MessageBox.Show("Error: Las coordenadas no son válidas.");
+                    return;
+                }
+
+                _ = SendCoords(lat, lng, selectedKm);
+            }
+        }
     }
 }
