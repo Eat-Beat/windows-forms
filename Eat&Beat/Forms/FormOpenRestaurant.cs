@@ -39,8 +39,8 @@ namespace Eat_Beat.Forms
                 if (coordenadas != null)
                 {
                     // Guardar coordenadas en un objeto (muestra en los TextBox)
-                    //textBox1.Text = coordenadas.latitude.ToString();
-                    //textBox2.Text = coordenadas.longitude.ToString();
+                    //roundedTextBoxLongitut.Text = coordenadas.latitude.ToString();
+                    //roundedTextBoxLatitut.Text = coordenadas.longitude.ToString();
                 }
             }
             catch (Exception ex)
