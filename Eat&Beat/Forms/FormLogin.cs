@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Eat_Beat.Forms;
 
 namespace Eat_Beat
@@ -16,6 +17,9 @@ namespace Eat_Beat
         public CalendarPopup calendarPopup;
         
         private List<Form> allForms = new List<Form>();
+        public List<Musician> Musicians = new List<Musician>();
+        public List<Restaurant> Restaurants = new List<Restaurant>();
+        public User selectedUser;
 
         public FormLogin()
         {
@@ -23,6 +27,34 @@ namespace Eat_Beat
             InitializeForms();
             panelMain.Visible = false;
             pictureBoxLogoSmall.Visible = false;
+
+            LoadJsonData();
+        }
+
+        /// <summary>
+        /// This fuction will load all of the infor from the JSON into the 2 Lists for musicians and restaurants
+        /// </summary>
+        private void LoadJsonData()
+        {
+            try
+            {
+                string baseDirectory = Application.StartupPath;
+
+                string jsonFolder = Path.Combine(baseDirectory, "JSON");
+
+                string musiciansPath = Path.Combine(jsonFolder, "musicians.json");
+                string restaurantsPath = Path.Combine(jsonFolder, "restaurans.json");
+
+                string musiciansJson = File.ReadAllText(musiciansPath);
+                string restaurantsJson = File.ReadAllText(restaurantsPath);
+
+                Musicians = JsonSerializer.Deserialize<List<Musician>>(musiciansJson);
+                Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(restaurantsJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading JSON data: " + ex.Message);
+            }
         }
 
         /// <summary>

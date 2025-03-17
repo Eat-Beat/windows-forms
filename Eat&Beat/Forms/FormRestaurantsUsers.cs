@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace Eat_Beat.Forms
 {
     public partial class FormRestaurantsUsers : Form
     {
         private FormLogin formLogin;
+
         public FormRestaurantsUsers(FormLogin formLogin)
         {
             InitializeComponent();
@@ -39,6 +32,29 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormOpenRestaurant", true);
 
+        }
+
+        private void FormRestaurantsUsers_Load(object sender, EventArgs e)
+        {
+
+            dataGridViewUsers.DataSource = null;
+
+
+            var restaurantsData = formLogin
+                .Restaurants
+                .Select(r => new
+                {
+                    r.idUser,
+                    r.name,
+                    r.email,
+                    FullAddress = r.address + " " + r.addressNum,
+                    r.zipCode,
+                    r.rating
+                })
+                .ToList();
+
+
+            dataGridViewUsers.DataSource = restaurantsData;
         }
     }
 }

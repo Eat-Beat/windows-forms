@@ -28,25 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGridViewUsers = new DataGridView();
             labelRestaurants = new Label();
             labelMusicians = new Label();
-            roundedButtonOpen = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonDelete = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonEdit = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonOpen = new Controls.RoundedButton();
+            roundedButtonCreate = new Controls.RoundedButton();
+            roundedButtonDelete = new Controls.RoundedButton();
+            roundedButtonEdit = new Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewUsers
             // 
+            dataGridViewUsers.AllowUserToAddRows = false;
+            dataGridViewUsers.AllowUserToDeleteRows = false;
+            dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewUsers.BackgroundColor = Color.FromArgb(32, 32, 31);
+            dataGridViewUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(252, 158, 79);
+            dataGridViewCellStyle1.Font = new Font("Barlow Medium", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(252, 158, 79);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle2.Font = new Font("Barlow Medium", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(239, 230, 220);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(239, 230, 220);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewUsers.EnableHeadersVisualStyles = false;
             dataGridViewUsers.GridColor = Color.FromArgb(239, 230, 220);
-            dataGridViewUsers.Location = new Point(2, 63);
+            dataGridViewUsers.Location = new Point(2, 77);
+            dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
-            dataGridViewUsers.Size = new Size(1145, 465);
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(252, 158, 79);
+            dataGridViewCellStyle3.Font = new Font("Barlow Medium", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(32, 32, 31);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewUsers.RowHeadersVisible = false;
+            dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewUsers.Size = new Size(1145, 451);
             dataGridViewUsers.TabIndex = 0;
             // 
             // labelRestaurants
@@ -79,7 +114,7 @@
             roundedButtonOpen.FlatStyle = FlatStyle.Flat;
             roundedButtonOpen.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonOpen.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonOpen.Location = new Point(655, 12);
+            roundedButtonOpen.Location = new Point(665, 12);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
             roundedButtonOpen.TabIndex = 4;
@@ -94,7 +129,7 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(892, 12);
+            roundedButtonCreate.Location = new Point(903, 12);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
             roundedButtonCreate.TabIndex = 5;
@@ -123,7 +158,7 @@
             roundedButtonEdit.FlatStyle = FlatStyle.Flat;
             roundedButtonEdit.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonEdit.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonEdit.Location = new Point(773, 12);
+            roundedButtonEdit.Location = new Point(784, 12);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
             roundedButtonEdit.TabIndex = 6;
@@ -146,6 +181,7 @@
             Controls.Add(dataGridViewUsers);
             Name = "FormRestaurantsUsers";
             Text = "RestaurantsUsers";
+            Load += FormRestaurantsUsers_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();

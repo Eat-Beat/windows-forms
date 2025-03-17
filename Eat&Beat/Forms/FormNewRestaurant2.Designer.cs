@@ -194,7 +194,8 @@
             Controls.Add(roundedButtonCancel);
             Controls.Add(labelRestaurants);
             Name = "FormNewRestaurant2";
-            Text = "NewRestaurant2";
+            Text = "NewRestaurant";
+            Load += FormNewRestaurant2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
