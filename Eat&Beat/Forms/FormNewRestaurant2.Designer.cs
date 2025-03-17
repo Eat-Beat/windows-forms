@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             labelRestaurants = new Label();
-            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCancel = new Controls.RoundedButton();
+            roundedButtonCreate = new Controls.RoundedButton();
             labelPostalCode = new Label();
             labelNum = new Label();
             labelAddress = new Label();
-            roundedTextBoxAddress = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxNum = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxPostalCode = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxAddress = new Controls.RoundedTextBox();
+            roundedTextBoxNum = new Controls.RoundedTextBox();
+            roundedTextBoxPostalCode = new Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // labelRestaurants
@@ -44,7 +44,7 @@
             labelRestaurants.AutoSize = true;
             labelRestaurants.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(257, 44);
+            labelRestaurants.Location = new Point(67, 44);
             labelRestaurants.Name = "labelRestaurants";
             labelRestaurants.Size = new Size(406, 37);
             labelRestaurants.TabIndex = 7;
