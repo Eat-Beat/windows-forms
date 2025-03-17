@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eat_Beat.Forms
+namespace Eat_Beat.Logic.Entities
 {
     public class Musician : User
     {

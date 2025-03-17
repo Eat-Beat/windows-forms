@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Eat_Beat.Logic.Entities
 {
-    internal class User
+    public class User
     {
-        private int userId {  get; set; }
-        private string name { get; set; }
-        private string email { get; set; }
-        private string password { get; set; }
-        private List<int> ratings { get; set; }
-
+        public int idUser { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public double rating { get; set; }
     }
 }

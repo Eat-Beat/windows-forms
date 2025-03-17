@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Eat_Beat.Forms;
+using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat
 {

@@ -141,12 +141,9 @@
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
             roundedTextBoxPassword.Padding = new Padding(8);
             roundedTextBoxPassword.PasswordChar = false;
-            roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxPassword.PlaceholderText = "";
             roundedTextBoxPassword.Size = new Size(485, 37);
             roundedTextBoxPassword.TabIndex = 58;
             roundedTextBoxPassword.Texts = "";
-            roundedTextBoxPassword.UnderlinedStyle = false;
             roundedTextBoxPassword.Load += roundedTextBoxPassword_Load;
             // 
             // roundedTextBoxConfPassword
@@ -164,12 +161,9 @@
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
             roundedTextBoxConfPassword.Padding = new Padding(8);
             roundedTextBoxConfPassword.PasswordChar = false;
-            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxConfPassword.PlaceholderText = "";
             roundedTextBoxConfPassword.Size = new Size(485, 37);
             roundedTextBoxConfPassword.TabIndex = 57;
             roundedTextBoxConfPassword.Texts = "";
-            roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxName
             // 
@@ -186,12 +180,9 @@
             roundedTextBoxName.Name = "roundedTextBoxName";
             roundedTextBoxName.Padding = new Padding(8);
             roundedTextBoxName.PasswordChar = false;
-            roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxName.PlaceholderText = "";
             roundedTextBoxName.Size = new Size(485, 37);
             roundedTextBoxName.TabIndex = 56;
             roundedTextBoxName.Texts = "";
-            roundedTextBoxName.UnderlinedStyle = false;
             // 
             // roundedTextBoxEmail
             // 
@@ -208,12 +199,9 @@
             roundedTextBoxEmail.Name = "roundedTextBoxEmail";
             roundedTextBoxEmail.Padding = new Padding(8);
             roundedTextBoxEmail.PasswordChar = false;
-            roundedTextBoxEmail.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxEmail.PlaceholderText = "";
             roundedTextBoxEmail.Size = new Size(485, 37);
             roundedTextBoxEmail.TabIndex = 55;
             roundedTextBoxEmail.Texts = "";
-            roundedTextBoxEmail.UnderlinedStyle = false;
             // 
             // FormNewMusician
             // 

@@ -100,12 +100,9 @@
             roundedTextBoxAddress.Name = "roundedTextBoxAddress";
             roundedTextBoxAddress.Padding = new Padding(8);
             roundedTextBoxAddress.PasswordChar = false;
-            roundedTextBoxAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxAddress.PlaceholderText = "";
             roundedTextBoxAddress.Size = new Size(483, 37);
             roundedTextBoxAddress.TabIndex = 52;
             roundedTextBoxAddress.Texts = "";
-            roundedTextBoxAddress.UnderlinedStyle = false;
             // 
             // roundedTextBoxNumAddress
             // 
@@ -122,12 +119,9 @@
             roundedTextBoxNumAddress.Name = "roundedTextBoxNumAddress";
             roundedTextBoxNumAddress.Padding = new Padding(8);
             roundedTextBoxNumAddress.PasswordChar = false;
-            roundedTextBoxNumAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxNumAddress.PlaceholderText = "";
             roundedTextBoxNumAddress.Size = new Size(483, 37);
             roundedTextBoxNumAddress.TabIndex = 51;
             roundedTextBoxNumAddress.Texts = "";
-            roundedTextBoxNumAddress.UnderlinedStyle = false;
             // 
             // roundedTextBoxPassword
             // 
@@ -144,12 +138,9 @@
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
             roundedTextBoxPassword.Padding = new Padding(8);
             roundedTextBoxPassword.PasswordChar = false;
-            roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxPassword.PlaceholderText = "";
             roundedTextBoxPassword.Size = new Size(483, 37);
             roundedTextBoxPassword.TabIndex = 50;
             roundedTextBoxPassword.Texts = "";
-            roundedTextBoxPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxConfPassword
             // 
@@ -166,12 +157,9 @@
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
             roundedTextBoxConfPassword.Padding = new Padding(8);
             roundedTextBoxConfPassword.PasswordChar = false;
-            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxConfPassword.PlaceholderText = "";
             roundedTextBoxConfPassword.Size = new Size(483, 37);
             roundedTextBoxConfPassword.TabIndex = 49;
             roundedTextBoxConfPassword.Texts = "";
-            roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxName
             // 
@@ -188,12 +176,9 @@
             roundedTextBoxName.Name = "roundedTextBoxName";
             roundedTextBoxName.Padding = new Padding(8);
             roundedTextBoxName.PasswordChar = false;
-            roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxName.PlaceholderText = "";
             roundedTextBoxName.Size = new Size(483, 37);
             roundedTextBoxName.TabIndex = 48;
             roundedTextBoxName.Texts = "";
-            roundedTextBoxName.UnderlinedStyle = false;
             // 
             // roundedTextBoxEmail
             // 
@@ -210,12 +195,9 @@
             roundedTextBoxEmail.Name = "roundedTextBoxEmail";
             roundedTextBoxEmail.Padding = new Padding(8);
             roundedTextBoxEmail.PasswordChar = false;
-            roundedTextBoxEmail.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxEmail.PlaceholderText = "";
             roundedTextBoxEmail.Size = new Size(483, 37);
             roundedTextBoxEmail.TabIndex = 47;
             roundedTextBoxEmail.Texts = "";
-            roundedTextBoxEmail.UnderlinedStyle = false;
             // 
             // labelNumAddress
             // 
