@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat.Forms
 {
@@ -10,6 +11,8 @@ namespace Eat_Beat.Forms
         {
             InitializeComponent();
             this.formLogin = formLogin;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
         }
 
         private void labelMusicians_Click(object sender, EventArgs e)
@@ -55,6 +58,16 @@ namespace Eat_Beat.Forms
 
 
             dataGridViewUsers.DataSource = restaurantsData;
+        }
+
+        private void LoadLanguage()
+        {
+            labelRestaurants.Text = LanguageManager.GetText("labelRestaurants");
+            labelMusicians.Text = LanguageManager.GetText("labelMusicians");
+            roundedButtonEdit.Text = LanguageManager.GetText("roundedButtonEdit");
+            roundedButtonOpen.Text = LanguageManager.GetText("roundedButtonOpen");
+            roundedButtonCreate.Text = LanguageManager.GetText("roundedButtonCreate");
+            roundedButtonDelete.Text = LanguageManager.GetText("roundedButtonDelete");
         }
     }
 }

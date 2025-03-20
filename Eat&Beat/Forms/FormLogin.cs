@@ -16,7 +16,7 @@ namespace Eat_Beat
         public FormModifyMusician modifyMusician;
         public FormOpenMusician openMusician;
         public CalendarPopup calendarPopup;
-        
+
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
@@ -25,6 +25,8 @@ namespace Eat_Beat
         public FormLogin()
         {
             InitializeComponent();
+            LanguageManager.LanguageChanged += UpdateLanguage;
+            LanguageManager.LoadSavedLanguage();
             InitializeForms();
             panelMain.Visible = false;
             pictureBoxLogoSmall.Visible = false;
@@ -100,8 +102,8 @@ namespace Eat_Beat
             {
                 //Grant Acces to App
                 panelMain.Visible = true;
-                pictureBoxLogoSmall.Visible= true;
-                pictureBox1.Visible= false;
+                pictureBoxLogoSmall.Visible = true;
+                pictureBox1.Visible = false;
 
                 LoadFormIntoPanel("FormRestaurantsUsers", true);
             }
@@ -142,28 +144,72 @@ namespace Eat_Beat
                 panelMain.Controls.Add(childForm);
                 childForm.Show();
             }
-            else {
+            else
+            {
                 //Users shoud never get here as we will define what name gets sent, this is solely for debugging purposes
                 MessageBox.Show("Form was not found. Can you read???");
             }
         }
 
-        
+
         /// <summary>
         /// Changes the panel size depending on which size we need
         /// </summary>
-        public void changePanelSize(bool desiredPanelSizeBig) {
+        public void changePanelSize(bool desiredPanelSizeBig)
+        {
             if (!desiredPanelSizeBig)
             {
                 panelMain.Location = new Point(110, 84);
                 panelMain.Height = 511;
                 panelMain.Width = 1051;
             }
-            else {
+            else
+            {
                 panelMain.Location = new Point(50, 70);
                 panelMain.Height = 568;
-                panelMain.Width= 1164;
+                panelMain.Width = 1164;
             }
+        }
+
+        private void UpdateLanguage()
+        {
+            labelUser.Text = LanguageManager.GetText("labelUser");
+            labelPassword.Text = LanguageManager.GetText("labelPassword");
+
+            if (panelMain.Controls.Count > 0)
+            {
+                Form activeForm = panelMain.Controls[0] as Form;
+                if (activeForm != null)
+                {
+                    string formName = activeForm.Name;
+                    bool isBig = activeForm.Size.Width == 1164;
+                    LoadFormIntoPanel(formName, isBig);
+                }
+            }
+        }
+
+        private void labelEs_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("es");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Bold);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Regular);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Regular);
+        }
+
+        private void labelCa_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("ca");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Regular);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Regular);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Bold);
+        }
+
+        private void labelEn_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("en");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Regular);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Bold);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Regular);
         }
     }
 }

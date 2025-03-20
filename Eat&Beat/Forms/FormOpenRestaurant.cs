@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eat_Beat.Logic.Entities;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json.Linq;
 
@@ -20,6 +21,8 @@ namespace Eat_Beat.Forms
             this.formLogin = formLogin;
             InitializeComponent();
             InitializeWebView();
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
         }
 
         private async void InitializeWebView()
@@ -58,6 +61,12 @@ namespace Eat_Beat.Forms
         private void roundedButtonBack_Click(object sender, EventArgs e)
         {
             formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
+        }
+
+        private void LoadLanguage()
+        {
+            roundedButtonOpenCalendar.Text = LanguageManager.GetText("roundedButtonOpenCalendar");
+            roundedButtonBack.Text = LanguageManager.GetText("roundedButtonBack");
         }
     }
 }

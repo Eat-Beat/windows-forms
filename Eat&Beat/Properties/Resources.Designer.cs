@@ -63,9 +63,29 @@ namespace Eat_Beat.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Catalan {
+            get {
+                object obj = ResourceManager.GetObject("Catalan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EmptyStar {
             get {
                 object obj = ResourceManager.GetObject("EmptyStar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English {
+            get {
+                object obj = ResourceManager.GetObject("English", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace Eat_Beat.Properties {
         internal static System.Drawing.Bitmap png_orange_circle2 {
             get {
                 object obj = ResourceManager.GetObject("png-orange-circle2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spanish {
+            get {
+                object obj = ResourceManager.GetObject("Spanish", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

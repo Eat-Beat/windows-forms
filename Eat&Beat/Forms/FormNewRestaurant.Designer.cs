@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelRestaurants = new Label();
+            labelNewRestaurant = new Label();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
             roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
             labelConfPassword = new Label();
@@ -41,16 +41,16 @@
             roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
-            // labelRestaurants
+            // labelNewRestaurant
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(257, 44);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(406, 37);
-            labelRestaurants.TabIndex = 7;
-            labelRestaurants.Text = "NUEVO RESTAURANTE:";
+            labelNewRestaurant.AutoSize = true;
+            labelNewRestaurant.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNewRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
+            labelNewRestaurant.Location = new Point(257, 44);
+            labelNewRestaurant.Name = "labelNewRestaurant";
+            labelNewRestaurant.Size = new Size(406, 37);
+            labelNewRestaurant.TabIndex = 7;
+            labelNewRestaurant.Text = "NUEVO RESTAURANTE:";
             // 
             // roundedButtonCancel
             // 
@@ -141,9 +141,12 @@
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
             roundedTextBoxPassword.Padding = new Padding(8);
             roundedTextBoxPassword.PasswordChar = false;
+            roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPassword.PlaceholderText = "";
             roundedTextBoxPassword.Size = new Size(485, 37);
             roundedTextBoxPassword.TabIndex = 66;
             roundedTextBoxPassword.Texts = "";
+            roundedTextBoxPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxConfPassword
             // 
@@ -160,9 +163,12 @@
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
             roundedTextBoxConfPassword.Padding = new Padding(8);
             roundedTextBoxConfPassword.PasswordChar = false;
+            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxConfPassword.PlaceholderText = "";
             roundedTextBoxConfPassword.Size = new Size(485, 37);
             roundedTextBoxConfPassword.TabIndex = 65;
             roundedTextBoxConfPassword.Texts = "";
+            roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
             // roundedTextBox1
             // 
@@ -179,9 +185,12 @@
             roundedTextBox1.Name = "roundedTextBox1";
             roundedTextBox1.Padding = new Padding(8);
             roundedTextBox1.PasswordChar = false;
+            roundedTextBox1.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBox1.PlaceholderText = "";
             roundedTextBox1.Size = new Size(485, 37);
             roundedTextBox1.TabIndex = 64;
             roundedTextBox1.Texts = "";
+            roundedTextBox1.UnderlinedStyle = false;
             // 
             // roundedTextBoxEmail
             // 
@@ -222,7 +231,7 @@
             Controls.Add(labelName);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelNewRestaurant);
             Name = "FormNewRestaurant";
             Text = "NewRestaurant";
             ResumeLayout(false);
@@ -230,7 +239,7 @@
         }
 
         #endregion
-        private Label labelRestaurants;
+        private Label labelNewRestaurant;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedButton roundedButtonContinue;
         private Label labelConfPassword;

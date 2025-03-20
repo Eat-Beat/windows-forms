@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat.Forms
 {
@@ -17,6 +18,18 @@ namespace Eat_Beat.Forms
         {
             InitializeComponent();
             this.formLogin = formLogin;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
+        }
+
+        private void LoadLanguage()
+        {
+            labelName.Text = LanguageManager.GetText("labelName");
+            labelEmail.Text = LanguageManager.GetText("labelEmail");
+            labelPassword.Text = LanguageManager.GetText("labelPassword");
+            labelConfPassword.Text = LanguageManager.GetText("labelConfPassword");
+            roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
+            roundedButtonContinue.Text = LanguageManager.GetText("roundedButtonContinue");
         }
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)

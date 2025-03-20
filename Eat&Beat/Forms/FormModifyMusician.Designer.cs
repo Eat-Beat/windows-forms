@@ -30,7 +30,7 @@
         {
             roundedButtonModify = new Eat_Beat.Controls.RoundedButton();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            labelRestaurants = new Label();
+            labelEditMusician = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelConfPassword = new Label();
@@ -74,16 +74,16 @@
             roundedButtonCancel.UseVisualStyleBackColor = false;
             roundedButtonCancel.Click += roundedButtonCancel_Click;
             // 
-            // labelRestaurants
+            // labelEditMusician
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(272, 18);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(317, 40);
-            labelRestaurants.TabIndex = 18;
-            labelRestaurants.Text = "MODIFICAR MUSICO:";
+            labelEditMusician.AutoSize = true;
+            labelEditMusician.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEditMusician.ForeColor = Color.FromArgb(239, 230, 220);
+            labelEditMusician.Location = new Point(272, 18);
+            labelEditMusician.Name = "labelEditMusician";
+            labelEditMusician.Size = new Size(317, 40);
+            labelEditMusician.TabIndex = 18;
+            labelEditMusician.Text = "MODIFICAR MUSICO:";
             // 
             // labelPassword
             // 
@@ -166,9 +166,12 @@
             roundedTextBoxEmail.Name = "roundedTextBoxEmail";
             roundedTextBoxEmail.Padding = new Padding(8);
             roundedTextBoxEmail.PasswordChar = false;
+            roundedTextBoxEmail.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxEmail.PlaceholderText = "";
             roundedTextBoxEmail.Size = new Size(483, 37);
             roundedTextBoxEmail.TabIndex = 31;
             roundedTextBoxEmail.Texts = "";
+            roundedTextBoxEmail.UnderlinedStyle = false;
             // 
             // roundedTextBoxName
             // 
@@ -185,9 +188,12 @@
             roundedTextBoxName.Name = "roundedTextBoxName";
             roundedTextBoxName.Padding = new Padding(8);
             roundedTextBoxName.PasswordChar = false;
+            roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxName.PlaceholderText = "";
             roundedTextBoxName.Size = new Size(483, 37);
             roundedTextBoxName.TabIndex = 36;
             roundedTextBoxName.Texts = "";
+            roundedTextBoxName.UnderlinedStyle = false;
             // 
             // roundedTextBoxPassword
             // 
@@ -204,9 +210,12 @@
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
             roundedTextBoxPassword.Padding = new Padding(8);
             roundedTextBoxPassword.PasswordChar = false;
+            roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPassword.PlaceholderText = "";
             roundedTextBoxPassword.Size = new Size(483, 37);
             roundedTextBoxPassword.TabIndex = 38;
             roundedTextBoxPassword.Texts = "";
+            roundedTextBoxPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxConfPassword
             // 
@@ -223,9 +232,12 @@
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
             roundedTextBoxConfPassword.Padding = new Padding(8);
             roundedTextBoxConfPassword.PasswordChar = false;
+            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxConfPassword.PlaceholderText = "";
             roundedTextBoxConfPassword.Size = new Size(483, 37);
             roundedTextBoxConfPassword.TabIndex = 37;
             roundedTextBoxConfPassword.Texts = "";
+            roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxAddress
             // 
@@ -242,9 +254,12 @@
             roundedTextBoxAddress.Name = "roundedTextBoxAddress";
             roundedTextBoxAddress.Padding = new Padding(8);
             roundedTextBoxAddress.PasswordChar = false;
+            roundedTextBoxAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxAddress.PlaceholderText = "";
             roundedTextBoxAddress.Size = new Size(483, 37);
             roundedTextBoxAddress.TabIndex = 40;
             roundedTextBoxAddress.Texts = "";
+            roundedTextBoxAddress.UnderlinedStyle = false;
             // 
             // roundedTextBoxNumAddress
             // 
@@ -261,9 +276,12 @@
             roundedTextBoxNumAddress.Name = "roundedTextBoxNumAddress";
             roundedTextBoxNumAddress.Padding = new Padding(8);
             roundedTextBoxNumAddress.PasswordChar = false;
+            roundedTextBoxNumAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxNumAddress.PlaceholderText = "";
             roundedTextBoxNumAddress.Size = new Size(483, 37);
             roundedTextBoxNumAddress.TabIndex = 39;
             roundedTextBoxNumAddress.Texts = "";
+            roundedTextBoxNumAddress.UnderlinedStyle = false;
             // 
             // FormModifyMusician
             // 
@@ -281,7 +299,7 @@
             Controls.Add(labelAddress);
             Controls.Add(roundedButtonModify);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelEditMusician);
             Controls.Add(labelConfPassword);
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
@@ -296,7 +314,7 @@
 
         private Controls.RoundedButton roundedButtonModify;
         private Controls.RoundedButton roundedButtonCancel;
-        private Label labelRestaurants;
+        private Label labelEditMusician;
         private Label labelPassword;
         private Label labelEmail;
         private Label labelConfPassword;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelRestaurants = new Label();
+            labelNewRestaurant = new Label();
             roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
             roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
             labelPostalCode = new Label();
@@ -39,16 +39,16 @@
             roundedTextBoxPostalCode = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
-            // labelRestaurants
+            // labelNewRestaurant
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(257, 44);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(406, 37);
-            labelRestaurants.TabIndex = 7;
-            labelRestaurants.Text = "NUEVO RESTAURANTE:";
+            labelNewRestaurant.AutoSize = true;
+            labelNewRestaurant.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNewRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
+            labelNewRestaurant.Location = new Point(257, 44);
+            labelNewRestaurant.Name = "labelNewRestaurant";
+            labelNewRestaurant.Size = new Size(406, 37);
+            labelNewRestaurant.TabIndex = 7;
+            labelNewRestaurant.Text = "NUEVO RESTAURANTE:";
             // 
             // roundedButtonCancel
             // 
@@ -192,7 +192,7 @@
             Controls.Add(labelAddress);
             Controls.Add(roundedButtonCreate);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelNewRestaurant);
             Name = "FormNewRestaurant2";
             Text = "NewRestaurant";
             Load += FormNewRestaurant2_Load;
@@ -206,7 +206,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label labelRestaurants;
+        private Label labelNewRestaurant;
         private TextBox textBox1;
         private TextBox textBoxAddress;
         private TextBox textBoxNumber;

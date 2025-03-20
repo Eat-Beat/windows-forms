@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eat_Beat.Controls;
+using Eat_Beat.Logic.Entities;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -24,7 +25,17 @@ namespace Eat_Beat.Forms
             this.formLogin = formLogin;
             InitializeWebView();
             roundedComboBoxKm.SelectedIndex = 0;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
+        }
 
+        private void LoadLanguage()
+        {
+            labelLongitut.Text = LanguageManager.GetText("labelLongitut");
+            labelLatitut.Text = LanguageManager.GetText("labelLatitut");
+            labelRangeKm.Text = LanguageManager.GetText("labelRangeKm");
+            roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
+            roundedButtonContinue.Text = LanguageManager.GetText("roundedButtonContinue");
         }
 
         private async void InitializeWebView()
