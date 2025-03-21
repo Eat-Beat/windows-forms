@@ -190,10 +190,10 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 681);
+            Controls.Add(panelMain);
             Controls.Add(labelEn);
             Controls.Add(labelCa);
             Controls.Add(labelEs);
-            Controls.Add(panelMain);
             Controls.Add(pictureBoxLogoSmall);
             Controls.Add(pictureBox1);
             Controls.Add(buttonLogIn);

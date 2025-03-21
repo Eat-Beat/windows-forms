@@ -90,5 +90,15 @@ namespace Eat_Beat.Forms
 
             dataGridViewUsers.DataSource = musiciansData;
         }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAdmins_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
+        }
     }
 }

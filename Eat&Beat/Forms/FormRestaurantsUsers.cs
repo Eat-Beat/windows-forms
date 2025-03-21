@@ -69,5 +69,10 @@ namespace Eat_Beat.Forms
             roundedButtonCreate.Text = LanguageManager.GetText("roundedButtonCreate");
             roundedButtonDelete.Text = LanguageManager.GetText("roundedButtonDelete");
         }
+
+        private void labelAdmins_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
+        }
     }
 }

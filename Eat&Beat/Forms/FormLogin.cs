@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Web.UI.DataVisualization.Charting;
 using Eat_Beat.Forms;
 using Eat_Beat.Logic.Entities;
 
@@ -6,20 +7,10 @@ namespace Eat_Beat
 {
     public partial class FormLogin : Form
     {
-
-        public FormNewRestaurant newRestaurant;
-        public FormNewRestaurant2 newRestaurant2;
-        public FormModifyRestaurant modifyRestaurant;
-        public FormOpenRestaurant openRestaurant;
-        public FormNewMusician newMusician;
-        public FormNewMusician2 newMusician2;
-        public FormModifyMusician modifyMusician;
-        public FormOpenMusician openMusician;
-        public CalendarPopup calendarPopup;
-
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
+        public List<User> Users = new List<User>();
         public User selectedUser;
 
         public FormLogin()
@@ -47,12 +38,15 @@ namespace Eat_Beat
 
                 string musiciansPath = Path.Combine(jsonFolder, "musicians.json");
                 string restaurantsPath = Path.Combine(jsonFolder, "restaurans.json");
+                string usersPath = Path.Combine(jsonFolder, "users.json");
 
                 string musiciansJson = File.ReadAllText(musiciansPath);
                 string restaurantsJson = File.ReadAllText(restaurantsPath);
+                string usersJson = File.ReadAllText("C:\\Users\\CEP-TARDA\\source\\repos\\Eat-Beat\\windows-forms\\Eat&Beat\\JSON\\users.json");
 
                 Musicians = JsonSerializer.Deserialize<List<Musician>>(musiciansJson);
                 Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(restaurantsJson);
+                Users = JsonSerializer.Deserialize<List<User>>(usersJson);
             }
             catch (Exception ex)
             {
@@ -69,6 +63,7 @@ namespace Eat_Beat
             {
                     typeof(FormRestaurantsUsers),
                     typeof(FormMusicianUsers),
+                    typeof(FormAdminUsers),
                     typeof(FormNewRestaurant),
                     typeof(FormNewRestaurant2),
                     typeof(FormModifyRestaurant),
@@ -95,10 +90,48 @@ namespace Eat_Beat
         /// <param name="e"></param>
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            //Login logic/Function goes here
-            bool correctPassword = true;
+            string username = textBoxUser.Text;
+            string password = textBoxPassword.Text;
 
-            if (correctPassword)
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Please enter a username and password");
+                return;
+            }
+
+            bool founUser = false;
+
+            foreach (User user in Users)
+            {
+                if (user.name == username && user.password == password)
+                {
+                    selectedUser = user;
+                    founUser = true;
+                    break;
+                }
+            }
+
+            if (!founUser)
+            {
+                MessageBox.Show("The user does not exist");
+                return;
+            }
+
+            bool correctUser = false;
+            if (selectedUser.idUser <3)
+            {
+                MessageBox.Show("The user does not have permission to enter the application");
+                return;
+            }
+            else
+            {
+                correctUser = true;
+            }
+
+            //Login logic/Function goes here
+            
+
+            if (correctUser)
             {
                 //Grant Acces to App
                 panelMain.Visible = true;

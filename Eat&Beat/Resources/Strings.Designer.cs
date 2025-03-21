@@ -79,7 +79,7 @@ namespace Eat_Beat.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a MODIFICAR MÚSICO.
+        ///   Busca una cadena traducida similar a MODIFICAR MÚSICO:.
         /// </summary>
         internal static string labelEditMusician {
             get {
