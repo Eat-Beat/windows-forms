@@ -118,7 +118,7 @@ namespace Eat_Beat
             }
 
             bool correctUser = false;
-            if (selectedUser.idUser <3)
+            if (selectedUser.idRol <3)
             {
                 MessageBox.Show("The user does not have permission to enter the application");
                 return;
