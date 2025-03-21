@@ -40,6 +40,14 @@ namespace Eat_Beat.Forms
         private void FormRestaurantsUsers_Load(object sender, EventArgs e)
         {
 
+            var user = formLogin.selectedUser;
+
+            if (user.idRol != 3)
+            {
+                labelAdmins.Visible = false;
+            }
+
+
             dataGridViewUsers.DataSource = null;
 
 

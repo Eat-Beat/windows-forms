@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eat_Beat.Logic.Entities;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Eat_Beat.Forms
 {
@@ -74,6 +75,14 @@ namespace Eat_Beat.Forms
 
         private void FormMusicianUsers_Load(object sender, EventArgs e)
         {
+            var user = formLogin.selectedUser;
+
+            if (user.idRol != 3)
+            {
+                labelAdmins.Visible = false;
+            }
+
+
             dataGridViewUsers.DataSource = null;
 
             var musiciansData = formLogin

@@ -121,9 +121,9 @@
     {
         "idUser": 21,
         "idRol": 3,
-        "name": "admin",
+        "name": "superadmin",
         "email": "alice@email.com",
-        "password": "admin"
+        "password": "superadmin"
     },
     {
         "idUser": 22,
@@ -135,9 +135,9 @@
     {
         "idUser": 23,
         "idRol": 4,
-        "name": "Charlie Brown",
+        "name": "admin",
         "email": "charlie@email.com",
-        "password": "admin123"
+        "password": "admin"
     },
     {
         "idUser": 24,
@@ -149,9 +149,9 @@
     {
         "idUser": 25,
         "idRol": 5,
-        "name": "Edward Norton",
+        "name": "manten",
         "email": "edward@email.com",
-        "password": "fixit"
+        "password": "manten"
     },
     {
         "idUser": 26,
