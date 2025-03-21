@@ -41,5 +41,25 @@ namespace Eat_Beat.Forms
         {
             formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
         }
+
+        private void FormAdminUsers_Load(object sender, EventArgs e)
+        {
+            dataGridViewUsers.DataSource = null;
+
+
+            var adminsData = formLogin
+                .Admins
+                .Select(a => new
+                {
+                    a.idUser,
+                    a.idRol,
+                    a.name,
+                    a.email
+                })
+                .ToList();
+
+
+            dataGridViewUsers.DataSource = adminsData;
+        }
     }
 }

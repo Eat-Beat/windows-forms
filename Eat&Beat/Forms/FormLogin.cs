@@ -10,7 +10,8 @@ namespace Eat_Beat
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
-        public List<User> Users = new List<User>();
+        public List<User> AllUsers = new List<User>();
+        public List<User> Admins = new List<User>();
         public User selectedUser;
 
         public FormLogin()
@@ -46,7 +47,8 @@ namespace Eat_Beat
 
                 Musicians = JsonSerializer.Deserialize<List<Musician>>(musiciansJson);
                 Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(restaurantsJson);
-                Users = JsonSerializer.Deserialize<List<User>>(usersJson);
+                AllUsers = JsonSerializer.Deserialize<List<User>>(usersJson);
+                Admins = AllUsers.Where(u => u.idRol >= 3).ToList();
             }
             catch (Exception ex)
             {
@@ -101,7 +103,7 @@ namespace Eat_Beat
 
             bool founUser = false;
 
-            foreach (User user in Users)
+            foreach (User user in AllUsers)
             {
                 if (user.name == username && user.password == password)
                 {
