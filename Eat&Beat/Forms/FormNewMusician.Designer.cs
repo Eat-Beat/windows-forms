@@ -31,7 +31,7 @@
 
             roundedButtonContinue = new Controls.RoundedButton();
             roundedButtonCancel = new Controls.RoundedButton();
-            labelRestaurants = new Label();
+            labelNewMusician = new Label();
             labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
