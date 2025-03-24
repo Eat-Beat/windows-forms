@@ -1,0 +1,29 @@
+[
+    {
+        "idPerform": 2,
+        "idMusician": 3,
+        "idRestaurant": 4,
+        "dateTime": "2025-03-18T21:30:00",
+        "budget": 750.0,
+        "musicianRate": 5,
+        "restaurantRate": 4
+    },
+    {
+        "idPerform": 9,
+        "idMusician": 1,
+        "idRestaurant": 4,
+        "dateTime": "2025-04-15T21:00:00",
+        "budget": 550.0,
+        "musicianRate": 5,
+        "restaurantRate": 4
+    },
+    {
+        "idPerform": 19,
+        "idMusician": 11,
+        "idRestaurant": 4,
+        "dateTime": "2025-06-01T21:00:00",
+        "budget": 1200.0,
+        "musicianRate": 5,
+        "restaurantRate": 5
+    }
+]

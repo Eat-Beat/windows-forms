@@ -1,0 +1,72 @@
+[
+    {
+        "idUser": 21,
+        "idRol": 3,
+        "name": "Alice Johnson",
+        "email": "alice@email.com",
+        "password": "adminpass"
+    },
+    {
+        "idUser": 22,
+        "idRol": 3,
+        "name": "Bob Roberts",
+        "email": "bob@email.com",
+        "password": "secureadmin"
+    },
+    {
+        "idUser": 23,
+        "idRol": 4,
+        "name": "Charlie Brown",
+        "email": "charlie@email.com",
+        "password": "admin123"
+    },
+    {
+        "idUser": 24,
+        "idRol": 4,
+        "name": "Diana Prince",
+        "email": "diana@email.com",
+        "password": "wonderwoman"
+    },
+    {
+        "idUser": 25,
+        "idRol": 5,
+        "name": "Edward Norton",
+        "email": "edward@email.com",
+        "password": "fixit"
+    },
+    {
+        "idUser": 26,
+        "idRol": 5,
+        "name": "Fiona Gallagher",
+        "email": "fiona@email.com",
+        "password": "maintenance99"
+    },
+    {
+        "idUser": 27,
+        "idRol": 3,
+        "name": "George Orwell",
+        "email": "george@email.com",
+        "password": "bigbrother"
+    },
+    {
+        "idUser": 28,
+        "idRol": 4,
+        "name": "Hannah Montana",
+        "email": "hannah@email.com",
+        "password": "bestofboth"
+    },
+    {
+        "idUser": 29,
+        "idRol": 5,
+        "name": "Ian McKellen",
+        "email": "ian@email.com",
+        "password": "gandalf"
+    },
+    {
+        "idUser": 30,
+        "idRol": 3,
+        "name": "Jack Sparrow",
+        "email": "jack@email.com",
+        "password": "rum123"
+    }
+]

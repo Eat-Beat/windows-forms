@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             roundedButtonContinue = new Controls.RoundedButton();
             roundedButtonCancel = new Controls.RoundedButton();
             labelRestaurants = new Label();
@@ -71,16 +72,16 @@
             roundedButtonCancel.UseVisualStyleBackColor = false;
             roundedButtonCancel.Click += roundedButtonCancel_Click;
             // 
-            // labelRestaurants
+            // labelNewMusician
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(63, 56);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(289, 37);
-            labelRestaurants.TabIndex = 18;
-            labelRestaurants.Text = "NUEVO MUSICO:";
+            labelNewMusician.AutoSize = true;
+            labelNewMusician.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNewMusician.ForeColor = Color.FromArgb(239, 230, 220);
+            labelNewMusician.Location = new Point(228, 28);
+            labelNewMusician.Name = "labelNewMusician";
+            labelNewMusician.Size = new Size(289, 37);
+            labelNewMusician.TabIndex = 18;
+            labelNewMusician.Text = "NUEVO MÚSICO:";
             // 
             // labelConfPassword
             // 
@@ -231,7 +232,7 @@
             Controls.Add(labelName);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelNewMusician);
             Name = "FormNewMusician";
             Text = "NewMusician";
             ResumeLayout(false);
@@ -242,7 +243,7 @@
 
         private Controls.RoundedButton roundedButtonContinue;
         private Controls.RoundedButton roundedButtonCancel;
-        private Label labelRestaurants;
+        private Label labelNewMusician;
         private Label labelConfPassword;
         private Label labelPassword;
         private Label labelEmail;

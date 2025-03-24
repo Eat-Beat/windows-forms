@@ -129,12 +129,9 @@
             roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
             roundedTextBoxLongitut.Padding = new Padding(8);
             roundedTextBoxLongitut.PasswordChar = false;
-            roundedTextBoxLongitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLongitut.PlaceholderText = "";
             roundedTextBoxLongitut.Size = new Size(307, 37);
             roundedTextBoxLongitut.TabIndex = 57;
             roundedTextBoxLongitut.Texts = "";
-            roundedTextBoxLongitut.UnderlinedStyle = false;
             // 
             // roundedTextBoxLatitut
             // 
@@ -151,12 +148,9 @@
             roundedTextBoxLatitut.Name = "roundedTextBoxLatitut";
             roundedTextBoxLatitut.Padding = new Padding(8);
             roundedTextBoxLatitut.PasswordChar = false;
-            roundedTextBoxLatitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxLatitut.PlaceholderText = "";
             roundedTextBoxLatitut.Size = new Size(307, 37);
             roundedTextBoxLatitut.TabIndex = 58;
             roundedTextBoxLatitut.Texts = "";
-            roundedTextBoxLatitut.UnderlinedStyle = false;
             // 
             // roundedComboBoxKm
             // 

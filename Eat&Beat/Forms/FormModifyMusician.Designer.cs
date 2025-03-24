@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             roundedButtonModify = new Controls.RoundedButton();
             roundedButtonCancel = new Controls.RoundedButton();
             labelRestaurants = new Label();
+
             labelPassword = new Label();
             labelEmail = new Label();
             labelConfPassword = new Label();
@@ -74,16 +76,18 @@
             roundedButtonCancel.UseVisualStyleBackColor = false;
             roundedButtonCancel.Click += roundedButtonCancel_Click;
             // 
-            // labelRestaurants
+            // labelEditMusician
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(58, 23);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(317, 40);
-            labelRestaurants.TabIndex = 18;
-            labelRestaurants.Text = "MODIFICAR MUSICO:";
+
+            labelEditMusician.AutoSize = true;
+            labelEditMusician.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEditMusician.ForeColor = Color.FromArgb(239, 230, 220);
+            labelEditMusician.Location = new Point(272, 18);
+            labelEditMusician.Name = "labelEditMusician";
+            labelEditMusician.Size = new Size(317, 40);
+            labelEditMusician.TabIndex = 18;
+            labelEditMusician.Text = "MODIFICAR MUSICO:";
+
             // 
             // labelPassword
             // 
@@ -299,13 +303,14 @@
             Controls.Add(labelAddress);
             Controls.Add(roundedButtonModify);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelEditMusician);
             Controls.Add(labelConfPassword);
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
             Controls.Add(labelName);
             Name = "FormModifyMusician";
             Text = "ModifyMusician";
+            Load += FormModifyMusician_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -314,7 +319,7 @@
 
         private Controls.RoundedButton roundedButtonModify;
         private Controls.RoundedButton roundedButtonCancel;
-        private Label labelRestaurants;
+        private Label labelEditMusician;
         private Label labelPassword;
         private Label labelEmail;
         private Label labelConfPassword;

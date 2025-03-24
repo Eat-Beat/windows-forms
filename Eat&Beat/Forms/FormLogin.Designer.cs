@@ -38,6 +38,9 @@
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
             pictureBoxLogoSmall = new PictureBox();
+            labelEs = new Label();
+            labelCa = new Label();
+            labelEn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogoSmall).BeginInit();
@@ -141,6 +144,45 @@
             pictureBoxLogoSmall.TabIndex = 8;
             pictureBoxLogoSmall.TabStop = false;
             // 
+            // labelEs
+            // 
+            labelEs.AutoSize = true;
+            labelEs.BackColor = Color.Transparent;
+            labelEs.Font = new Font("Barlow Medium", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEs.ForeColor = Color.FromArgb(32, 32, 31);
+            labelEs.Location = new Point(1144, 648);
+            labelEs.Name = "labelEs";
+            labelEs.Size = new Size(31, 24);
+            labelEs.TabIndex = 51;
+            labelEs.Text = "es";
+            labelEs.Click += labelEs_Click;
+            // 
+            // labelCa
+            // 
+            labelCa.AutoSize = true;
+            labelCa.BackColor = Color.Transparent;
+            labelCa.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelCa.ForeColor = Color.FromArgb(32, 32, 31);
+            labelCa.Location = new Point(1179, 648);
+            labelCa.Name = "labelCa";
+            labelCa.Size = new Size(30, 24);
+            labelCa.TabIndex = 52;
+            labelCa.Text = "ca";
+            labelCa.Click += labelCa_Click;
+            // 
+            // labelEn
+            // 
+            labelEn.AutoSize = true;
+            labelEn.BackColor = Color.Transparent;
+            labelEn.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEn.ForeColor = Color.FromArgb(32, 32, 31);
+            labelEn.Location = new Point(1214, 648);
+            labelEn.Name = "labelEn";
+            labelEn.Size = new Size(30, 24);
+            labelEn.TabIndex = 53;
+            labelEn.Text = "en";
+            labelEn.Click += labelEn_Click;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -149,6 +191,9 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 681);
             Controls.Add(panelMain);
+            Controls.Add(labelEn);
+            Controls.Add(labelCa);
+            Controls.Add(labelEs);
             Controls.Add(pictureBoxLogoSmall);
             Controls.Add(pictureBox1);
             Controls.Add(buttonLogIn);
@@ -158,8 +203,13 @@
             Controls.Add(labelUser);
             Controls.Add(pictureBoxBackground);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormLogin";
-            Text = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "EAT&BEAT";
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogoSmall).EndInit();
@@ -178,5 +228,8 @@
         private PictureBox pictureBox1;
         private Panel panelMain;
         private PictureBox pictureBoxLogoSmall;
+        private Label labelEs;
+        private Label labelCa;
+        private Label labelEn;
     }
 }

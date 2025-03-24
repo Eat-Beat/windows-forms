@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eat_Beat.Logic.Entities;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Eat_Beat.Forms
 {
@@ -20,6 +22,18 @@ namespace Eat_Beat.Forms
         {
             InitializeComponent();
             this.formLogin = formLogin;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
+        }
+
+        private void LoadLanguage()
+        {
+            labelRestaurants.Text = LanguageManager.GetText("labelRestaurants");
+            labelMusicians.Text = LanguageManager.GetText("labelMusicians");
+            roundedButtonOpen.Text = LanguageManager.GetText("roundedButtonOpen");
+            roundedButtonEdit.Text = LanguageManager.GetText("roundedButtonEdit");
+            roundedButtonCreate.Text = LanguageManager.GetText("roundedButtonCreate");
+            roundedButtonDelete.Text = LanguageManager.GetText("roundedButtonDelete");
         }
 
         private void labelRestaurants_Click(object sender, EventArgs e)
@@ -61,6 +75,14 @@ namespace Eat_Beat.Forms
 
         private void FormMusicianUsers_Load(object sender, EventArgs e)
         {
+            var user = formLogin.selectedUser;
+
+            if (user.idRol != 3)
+            {
+                labelAdmins.Visible = false;
+            }
+
+
             dataGridViewUsers.DataSource = null;
 
             var musiciansData = formLogin
@@ -76,6 +98,16 @@ namespace Eat_Beat.Forms
                 .ToList();
 
             dataGridViewUsers.DataSource = musiciansData;
+        }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAdmins_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
         }
     }
 }

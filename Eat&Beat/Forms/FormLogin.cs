@@ -1,29 +1,40 @@
 using System.Text.Json;
+using System.Web.UI.DataVisualization.Charting;
 using Eat_Beat.Forms;
+using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat
 {
     public partial class FormLogin : Form
     {
-
-        public FormNewRestaurant newRestaurant;
-        public FormNewRestaurant2 newRestaurant2;
-        public FormModifyRestaurant modifyRestaurant;
-        public FormOpenRestaurant openRestaurant;
-        public FormNewMusician newMusician;
-        public FormNewMusician2 newMusician2;
-        public FormModifyMusician modifyMusician;
-        public FormOpenMusician openMusician;
+        public FormRestaurantsUsers formRestaurantsUsers;
+        public FormMusicianUsers formMusicianUsers;
+        public FormAdminUsers formAdminUsers;
+        public FormNewRestaurant formNewRestaurant;
+        public FormNewRestaurant2 formNewRestaurant2;
+        public FormModifyRestaurant formModifyRestaurant;
+        public FormOpenRestaurant formOpenRestaurant;
+        public FormNewMusician formNewMusician;
+        public FormNewMusician2 formNewMusician2;
+        public FormModifyMusician formModifyMusician;
+        public FormOpenMusician formOpenMusician;
         public CalendarPopup calendarPopup;
-        
+
+
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
+        public List<User> AllUsers = new List<User>();
+        public List<User> Admins = new List<User>();
         public User selectedUser;
+        public Restaurant selectedRestaurant;
+        public Musician selectedMusician;
 
         public FormLogin()
         {
             InitializeComponent();
+            LanguageManager.LanguageChanged += UpdateLanguage;
+            LanguageManager.LoadSavedLanguage();
             InitializeForms();
             panelMain.Visible = false;
             pictureBoxLogoSmall.Visible = false;
@@ -44,12 +55,16 @@ namespace Eat_Beat
 
                 string musiciansPath = Path.Combine(jsonFolder, "musicians.json");
                 string restaurantsPath = Path.Combine(jsonFolder, "restaurans.json");
+                string usersPath = Path.Combine(jsonFolder, "users.json");
 
                 string musiciansJson = File.ReadAllText(musiciansPath);
                 string restaurantsJson = File.ReadAllText(restaurantsPath);
+                string usersJson = File.ReadAllText(usersPath);
 
                 Musicians = JsonSerializer.Deserialize<List<Musician>>(musiciansJson);
                 Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(restaurantsJson);
+                AllUsers = JsonSerializer.Deserialize<List<User>>(usersJson);
+                Admins = AllUsers.Where(u => u.idRol >= 3).ToList();
             }
             catch (Exception ex)
             {
@@ -66,6 +81,7 @@ namespace Eat_Beat
             {
                     typeof(FormRestaurantsUsers),
                     typeof(FormMusicianUsers),
+                    typeof(FormAdminUsers),
                     typeof(FormNewRestaurant),
                     typeof(FormNewRestaurant2),
                     typeof(FormModifyRestaurant),
@@ -92,15 +108,53 @@ namespace Eat_Beat
         /// <param name="e"></param>
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            //Login logic/Function goes here
-            bool correctPassword = true;
+            string username = textBoxUser.Text;
+            string password = textBoxPassword.Text;
 
-            if (correctPassword)
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Please enter a username and password");
+                return;
+            }
+
+            bool founUser = false;
+
+            foreach (User user in AllUsers)
+            {
+                if (user.name == username && user.password == password)
+                {
+                    selectedUser = user;
+                    founUser = true;
+                    break;
+                }
+            }
+
+            if (!founUser)
+            {
+                MessageBox.Show("The user does not exist");
+                return;
+            }
+
+            bool correctUser = false;
+            if (selectedUser.idRol <3)
+            {
+                MessageBox.Show("The user does not have permission to enter the application");
+                return;
+            }
+            else
+            {
+                correctUser = true;
+            }
+
+            //Login logic/Function goes here
+            
+
+            if (correctUser)
             {
                 //Grant Acces to App
                 panelMain.Visible = true;
-                pictureBoxLogoSmall.Visible= true;
-                pictureBox1.Visible= false;
+                pictureBoxLogoSmall.Visible = true;
+                pictureBox1.Visible = false;
 
                 LoadFormIntoPanel("FormRestaurantsUsers", true);
             }
@@ -141,28 +195,72 @@ namespace Eat_Beat
                 panelMain.Controls.Add(childForm);
                 childForm.Show();
             }
-            else {
+            else
+            {
                 //Users shoud never get here as we will define what name gets sent, this is solely for debugging purposes
                 MessageBox.Show("Form was not found. Can you read???");
             }
         }
 
-        
+
         /// <summary>
         /// Changes the panel size depending on which size we need
         /// </summary>
-        public void changePanelSize(bool desiredPanelSizeBig) {
+        public void changePanelSize(bool desiredPanelSizeBig)
+        {
             if (!desiredPanelSizeBig)
             {
                 panelMain.Location = new Point(160, 134);
                 panelMain.Height = 450;    //1051 511
                 panelMain.Width = 950;
             }
-            else {
+            else
+            {
                 panelMain.Location = new Point(50, 70);
                 panelMain.Height = 568;
-                panelMain.Width= 1164;
+                panelMain.Width = 1164;
             }
+        }
+
+        private void UpdateLanguage()
+        {
+            labelUser.Text = LanguageManager.GetText("labelUser");
+            labelPassword.Text = LanguageManager.GetText("labelPassword");
+
+            if (panelMain.Controls.Count > 0)
+            {
+                Form activeForm = panelMain.Controls[0] as Form;
+                if (activeForm != null)
+                {
+                    string formName = activeForm.Name;
+                    bool isBig = activeForm.Size.Width == 1164;
+                    LoadFormIntoPanel(formName, isBig);
+                }
+            }
+        }
+
+        private void labelEs_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("es");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Bold);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Regular);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Regular);
+        }
+
+        private void labelCa_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("ca");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Regular);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Regular);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Bold);
+        }
+
+        private void labelEn_Click(object sender, EventArgs e)
+        {
+            LanguageManager.ChangeLanguage("en");
+            labelEs.Font = new Font(labelEs.Font, FontStyle.Regular);
+            labelEn.Font = new Font(labelEn.Font, FontStyle.Bold);
+            labelCa.Font = new Font(labelCa.Font, FontStyle.Regular);
         }
     }
 }

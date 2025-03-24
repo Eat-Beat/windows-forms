@@ -1,0 +1,191 @@
+[
+    {
+        "idUser": 1,
+        "idRol": 1,
+        "name": "John Doe",
+        "email": "johndoe@email.com",
+        "password": "securepass"
+    },
+    {
+        "idUser": 2,
+        "idRol": 2,
+        "name": "La Trattoria",
+        "email": "trattoria@email.com",
+        "password": "secure123"
+    },
+    {
+        "idUser": 3,
+        "idRol": 1,
+        "name": "Jane Smith",
+        "email": "janesmith@email.com",
+        "password": "pass1234"
+    },
+    {
+        "idUser": 4,
+        "idRol": 2,
+        "name": "Sushi World",
+        "email": "sushi@email.com",
+        "password": "fishlover"
+    },
+    {
+        "idUser": 5,
+        "idRol": 1,
+        "name": "Carlos Santana",
+        "email": "carlos@email.com",
+        "password": "guitarhero"
+    },
+    {
+        "idUser": 6,
+        "idRol": 2,
+        "name": "El Asador",
+        "email": "asador@email.com",
+        "password": "meatlover"
+    },
+    {
+        "idUser": 7,
+        "idRol": 1,
+        "name": "Amy Winehouse",
+        "email": "amy@email.com",
+        "password": "rehab123"
+    },
+    {
+        "idUser": 8,
+        "idRol": 2,
+        "name": "Vegan Bliss",
+        "email": "vegan@email.com",
+        "password": "healthy123"
+    },
+    {
+        "idUser": 9,
+        "idRol": 1,
+        "name": "Ludwig Beethoven",
+        "email": "beethoven@email.com",
+        "password": "furElise"
+    },
+    {
+        "idUser": 10,
+        "idRol": 2,
+        "name": "Taco Fiesta",
+        "email": "taco@email.com",
+        "password": "spicy"
+    },
+    {
+        "idUser": 11,
+        "idRol": 1,
+        "name": "Freddie Mercury",
+        "email": "freddie@email.com",
+        "password": "bohemianRhapsody"
+    },
+    {
+        "idUser": 12,
+        "idRol": 2,
+        "name": "Bistro Franc?s",
+        "email": "bistro@email.com",
+        "password": "baguette"
+    },
+    {
+        "idUser": 13,
+        "idRol": 1,
+        "name": "Miles Davis",
+        "email": "miles@email.com",
+        "password": "kindofblue"
+    },
+    {
+        "idUser": 14,
+        "idRol": 2,
+        "name": "Pizza Napoli",
+        "email": "napoli@email.com",
+        "password": "pizza123"
+    },
+    {
+        "idUser": 16,
+        "idRol": 2,
+        "name": "Burger House",
+        "email": "burger@email.com",
+        "password": "cheeseburger"
+    },
+    {
+        "idUser": 18,
+        "idRol": 2,
+        "name": "India Spice",
+        "email": "india@email.com",
+        "password": "currylover"
+    },
+    {
+        "idUser": 20,
+        "idRol": 2,
+        "name": "Tapas Bar",
+        "email": "tapas@email.com",
+        "password": "jamon123"
+    },
+    {
+        "idUser": 21,
+        "idRol": 3,
+        "name": "superadmin",
+        "email": "alice@email.com",
+        "password": "superadmin"
+    },
+    {
+        "idUser": 22,
+        "idRol": 3,
+        "name": "Bob Roberts",
+        "email": "bob@email.com",
+        "password": "secureadmin"
+    },
+    {
+        "idUser": 23,
+        "idRol": 4,
+        "name": "admin",
+        "email": "charlie@email.com",
+        "password": "admin"
+    },
+    {
+        "idUser": 24,
+        "idRol": 4,
+        "name": "Diana Prince",
+        "email": "diana@email.com",
+        "password": "wonderwoman"
+    },
+    {
+        "idUser": 25,
+        "idRol": 5,
+        "name": "manten",
+        "email": "edward@email.com",
+        "password": "manten"
+    },
+    {
+        "idUser": 26,
+        "idRol": 5,
+        "name": "Fiona Gallagher",
+        "email": "fiona@email.com",
+        "password": "maintenance99"
+    },
+    {
+        "idUser": 27,
+        "idRol": 3,
+        "name": "George Orwell",
+        "email": "george@email.com",
+        "password": "bigbrother"
+    },
+    {
+        "idUser": 28,
+        "idRol": 4,
+        "name": "Hannah Montana",
+        "email": "hannah@email.com",
+        "password": "bestofboth"
+    },
+    {
+        "idUser": 29,
+        "idRol": 5,
+        "name": "Ian McKellen",
+        "email": "ian@email.com",
+        "password": "gandalf"
+    },
+    {
+        "idUser": 30,
+        "idRol": 3,
+        "name": "Jack Sparrow",
+        "email": "jack@email.com",
+        "password": "rum123"
+    }
+]

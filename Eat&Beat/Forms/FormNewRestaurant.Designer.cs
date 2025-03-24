@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelRestaurants = new Label();
+            labelNewRestaurant = new Label();
             roundedButtonCancel = new Controls.RoundedButton();
             roundedButtonContinue = new Controls.RoundedButton();
             labelConfPassword = new Label();
@@ -37,20 +37,21 @@
             labelName = new Label();
             roundedTextBoxPassword = new Controls.RoundedTextBox();
             roundedTextBoxConfPassword = new Controls.RoundedTextBox();
-            roundedTextBox1 = new Controls.RoundedTextBox();
+            roundedTextBoxName = new Controls.RoundedTextBox();
             roundedTextBoxEmail = new Controls.RoundedTextBox();
+          
             SuspendLayout();
             // 
-            // labelRestaurants
+            // labelNewRestaurant
             // 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(67, 46);
-            labelRestaurants.Name = "labelRestaurants";
-            labelRestaurants.Size = new Size(406, 37);
-            labelRestaurants.TabIndex = 7;
-            labelRestaurants.Text = "NUEVO RESTAURANTE:";
+            labelNewRestaurant.AutoSize = true;
+            labelNewRestaurant.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNewRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
+            labelNewRestaurant.Location = new Point(67, 46);
+            labelNewRestaurant.Name = "labelNewRestaurant";
+            labelNewRestaurant.Size = new Size(406, 37);
+            labelNewRestaurant.TabIndex = 7;
+            labelNewRestaurant.Text = "NUEVO RESTAURANTE:";
             // 
             // roundedButtonCancel
             // 
@@ -170,27 +171,27 @@
             roundedTextBoxConfPassword.Texts = "";
             roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
-            // roundedTextBox1
+            // roundedTextBoxName
             // 
-            roundedTextBox1.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBox1.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBox1.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox1.BorderRadius = 10;
-            roundedTextBox1.BorderSize = 2;
-            roundedTextBox1.Font = new Font("Barlow Medium", 12F);
-            roundedTextBox1.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBox1.Location = new Point(283, 110);
-            roundedTextBox1.Margin = new Padding(3, 4, 3, 4);
-            roundedTextBox1.Multiline = false;
-            roundedTextBox1.Name = "roundedTextBox1";
-            roundedTextBox1.Padding = new Padding(8);
-            roundedTextBox1.PasswordChar = false;
-            roundedTextBox1.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBox1.PlaceholderText = "";
-            roundedTextBox1.Size = new Size(485, 37);
-            roundedTextBox1.TabIndex = 64;
-            roundedTextBox1.Texts = "";
-            roundedTextBox1.UnderlinedStyle = false;
+            roundedTextBoxName.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxName.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxName.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxName.BorderRadius = 10;
+            roundedTextBoxName.BorderSize = 2;
+            roundedTextBoxName.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxName.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxName.Location = new Point(283, 110);
+            roundedTextBoxName.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxName.Multiline = false;
+            roundedTextBoxName.Name = "roundedTextBoxName";
+            roundedTextBoxName.Padding = new Padding(8);
+            roundedTextBoxName.PasswordChar = false;
+            roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxName.PlaceholderText = "";
+            roundedTextBoxName.Size = new Size(485, 37);
+            roundedTextBoxName.TabIndex = 64;
+            roundedTextBoxName.Texts = "";
+            roundedTextBoxName.UnderlinedStyle = false;
             // 
             // roundedTextBoxEmail
             // 
@@ -213,7 +214,6 @@
             roundedTextBoxEmail.TabIndex = 63;
             roundedTextBoxEmail.Texts = "";
             roundedTextBoxEmail.UnderlinedStyle = false;
-            roundedTextBoxEmail.Load += roundedTextBoxEmail_Load;
             // 
             // FormNewRestaurant
             // 
@@ -223,7 +223,7 @@
             ClientSize = new Size(915, 415);
             Controls.Add(roundedTextBoxPassword);
             Controls.Add(roundedTextBoxConfPassword);
-            Controls.Add(roundedTextBox1);
+            Controls.Add(roundedTextBoxName);
             Controls.Add(roundedTextBoxEmail);
             Controls.Add(labelConfPassword);
             Controls.Add(labelPassword);
@@ -231,7 +231,7 @@
             Controls.Add(labelName);
             Controls.Add(roundedButtonContinue);
             Controls.Add(roundedButtonCancel);
-            Controls.Add(labelRestaurants);
+            Controls.Add(labelNewRestaurant);
             Name = "FormNewRestaurant";
             Text = "NewRestaurant";
             ResumeLayout(false);
@@ -239,7 +239,7 @@
         }
 
         #endregion
-        private Label labelRestaurants;
+        private Label labelNewRestaurant;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedButton roundedButtonContinue;
         private Label labelConfPassword;
@@ -248,7 +248,7 @@
         private Label labelName;
         private Controls.RoundedTextBox roundedTextBoxPassword;
         private Controls.RoundedTextBox roundedTextBoxConfPassword;
-        private Controls.RoundedTextBox roundedTextBox1;
+        private Controls.RoundedTextBox roundedTextBoxName;
         private Controls.RoundedTextBox roundedTextBoxEmail;
     }
 }

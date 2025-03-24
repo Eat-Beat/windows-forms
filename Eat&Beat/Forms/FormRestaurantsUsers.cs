@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat.Forms
 {
@@ -10,8 +11,36 @@ namespace Eat_Beat.Forms
         {
             InitializeComponent();
             this.formLogin = formLogin;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
         }
 
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (Visible)
+            {
+                LoadRestaurants();
+            }
+        }
+
+        private void LoadRestaurants()
+        {
+            dataGridViewUsers.DataSource = null;
+            var restaurantsData = formLogin
+                .Restaurants
+                .Select(r => new
+                {
+                    r.idUser,
+                    r.name,
+                    r.email,
+                    FullAddress = r.address + " " + r.addressNum,
+                    r.zipCode,
+                    r.rating
+                })
+                .ToList();
+            dataGridViewUsers.DataSource = restaurantsData;
+        }
         private void labelMusicians_Click(object sender, EventArgs e)
         {
             formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
@@ -24,6 +53,17 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonEdit_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a restaurant to edit");
+                return;
+            }
+
+            int selectedRestaurantId = (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value;
+            Restaurant selectedRestaurant = formLogin.Restaurants.FirstOrDefault(r => r.idUser == selectedRestaurantId);
+
+
+            formLogin.selectedRestaurant = selectedRestaurant;
             formLogin.LoadFormIntoPanel("FormModifyRestaurant", false);
 
         }
@@ -37,24 +77,49 @@ namespace Eat_Beat.Forms
         private void FormRestaurantsUsers_Load(object sender, EventArgs e)
         {
 
-            dataGridViewUsers.DataSource = null;
+            var user = formLogin.selectedUser;
 
+            if (user.idRol != 3)
+            {
+                labelAdmins.Visible = false;
+            }
 
-            var restaurantsData = formLogin
-                .Restaurants
-                .Select(r => new
+            LoadRestaurants();
+
+        }
+
+        private void LoadLanguage()
+        {
+            labelRestaurants.Text = LanguageManager.GetText("labelRestaurants");
+            labelMusicians.Text = LanguageManager.GetText("labelMusicians");
+            roundedButtonEdit.Text = LanguageManager.GetText("roundedButtonEdit");
+            roundedButtonOpen.Text = LanguageManager.GetText("roundedButtonOpen");
+            roundedButtonCreate.Text = LanguageManager.GetText("roundedButtonCreate");
+            roundedButtonDelete.Text = LanguageManager.GetText("roundedButtonDelete");
+        }
+
+        private void labelAdmins_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
+        }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a restaurant to edit");
+                return;
+            }
+
+            foreach (Restaurant rest in formLogin.Restaurants)
+            {
+                if (rest.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
                 {
-                    r.idUser,
-                    r.name,
-                    r.email,
-                    FullAddress = r.address + " " + r.addressNum,
-                    r.zipCode,
-                    r.rating
-                })
-                .ToList();
-
-
-            dataGridViewUsers.DataSource = restaurantsData;
+                    formLogin.Restaurants.Remove(rest);
+                    LoadRestaurants();
+                    break;
+                }
+            }
         }
     }
 }
