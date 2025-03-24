@@ -39,5 +39,14 @@ namespace Eat_Beat.Forms
             roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
             roundedButtonModify.Text = LanguageManager.GetText("roundedButtonModify");
         }
+
+        private void FormModifyMusician_Load(object sender, EventArgs e)
+        {
+            /*Musician selectedMusician = formLogin.selectedMusician;
+            roundedTextBoxName.Texts = selectedMusician.name;
+            roundedTextBoxEmail.Texts = selectedMusician.email;
+            roundedTextBoxPassword.Texts = selectedMusician.password;
+            */
+        }
     }
 }

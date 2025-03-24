@@ -306,6 +306,7 @@
             Controls.Add(labelName);
             Name = "FormModifyMusician";
             Text = "ModifyMusician";
+            Load += FormModifyMusician_Load;
             ResumeLayout(false);
             PerformLayout();
         }

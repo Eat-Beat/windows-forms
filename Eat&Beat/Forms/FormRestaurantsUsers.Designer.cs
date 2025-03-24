@@ -82,7 +82,7 @@
             dataGridViewUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewUsers.RowHeadersVisible = false;
             dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewUsers.Size = new Size(1145, 451);
+            dataGridViewUsers.Size = new Size(1151, 451);
             dataGridViewUsers.TabIndex = 0;
             // 
             // labelRestaurants

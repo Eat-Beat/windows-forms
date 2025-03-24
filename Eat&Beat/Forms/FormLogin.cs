@@ -7,12 +7,28 @@ namespace Eat_Beat
 {
     public partial class FormLogin : Form
     {
+        public FormRestaurantsUsers formRestaurantsUsers;
+        public FormMusicianUsers formMusicianUsers;
+        public FormAdminUsers formAdminUsers;
+        public FormNewRestaurant formNewRestaurant;
+        public FormNewRestaurant2 formNewRestaurant2;
+        public FormModifyRestaurant formModifyRestaurant;
+        public FormOpenRestaurant formOpenRestaurant;
+        public FormNewMusician formNewMusician;
+        public FormNewMusician2 formNewMusician2;
+        public FormModifyMusician formModifyMusician;
+        public FormOpenMusician formOpenMusician;
+        public CalendarPopup calendarPopup;
+
+
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
         public List<User> AllUsers = new List<User>();
         public List<User> Admins = new List<User>();
         public User selectedUser;
+        public Restaurant selectedRestaurant;
+        public Musician selectedMusician;
 
         public FormLogin()
         {
@@ -160,7 +176,7 @@ namespace Eat_Beat
             {
                 if (form.Name == childFormName)
                 {
-                    childForm = form;
+                    childForm = (Form)Activator.CreateInstance(form.GetType(), this);
                     changePanelSize(formIsBig);
                     foundForm = true;
                 }

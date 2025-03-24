@@ -203,8 +203,13 @@
             Controls.Add(labelUser);
             Controls.Add(pictureBoxBackground);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormLogin";
-            Text = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "EAT&BEAT";
             ((System.ComponentModel.ISupportInitialize)pictureBoxBackground).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogoSmall).EndInit();

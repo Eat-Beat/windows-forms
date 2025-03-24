@@ -52,7 +52,9 @@ namespace Eat_Beat.Forms
                 .Select(a => new
                 {
                     a.idUser,
-                    a.idRol,
+                    rol = a.idRol == 3 ? "Superadmin":
+                          a.idRol == 4 ? "Admin" :
+                          a.idRol == 5 ? "Mantenimiento" : "User",
                     a.name,
                     a.email
                 })

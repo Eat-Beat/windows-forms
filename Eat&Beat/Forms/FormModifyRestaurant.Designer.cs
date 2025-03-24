@@ -34,15 +34,15 @@
             roundedTextBoxAddress = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxNumAddress = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
             roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
             labelNumAddress = new Label();
             labelAddress = new Label();
-            labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelName = new Label();
+            labelPostalCode = new Label();
+            roundedTextBoxPostalCode = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // roundedButtonModify
@@ -72,7 +72,7 @@
             roundedButtonCancel.TabIndex = 38;
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
-            roundedButtonCancel.Click += roundedButtonOpen_Click_1;
+            roundedButtonCancel.Click += roundedButtonModify_Click_1;
             // 
             // labelEditRestaurant
             // 
@@ -94,7 +94,7 @@
             roundedTextBoxAddress.BorderSize = 2;
             roundedTextBoxAddress.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxAddress.Location = new Point(274, 262);
+            roundedTextBoxAddress.Location = new Point(274, 213);
             roundedTextBoxAddress.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxAddress.Multiline = false;
             roundedTextBoxAddress.Name = "roundedTextBoxAddress";
@@ -116,7 +116,7 @@
             roundedTextBoxNumAddress.BorderSize = 2;
             roundedTextBoxNumAddress.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxNumAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxNumAddress.Location = new Point(274, 310);
+            roundedTextBoxNumAddress.Location = new Point(274, 261);
             roundedTextBoxNumAddress.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxNumAddress.Multiline = false;
             roundedTextBoxNumAddress.Name = "roundedTextBoxNumAddress";
@@ -150,28 +150,6 @@
             roundedTextBoxPassword.TabIndex = 50;
             roundedTextBoxPassword.Texts = "";
             roundedTextBoxPassword.UnderlinedStyle = false;
-            // 
-            // roundedTextBoxConfPassword
-            // 
-            roundedTextBoxConfPassword.BackColor = Color.FromArgb(32, 32, 31);
-            roundedTextBoxConfPassword.BorderColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxConfPassword.BorderFocusColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxConfPassword.BorderRadius = 10;
-            roundedTextBoxConfPassword.BorderSize = 2;
-            roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 12F);
-            roundedTextBoxConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxConfPassword.Location = new Point(274, 216);
-            roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
-            roundedTextBoxConfPassword.Multiline = false;
-            roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
-            roundedTextBoxConfPassword.Padding = new Padding(8);
-            roundedTextBoxConfPassword.PasswordChar = false;
-            roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
-            roundedTextBoxConfPassword.PlaceholderText = "";
-            roundedTextBoxConfPassword.Size = new Size(483, 37);
-            roundedTextBoxConfPassword.TabIndex = 49;
-            roundedTextBoxConfPassword.Texts = "";
-            roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
             // roundedTextBoxName
             // 
@@ -222,7 +200,7 @@
             labelNumAddress.AutoSize = true;
             labelNumAddress.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelNumAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            labelNumAddress.Location = new Point(58, 310);
+            labelNumAddress.Location = new Point(58, 267);
             labelNumAddress.Name = "labelNumAddress";
             labelNumAddress.Size = new Size(145, 24);
             labelNumAddress.TabIndex = 58;
@@ -233,29 +211,18 @@
             labelAddress.AutoSize = true;
             labelAddress.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelAddress.ForeColor = Color.FromArgb(239, 230, 220);
-            labelAddress.Location = new Point(58, 263);
+            labelAddress.Location = new Point(58, 217);
             labelAddress.Name = "labelAddress";
             labelAddress.Size = new Size(97, 24);
             labelAddress.TabIndex = 57;
             labelAddress.Text = "Dirección:";
-            // 
-            // labelConfPassword
-            // 
-            labelConfPassword.AutoSize = true;
-            labelConfPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelConfPassword.Location = new Point(58, 217);
-            labelConfPassword.Name = "labelConfPassword";
-            labelConfPassword.Size = new Size(202, 24);
-            labelConfPassword.TabIndex = 56;
-            labelConfPassword.Text = "Confirmar Contraseña:";
             // 
             // labelPassword
             // 
             labelPassword.AutoSize = true;
             labelPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelPassword.Location = new Point(58, 168);
+            labelPassword.Location = new Point(58, 171);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(113, 24);
             labelPassword.TabIndex = 55;
@@ -283,22 +250,55 @@
             labelName.TabIndex = 53;
             labelName.Text = "Nombre:";
             // 
+            // labelPostalCode
+            // 
+            labelPostalCode.AutoSize = true;
+            labelPostalCode.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPostalCode.ForeColor = Color.FromArgb(239, 230, 220);
+            labelPostalCode.Location = new Point(58, 316);
+            labelPostalCode.Name = "labelPostalCode";
+            labelPostalCode.Size = new Size(133, 24);
+            labelPostalCode.TabIndex = 60;
+            labelPostalCode.Text = "Código Postal:";
+            // 
+            // roundedTextBoxPostalCode
+            // 
+            roundedTextBoxPostalCode.BackColor = Color.FromArgb(32, 32, 31);
+            roundedTextBoxPostalCode.BorderColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPostalCode.BorderFocusColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPostalCode.BorderRadius = 10;
+            roundedTextBoxPostalCode.BorderSize = 2;
+            roundedTextBoxPostalCode.Font = new Font("Barlow Medium", 12F);
+            roundedTextBoxPostalCode.ForeColor = Color.FromArgb(239, 230, 220);
+            roundedTextBoxPostalCode.Location = new Point(274, 308);
+            roundedTextBoxPostalCode.Margin = new Padding(3, 4, 3, 4);
+            roundedTextBoxPostalCode.Multiline = false;
+            roundedTextBoxPostalCode.Name = "roundedTextBoxPostalCode";
+            roundedTextBoxPostalCode.Padding = new Padding(8);
+            roundedTextBoxPostalCode.PasswordChar = false;
+            roundedTextBoxPostalCode.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxPostalCode.PlaceholderText = "";
+            roundedTextBoxPostalCode.Size = new Size(483, 37);
+            roundedTextBoxPostalCode.TabIndex = 59;
+            roundedTextBoxPostalCode.Texts = "";
+            roundedTextBoxPostalCode.UnderlinedStyle = false;
+            // 
             // FormModifyRestaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
             ClientSize = new Size(915, 415);
+            Controls.Add(labelPostalCode);
+            Controls.Add(roundedTextBoxPostalCode);
             Controls.Add(labelNumAddress);
             Controls.Add(labelAddress);
-            Controls.Add(labelConfPassword);
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
             Controls.Add(labelName);
             Controls.Add(roundedTextBoxAddress);
             Controls.Add(roundedTextBoxNumAddress);
             Controls.Add(roundedTextBoxPassword);
-            Controls.Add(roundedTextBoxConfPassword);
             Controls.Add(roundedTextBoxName);
             Controls.Add(roundedTextBoxEmail);
             Controls.Add(roundedButtonModify);
@@ -306,6 +306,7 @@
             Controls.Add(labelEditRestaurant);
             Name = "FormModifyRestaurant";
             Text = "ModifyRestaurant";
+            Load += FormModifyRestaurant_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -317,14 +318,14 @@
         private Controls.RoundedTextBox roundedTextBoxAddress;
         private Controls.RoundedTextBox roundedTextBoxNumAddress;
         private Controls.RoundedTextBox roundedTextBoxPassword;
-        private Controls.RoundedTextBox roundedTextBoxConfPassword;
         private Controls.RoundedTextBox roundedTextBoxName;
         private Controls.RoundedTextBox roundedTextBoxEmail;
         private Label labelNumAddress;
         private Label labelAddress;
-        private Label labelConfPassword;
         private Label labelPassword;
         private Label labelEmail;
         private Label labelName;
+        private Label labelPostalCode;
+        private Controls.RoundedTextBox roundedTextBoxPostalCode;
     }
 }

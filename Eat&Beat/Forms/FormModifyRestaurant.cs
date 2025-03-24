@@ -28,16 +28,29 @@ namespace Eat_Beat.Forms
             labelName.Text = LanguageManager.GetText("labelName");
             labelEmail.Text = LanguageManager.GetText("labelEmail");
             labelPassword.Text = LanguageManager.GetText("labelPassword");
-            labelConfPassword.Text = LanguageManager.GetText("labelConfPassword");
             labelAddress.Text = LanguageManager.GetText("labelAddress");
             labelNumAddress.Text = LanguageManager.GetText("labelNumAddress");
+            labelPostalCode.Text = LanguageManager.GetText("labelPostalCode");
             roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
             roundedButtonModify.Text = LanguageManager.GetText("roundedButtonModify");
         }
 
-        private void roundedButtonOpen_Click_1(object sender, EventArgs e)
+        private void roundedButtonModify_Click_1(object sender, EventArgs e)
         {
             formLogin.LoadFormIntoPanel("FormRestaurantsUsers", true);
+
+        }
+
+        private void FormModifyRestaurant_Load(object sender, EventArgs e)
+        {
+            Restaurant restaurant = formLogin.selectedRestaurant;
+
+            roundedTextBoxName.Texts = restaurant.name;
+            roundedTextBoxEmail.Texts = restaurant.email;
+            roundedTextBoxPassword.Texts = restaurant.password;
+            roundedTextBoxAddress.Texts = restaurant.address;
+            roundedTextBoxNumAddress.Texts = restaurant.addressNum.ToString();
+            roundedTextBoxPostalCode.Texts = restaurant.zipCode;
 
         }
     }
