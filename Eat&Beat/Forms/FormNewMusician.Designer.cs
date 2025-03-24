@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            roundedButtonContinue = new Controls.RoundedButton();
-            roundedButtonCancel = new Controls.RoundedButton();
+            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
             labelNewMusician = new Label();
             labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelName = new Label();
-            roundedTextBoxPassword = new Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
-            roundedTextBoxName = new Controls.RoundedTextBox();
-            roundedTextBoxEmail = new Controls.RoundedTextBox();
+            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // roundedButtonContinue
@@ -77,7 +76,7 @@
             labelNewMusician.AutoSize = true;
             labelNewMusician.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNewMusician.ForeColor = Color.FromArgb(239, 230, 220);
-            labelNewMusician.Location = new Point(228, 28);
+            labelNewMusician.Location = new Point(63, 30);
             labelNewMusician.Name = "labelNewMusician";
             labelNewMusician.Size = new Size(289, 37);
             labelNewMusician.TabIndex = 18;
