@@ -59,7 +59,7 @@ namespace Eat_Beat
 
                 string musiciansJson = File.ReadAllText(musiciansPath);
                 string restaurantsJson = File.ReadAllText(restaurantsPath);
-                string usersJson = File.ReadAllText("C:\\Users\\CEP-TARDA\\source\\repos\\Eat-Beat\\windows-forms\\Eat&Beat\\JSON\\users.json");
+                string usersJson = File.ReadAllText(usersPath);
 
                 Musicians = JsonSerializer.Deserialize<List<Musician>>(musiciansJson);
                 Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(restaurantsJson);
