@@ -68,7 +68,7 @@
             dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewUsers.EnableHeadersVisualStyles = false;
             dataGridViewUsers.GridColor = Color.FromArgb(239, 230, 220);
-            dataGridViewUsers.Location = new Point(2, 77);
+            dataGridViewUsers.Location = new Point(8, 77);
             dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;

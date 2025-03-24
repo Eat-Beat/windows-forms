@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             labelNewRestaurant = new Label();
-            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCancel = new Controls.RoundedButton();
+            roundedButtonContinue = new Controls.RoundedButton();
             labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelName = new Label();
-            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPassword = new Controls.RoundedTextBox();
+            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
+            roundedTextBoxName = new Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Controls.RoundedTextBox();
+          
             SuspendLayout();
             // 
             // labelNewRestaurant
@@ -46,7 +47,7 @@
             labelNewRestaurant.AutoSize = true;
             labelNewRestaurant.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNewRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
-            labelNewRestaurant.Location = new Point(257, 44);
+            labelNewRestaurant.Location = new Point(67, 46);
             labelNewRestaurant.Name = "labelNewRestaurant";
             labelNewRestaurant.Size = new Size(406, 37);
             labelNewRestaurant.TabIndex = 7;

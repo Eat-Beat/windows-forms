@@ -210,9 +210,9 @@ namespace Eat_Beat
         {
             if (!desiredPanelSizeBig)
             {
-                panelMain.Location = new Point(110, 84);
-                panelMain.Height = 511;
-                panelMain.Width = 1051;
+                panelMain.Location = new Point(160, 134);
+                panelMain.Height = 450;    //1051 511
+                panelMain.Width = 950;
             }
             else
             {

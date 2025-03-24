@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
-            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
-            labelNewMusician = new Label();
+
+            roundedButtonContinue = new Controls.RoundedButton();
+            roundedButtonCancel = new Controls.RoundedButton();
+            labelRestaurants = new Label();
             labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelName = new Label();
-            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
-            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPassword = new Controls.RoundedTextBox();
+            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
+            roundedTextBoxName = new Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // roundedButtonContinue
@@ -48,7 +49,7 @@
             roundedButtonContinue.FlatStyle = FlatStyle.Flat;
             roundedButtonContinue.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonContinue.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonContinue.Location = new Point(740, 342);
+            roundedButtonContinue.Location = new Point(740, 364);
             roundedButtonContinue.Name = "roundedButtonContinue";
             roundedButtonContinue.Size = new Size(115, 45);
             roundedButtonContinue.TabIndex = 24;
@@ -63,7 +64,7 @@
             roundedButtonCancel.FlatStyle = FlatStyle.Flat;
             roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCancel.Location = new Point(619, 342);
+            roundedButtonCancel.Location = new Point(619, 364);
             roundedButtonCancel.Name = "roundedButtonCancel";
             roundedButtonCancel.Size = new Size(115, 45);
             roundedButtonCancel.TabIndex = 23;
@@ -87,7 +88,7 @@
             labelConfPassword.AutoSize = true;
             labelConfPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelConfPassword.Location = new Point(63, 256);
+            labelConfPassword.Location = new Point(63, 278);
             labelConfPassword.Name = "labelConfPassword";
             labelConfPassword.Size = new Size(202, 24);
             labelConfPassword.TabIndex = 53;
@@ -98,7 +99,7 @@
             labelPassword.AutoSize = true;
             labelPassword.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            labelPassword.Location = new Point(63, 209);
+            labelPassword.Location = new Point(63, 231);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(113, 24);
             labelPassword.TabIndex = 52;
@@ -109,7 +110,7 @@
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEmail.ForeColor = Color.FromArgb(239, 230, 220);
-            labelEmail.Location = new Point(63, 160);
+            labelEmail.Location = new Point(63, 182);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(176, 24);
             labelEmail.TabIndex = 51;
@@ -120,7 +121,7 @@
             labelName.AutoSize = true;
             labelName.Font = new Font("Barlow Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelName.ForeColor = Color.FromArgb(239, 230, 220);
-            labelName.Location = new Point(63, 112);
+            labelName.Location = new Point(63, 134);
             labelName.Name = "labelName";
             labelName.Size = new Size(84, 24);
             labelName.TabIndex = 50;
@@ -135,7 +136,7 @@
             roundedTextBoxPassword.BorderSize = 2;
             roundedTextBoxPassword.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxPassword.Location = new Point(274, 202);
+            roundedTextBoxPassword.Location = new Point(274, 224);
             roundedTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxPassword.Multiline = false;
             roundedTextBoxPassword.Name = "roundedTextBoxPassword";
@@ -158,7 +159,7 @@
             roundedTextBoxConfPassword.BorderSize = 2;
             roundedTextBoxConfPassword.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxConfPassword.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxConfPassword.Location = new Point(274, 250);
+            roundedTextBoxConfPassword.Location = new Point(274, 272);
             roundedTextBoxConfPassword.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxConfPassword.Multiline = false;
             roundedTextBoxConfPassword.Name = "roundedTextBoxConfPassword";
@@ -180,7 +181,7 @@
             roundedTextBoxName.BorderSize = 2;
             roundedTextBoxName.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxName.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxName.Location = new Point(274, 107);
+            roundedTextBoxName.Location = new Point(274, 129);
             roundedTextBoxName.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxName.Multiline = false;
             roundedTextBoxName.Name = "roundedTextBoxName";
@@ -202,7 +203,7 @@
             roundedTextBoxEmail.BorderSize = 2;
             roundedTextBoxEmail.Font = new Font("Barlow Medium", 12F);
             roundedTextBoxEmail.ForeColor = Color.FromArgb(239, 230, 220);
-            roundedTextBoxEmail.Location = new Point(274, 155);
+            roundedTextBoxEmail.Location = new Point(274, 177);
             roundedTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
             roundedTextBoxEmail.Multiline = false;
             roundedTextBoxEmail.Name = "roundedTextBoxEmail";
