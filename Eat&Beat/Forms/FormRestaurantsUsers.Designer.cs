@@ -151,6 +151,7 @@
             roundedButtonDelete.TabIndex = 7;
             roundedButtonDelete.Text = "Eliminar";
             roundedButtonDelete.UseVisualStyleBackColor = false;
+            roundedButtonDelete.Click += roundedButtonDelete_Click;
             // 
             // roundedButtonEdit
             // 

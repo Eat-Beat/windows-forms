@@ -78,6 +78,7 @@
             roundedButtonCreate.TabIndex = 13;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
+            roundedButtonCreate.Click += roundedButtonCreate_Click;
             // 
             // labelPostalCode
             // 
@@ -195,7 +196,6 @@
             Controls.Add(labelNewRestaurant);
             Name = "FormNewRestaurant2";
             Text = "NewRestaurant";
-            Load += FormNewRestaurant2_Load;
             ResumeLayout(false);
             PerformLayout();
         }

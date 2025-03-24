@@ -84,25 +84,8 @@ namespace Eat_Beat.Forms
                 labelAdmins.Visible = false;
             }
 
+            LoadRestaurants();
 
-            dataGridViewUsers.DataSource = null;
-
-
-            var restaurantsData = formLogin
-                .Restaurants
-                .Select(r => new
-                {
-                    r.idUser,
-                    r.name,
-                    r.email,
-                    FullAddress = r.address + " " + r.addressNum,
-                    r.zipCode,
-                    r.rating
-                })
-                .ToList();
-
-
-            dataGridViewUsers.DataSource = restaurantsData;
         }
 
         private void LoadLanguage()
@@ -118,6 +101,25 @@ namespace Eat_Beat.Forms
         private void labelAdmins_Click(object sender, EventArgs e)
         {
             formLogin.LoadFormIntoPanel("FormAdminUsers", true);
+        }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a restaurant to edit");
+                return;
+            }
+
+            foreach (Restaurant rest in formLogin.Restaurants)
+            {
+                if (rest.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
+                {
+                    formLogin.Restaurants.Remove(rest);
+                    LoadRestaurants();
+                    break;
+                }
+            }
         }
     }
 }
