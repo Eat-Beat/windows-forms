@@ -31,11 +31,10 @@
 
             roundedButtonModify = new Controls.RoundedButton();
             roundedButtonCancel = new Controls.RoundedButton();
-            labelRestaurants = new Label();
+            labelEditRestaurant = new Label();
             roundedTextBoxAddress = new Controls.RoundedTextBox();
             roundedTextBoxNumAddress = new Controls.RoundedTextBox();
             roundedTextBoxPassword = new Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
             roundedTextBoxName = new Controls.RoundedTextBox();
             roundedTextBoxEmail = new Controls.RoundedTextBox();
 
@@ -81,14 +80,14 @@
             // labelEditRestaurant
             // 
 
-            labelRestaurants.AutoSize = true;
-            labelRestaurants.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRestaurants.ForeColor = Color.FromArgb(239, 230, 220);
-            labelRestaurants.Location = new Point(58, 24);
-            labelRestaurants.Name = "labelEditRestaurant";
-            labelRestaurants.Size = new Size(425, 40);
-            labelRestaurants.TabIndex = 33;
-            labelRestaurants.Text = "MODIFICAR RESTAURANTE:";
+            labelEditRestaurant.AutoSize = true;
+            labelEditRestaurant.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEditRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
+            labelEditRestaurant.Location = new Point(58, 24);
+            labelEditRestaurant.Name = "labelEditRestaurant";
+            labelEditRestaurant.Size = new Size(425, 40);
+            labelEditRestaurant.TabIndex = 33;
+            labelEditRestaurant.Text = "MODIFICAR RESTAURANTE:";
 
             // 
             // roundedTextBoxAddress
