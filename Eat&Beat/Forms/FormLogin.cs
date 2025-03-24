@@ -176,7 +176,7 @@ namespace Eat_Beat
             {
                 if (form.Name == childFormName)
                 {
-                    childForm = (Form)Activator.CreateInstance(form.GetType(), this);
+                    childForm = form;
                     changePanelSize(formIsBig);
                     foundForm = true;
                 }

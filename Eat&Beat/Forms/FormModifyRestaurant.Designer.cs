@@ -58,6 +58,7 @@
             roundedButtonModify.TabIndex = 39;
             roundedButtonModify.Text = "Modificar";
             roundedButtonModify.UseVisualStyleBackColor = false;
+            roundedButtonModify.Click += roundedButtonModify_Click;
             // 
             // roundedButtonCancel
             // 
@@ -306,7 +307,6 @@
             Controls.Add(labelEditRestaurant);
             Name = "FormModifyRestaurant";
             Text = "ModifyRestaurant";
-            Load += FormModifyRestaurant_Load;
             ResumeLayout(false);
             PerformLayout();
         }

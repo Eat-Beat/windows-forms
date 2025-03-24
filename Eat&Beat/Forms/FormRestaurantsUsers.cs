@@ -15,6 +15,32 @@ namespace Eat_Beat.Forms
             LanguageManager.LanguageChanged += LoadLanguage;
         }
 
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (Visible)
+            {
+                LoadRestaurants();
+            }
+        }
+
+        private void LoadRestaurants()
+        {
+            dataGridViewUsers.DataSource = null;
+            var restaurantsData = formLogin
+                .Restaurants
+                .Select(r => new
+                {
+                    r.idUser,
+                    r.name,
+                    r.email,
+                    FullAddress = r.address + " " + r.addressNum,
+                    r.zipCode,
+                    r.rating
+                })
+                .ToList();
+            dataGridViewUsers.DataSource = restaurantsData;
+        }
         private void labelMusicians_Click(object sender, EventArgs e)
         {
             formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
