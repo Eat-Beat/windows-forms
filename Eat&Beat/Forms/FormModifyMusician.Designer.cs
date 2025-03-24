@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            roundedButtonModify = new Controls.RoundedButton();
-            roundedButtonCancel = new Controls.RoundedButton();
+            roundedButtonModify = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
             labelEditMusician = new Label();
-
             labelPassword = new Label();
             labelEmail = new Label();
             labelConfPassword = new Label();
             labelName = new Label();
             labelNumAddress = new Label();
             labelAddress = new Label();
-            roundedTextBoxEmail = new Controls.RoundedTextBox();
-            roundedTextBoxName = new Controls.RoundedTextBox();
-            roundedTextBoxPassword = new Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
-            roundedTextBoxAddress = new Controls.RoundedTextBox();
-            roundedTextBoxNumAddress = new Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxAddress = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxNumAddress = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // roundedButtonModify
@@ -54,7 +52,7 @@
             roundedButtonModify.FlatStyle = FlatStyle.Flat;
             roundedButtonModify.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonModify.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonModify.Location = new Point(788, 372);
+            roundedButtonModify.Location = new Point(788, 368);
             roundedButtonModify.Name = "roundedButtonModify";
             roundedButtonModify.Size = new Size(115, 45);
             roundedButtonModify.TabIndex = 24;
@@ -68,7 +66,7 @@
             roundedButtonCancel.FlatStyle = FlatStyle.Flat;
             roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCancel.Location = new Point(667, 372);
+            roundedButtonCancel.Location = new Point(667, 368);
             roundedButtonCancel.Name = "roundedButtonCancel";
             roundedButtonCancel.Size = new Size(115, 45);
             roundedButtonCancel.TabIndex = 23;
@@ -78,16 +76,14 @@
             // 
             // labelEditMusician
             // 
-
             labelEditMusician.AutoSize = true;
             labelEditMusician.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelEditMusician.ForeColor = Color.FromArgb(239, 230, 220);
-            labelEditMusician.Location = new Point(272, 18);
+            labelEditMusician.Location = new Point(58, 24);
             labelEditMusician.Name = "labelEditMusician";
             labelEditMusician.Size = new Size(317, 40);
             labelEditMusician.TabIndex = 18;
             labelEditMusician.Text = "MODIFICAR MUSICO:";
-
             // 
             // labelPassword
             // 
