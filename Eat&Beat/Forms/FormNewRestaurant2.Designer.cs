@@ -55,7 +55,7 @@
             roundedButtonCancel.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonCancel.FlatAppearance.BorderSize = 0;
             roundedButtonCancel.FlatStyle = FlatStyle.Flat;
-            roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonCancel.Font = new Font("Barlow Medium", 12F);
             roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonCancel.Location = new Point(667, 358);
             roundedButtonCancel.Name = "roundedButtonCancel";
@@ -70,7 +70,7 @@
             roundedButtonCreate.BackColor = Color.FromArgb(252, 158, 79);
             roundedButtonCreate.FlatAppearance.BorderSize = 0;
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
-            roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roundedButtonCreate.Font = new Font("Barlow Medium", 12F);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
             roundedButtonCreate.Location = new Point(788, 358);
             roundedButtonCreate.Name = "roundedButtonCreate";

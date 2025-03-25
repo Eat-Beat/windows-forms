@@ -79,7 +79,16 @@ namespace Eat_Beat.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a MODIFICAR MÚSICO:.
+        ///   Busca una cadena traducida similar a MODIFICAR ADMIN.
+        /// </summary>
+        internal static string labelEditAdmin {
+            get {
+                return ResourceManager.GetString("labelEditAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a MODIFICAR MÚSICO.
         /// </summary>
         internal static string labelEditMusician {
             get {
@@ -138,6 +147,15 @@ namespace Eat_Beat.Resources {
         internal static string labelName {
             get {
                 return ResourceManager.GetString("labelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a NUEVO ADMIN.
+        /// </summary>
+        internal static string labelNewAdmin {
+            get {
+                return ResourceManager.GetString("labelNewAdmin", resourceCulture);
             }
         }
         

@@ -174,13 +174,13 @@
             // labelEditAdmin
             // 
             labelEditAdmin.AutoSize = true;
-            labelEditAdmin.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEditAdmin.Font = new Font("Barlow Medium", 23.9999962F, FontStyle.Bold);
             labelEditAdmin.ForeColor = Color.FromArgb(239, 230, 220);
             labelEditAdmin.Location = new Point(61, 46);
             labelEditAdmin.Name = "labelEditAdmin";
-            labelEditAdmin.Size = new Size(331, 37);
+            labelEditAdmin.Size = new Size(286, 40);
             labelEditAdmin.TabIndex = 12;
-            labelEditAdmin.Text = "MODIFICAR ADMIN:";
+            labelEditAdmin.Text = "MODIFICAR ADMIN";
             // 
             // roundedButtonModify
             // 

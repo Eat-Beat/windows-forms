@@ -20,6 +20,8 @@ namespace Eat_Beat.Forms
             InitializeComponent();
             this.formLogin = formLogin;
             this.selectedUser = formLogin.selectedUser;
+            LoadLanguage();
+            LanguageManager.LanguageChanged += LoadLanguage;
         }
 
         protected override void OnVisibleChanged(EventArgs e)
@@ -29,6 +31,17 @@ namespace Eat_Beat.Forms
             {
                 LoadAdminData();
             }
+        }
+
+        private void LoadLanguage()
+        {
+            labelEditAdmin.Text = LanguageManager.GetText("labelEditAdmin");
+            labelName.Text = LanguageManager.GetText("labelName");
+            labelEmail.Text = LanguageManager.GetText("labelEmail");
+            labelPassword.Text = LanguageManager.GetText("labelPassword");
+            labelRol.Text = LanguageManager.GetText("labelRol");
+            roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
+            roundedButtonModify.Text = LanguageManager.GetText("roundedButtonModify");
         }
 
         private void LoadAdminData()

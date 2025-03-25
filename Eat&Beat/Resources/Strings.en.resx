@@ -195,4 +195,10 @@
   <data name="labelEditRestaurant" xml:space="preserve">
     <value>EDIT RESTAURANTE</value>
   </data>
+  <data name="labelEditAdmin" xml:space="preserve">
+    <value>EDIT ADMIN</value>
+  </data>
+  <data name="labelNewAdmin" xml:space="preserve">
+    <value>NEW ADMIN</value>
+  </data>
 </root>

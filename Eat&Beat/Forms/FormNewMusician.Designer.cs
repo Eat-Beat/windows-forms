@@ -147,7 +147,6 @@
             roundedTextBoxPassword.TabIndex = 7;
             roundedTextBoxPassword.Texts = "";
             roundedTextBoxPassword.UnderlinedStyle = false;
-            roundedTextBoxPassword.Load += roundedTextBoxPassword_Load;
             // 
             // roundedTextBoxConfPassword
             // 

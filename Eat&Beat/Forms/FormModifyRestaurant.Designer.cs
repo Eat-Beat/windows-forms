@@ -82,9 +82,9 @@
             labelEditRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
             labelEditRestaurant.Location = new Point(58, 24);
             labelEditRestaurant.Name = "labelEditRestaurant";
-            labelEditRestaurant.Size = new Size(425, 40);
+            labelEditRestaurant.Size = new Size(413, 40);
             labelEditRestaurant.TabIndex = 1;
-            labelEditRestaurant.Text = "MODIFICAR RESTAURANTE:";
+            labelEditRestaurant.Text = "MODIFICAR RESTAURANTE";
             // 
             // roundedTextBoxAddress
             // 

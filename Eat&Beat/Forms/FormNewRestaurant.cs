@@ -72,7 +72,7 @@ namespace Eat_Beat.Forms
 
             formLogin.selectedRestaurant = new Restaurant()
             {
-                idUser = formLogin.Restaurants.Max(r => r.idUser) + 1,
+                idUser = formLogin.AllUsers.Max(r => r.idUser) + 1,
                 idRol = 2,
                 name = name,
                 email = email,
