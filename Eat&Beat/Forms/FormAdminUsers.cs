@@ -102,6 +102,13 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a user to delete");
+                return;
+            }
+
+
             DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Delete user", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)

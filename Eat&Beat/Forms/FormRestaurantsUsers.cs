@@ -107,7 +107,7 @@ namespace Eat_Beat.Forms
         {
             if (dataGridViewUsers.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a restaurant to edit");
+                MessageBox.Show("Please select a restaurant to delete");
                 return;
             }
 

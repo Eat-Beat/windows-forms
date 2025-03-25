@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,35 @@ namespace Eat_Beat.Forms
             roundedButtonEdit.Text = LanguageManager.GetText("roundedButtonEdit");
             roundedButtonCreate.Text = LanguageManager.GetText("roundedButtonCreate");
             roundedButtonDelete.Text = LanguageManager.GetText("roundedButtonDelete");
+        }
+
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (Visible)
+            {
+                LoadMusicians();
+            }
+        }
+
+        private void LoadMusicians()
+        {
+
+            dataGridViewUsers.DataSource = null;
+
+            var musiciansData = formLogin
+                .Musicians
+                .Select(m => new
+                {
+                    m.idUser,
+                    m.name,
+                    m.email,
+                    m.description,
+                    m.rating
+                })
+                .ToList();
+
+            dataGridViewUsers.DataSource = musiciansData;
         }
 
         private void labelRestaurants_Click(object sender, EventArgs e)
@@ -81,28 +111,30 @@ namespace Eat_Beat.Forms
             {
                 labelAdmins.Visible = false;
             }
-
-
-            dataGridViewUsers.DataSource = null;
-
-            var musiciansData = formLogin
-                .Musicians
-                .Select(m => new
-                {
-                    m.idUser,
-                    m.name,
-                    m.email,
-                    m.description,
-                    m.rating
-                })
-                .ToList();
-
-            dataGridViewUsers.DataSource = musiciansData;
         }
 
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a musicial to delete");
+                return;
+            }
 
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this musician?", "Delete musician", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                foreach (Musician musician in formLogin.Musicians)
+                {
+                    if (musician.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
+                    {
+                        formLogin.Musicians.Remove(musician);
+                        LoadMusicians();
+                        break;
+                    }
+                }
+            }
         }
 
         private void labelAdmins_Click(object sender, EventArgs e)
