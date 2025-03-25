@@ -85,6 +85,18 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonEdit_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a restaurant to edit");
+                return;
+            }
+
+            int selectedAdminId = (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value;
+            User selectedUser = formLogin.Admins.FirstOrDefault(a => a.idUser == selectedAdminId);
+
+            formLogin.selectedUser = selectedUser;
+
+            formLogin.LoadFormIntoPanel("FormModifyAdmin", false);
 
         }
     }
