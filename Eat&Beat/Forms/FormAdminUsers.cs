@@ -99,5 +99,23 @@ namespace Eat_Beat.Forms
             formLogin.LoadFormIntoPanel("FormModifyAdmin", false);
 
         }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Delete user", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                foreach (User user in formLogin.Admins)
+                {
+                    if (user.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
+                    {
+                        formLogin.Admins.Remove(user);
+                        LoadAdmins();
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

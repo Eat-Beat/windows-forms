@@ -111,13 +111,18 @@ namespace Eat_Beat.Forms
                 return;
             }
 
-            foreach (Restaurant rest in formLogin.Restaurants)
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this restaurant?", "Delete restaurant", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
             {
-                if (rest.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
+                foreach (Restaurant rest in formLogin.Restaurants)
                 {
-                    formLogin.Restaurants.Remove(rest);
-                    LoadRestaurants();
-                    break;
+                    if (rest.idUser == (int)dataGridViewUsers.SelectedRows[0].Cells[0].Value)
+                    {
+                        formLogin.Restaurants.Remove(rest);
+                        LoadRestaurants();
+                        break;
+                    }
                 }
             }
         }
