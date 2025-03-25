@@ -75,7 +75,7 @@
             dataGridViewUsers.RowHeadersVisible = false;
             dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(1145, 452);
-            dataGridViewUsers.TabIndex = 1;
+            dataGridViewUsers.TabIndex = 8;
             // 
             // labelRestaurants
             // 
@@ -85,7 +85,7 @@
             labelRestaurants.Location = new Point(12, 27);
             labelRestaurants.Name = "labelRestaurants";
             labelRestaurants.Size = new Size(119, 24);
-            labelRestaurants.TabIndex = 2;
+            labelRestaurants.TabIndex = 1;
             labelRestaurants.Text = "Restaurantes";
             labelRestaurants.Click += labelRestaurants_Click;
             // 
@@ -97,7 +97,7 @@
             labelMusicians.Location = new Point(206, 27);
             labelMusicians.Name = "labelMusicians";
             labelMusicians.Size = new Size(87, 24);
-            labelMusicians.TabIndex = 3;
+            labelMusicians.TabIndex = 2;
             labelMusicians.Text = "Músicos";
             // 
             // roundedButtonOpen
@@ -110,7 +110,7 @@
             roundedButtonOpen.Location = new Point(665, 16);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
-            roundedButtonOpen.TabIndex = 5;
+            roundedButtonOpen.TabIndex = 4;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
             roundedButtonOpen.Click += roundedButtonOpen_Click;
@@ -125,7 +125,7 @@
             roundedButtonEdit.Location = new Point(784, 16);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
-            roundedButtonEdit.TabIndex = 7;
+            roundedButtonEdit.TabIndex = 5;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
             roundedButtonEdit.Click += roundedButtonEdit_Click;
@@ -140,7 +140,7 @@
             roundedButtonDelete.Location = new Point(1021, 16);
             roundedButtonDelete.Name = "roundedButtonDelete";
             roundedButtonDelete.Size = new Size(115, 45);
-            roundedButtonDelete.TabIndex = 9;
+            roundedButtonDelete.TabIndex = 7;
             roundedButtonDelete.Text = "Eliminar";
             roundedButtonDelete.UseVisualStyleBackColor = false;
             roundedButtonDelete.Click += roundedButtonDelete_Click;
@@ -155,7 +155,7 @@
             roundedButtonCreate.Location = new Point(903, 16);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
-            roundedButtonCreate.TabIndex = 8;
+            roundedButtonCreate.TabIndex = 6;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
             roundedButtonCreate.Click += roundedButtonCreate_Click;
@@ -168,7 +168,7 @@
             labelAdmins.Location = new Point(358, 27);
             labelAdmins.Name = "labelAdmins";
             labelAdmins.Size = new Size(72, 24);
-            labelAdmins.TabIndex = 18;
+            labelAdmins.TabIndex = 3;
             labelAdmins.Text = "Admins";
             labelAdmins.Click += labelAdmins_Click;
             // 

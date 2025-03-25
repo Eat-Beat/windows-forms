@@ -48,5 +48,10 @@ namespace Eat_Beat.Forms
             roundedTextBoxPassword.Texts = selectedMusician.password;
             */
         }
+
+        private void roundedButtonModify_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

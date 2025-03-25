@@ -7,20 +7,6 @@ namespace Eat_Beat
 {
     public partial class FormLogin : Form
     {
-        public FormRestaurantsUsers formRestaurantsUsers;
-        public FormMusicianUsers formMusicianUsers;
-        public FormAdminUsers formAdminUsers;
-        public FormNewRestaurant formNewRestaurant;
-        public FormNewRestaurant2 formNewRestaurant2;
-        public FormModifyRestaurant formModifyRestaurant;
-        public FormOpenRestaurant formOpenRestaurant;
-        public FormNewMusician formNewMusician;
-        public FormNewMusician2 formNewMusician2;
-        public FormModifyMusician formModifyMusician;
-        public FormOpenMusician formOpenMusician;
-        public CalendarPopup calendarPopup;
-
-
         private List<Form> allForms = new List<Form>();
         public List<Musician> Musicians = new List<Musician>();
         public List<Restaurant> Restaurants = new List<Restaurant>();
@@ -90,6 +76,8 @@ namespace Eat_Beat
                     typeof(FormNewMusician2),
                     typeof(FormModifyMusician),
                     typeof(FormOpenMusician),
+                    typeof(FormNewAdmin),
+                    typeof(FormModifyAdmin),
                     typeof(CalendarPopup)
             };
 

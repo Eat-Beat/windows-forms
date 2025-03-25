@@ -51,9 +51,10 @@
             roundedButtonDelete.Location = new Point(1021, 16);
             roundedButtonDelete.Name = "roundedButtonDelete";
             roundedButtonDelete.Size = new Size(115, 45);
-            roundedButtonDelete.TabIndex = 14;
+            roundedButtonDelete.TabIndex = 7;
             roundedButtonDelete.Text = "Eliminar";
             roundedButtonDelete.UseVisualStyleBackColor = false;
+            roundedButtonDelete.Click += roundedButtonDelete_Click;
             // 
             // roundedButtonCreate
             // 
@@ -65,9 +66,10 @@
             roundedButtonCreate.Location = new Point(903, 16);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
-            roundedButtonCreate.TabIndex = 13;
+            roundedButtonCreate.TabIndex = 6;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
+            roundedButtonCreate.Click += roundedButtonCreate_Click;
             // 
             // roundedButtonEdit
             // 
@@ -79,9 +81,10 @@
             roundedButtonEdit.Location = new Point(784, 16);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
-            roundedButtonEdit.TabIndex = 12;
+            roundedButtonEdit.TabIndex = 5;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
+            roundedButtonEdit.Click += roundedButtonEdit_Click;
             // 
             // roundedButtonOpen
             // 
@@ -93,7 +96,7 @@
             roundedButtonOpen.Location = new Point(665, 16);
             roundedButtonOpen.Name = "roundedButtonOpen";
             roundedButtonOpen.Size = new Size(115, 45);
-            roundedButtonOpen.TabIndex = 11;
+            roundedButtonOpen.TabIndex = 4;
             roundedButtonOpen.Text = "Abrir";
             roundedButtonOpen.UseVisualStyleBackColor = false;
             // 
@@ -124,14 +127,14 @@
             dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewUsers.EnableHeadersVisualStyles = false;
             dataGridViewUsers.GridColor = Color.FromArgb(239, 230, 220);
-            dataGridViewUsers.Location = new Point(2, 76);
+            dataGridViewUsers.Location = new Point(3, 67);
             dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.RowHeadersVisible = false;
             dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(1145, 452);
-            dataGridViewUsers.TabIndex = 10;
+            dataGridViewUsers.TabIndex = 8;
             // 
             // labelRestaurants
             // 
@@ -141,7 +144,7 @@
             labelRestaurants.Location = new Point(12, 27);
             labelRestaurants.Name = "labelRestaurants";
             labelRestaurants.Size = new Size(119, 24);
-            labelRestaurants.TabIndex = 15;
+            labelRestaurants.TabIndex = 1;
             labelRestaurants.Text = "Restaurantes";
             labelRestaurants.Click += labelRestaurants_Click;
             // 
@@ -153,7 +156,7 @@
             labelMusicians.Location = new Point(206, 27);
             labelMusicians.Name = "labelMusicians";
             labelMusicians.Size = new Size(77, 24);
-            labelMusicians.TabIndex = 16;
+            labelMusicians.TabIndex = 2;
             labelMusicians.Text = "Músicos";
             labelMusicians.Click += labelMusicians_Click;
             // 
@@ -165,7 +168,7 @@
             labelAdmins.Location = new Point(358, 27);
             labelAdmins.Name = "labelAdmins";
             labelAdmins.Size = new Size(78, 24);
-            labelAdmins.TabIndex = 17;
+            labelAdmins.TabIndex = 3;
             labelAdmins.Text = "Admins";
             // 
             // FormAdminUsers

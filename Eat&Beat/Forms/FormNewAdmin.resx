@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,88 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelPostalCode" xml:space="preserve">
-    <value>Codi Postal</value>
-  </data>
-  <data name="labelAddress" xml:space="preserve">
-    <value>Direcció:</value>
-  </data>
-  <data name="labelConfPassword" xml:space="preserve">
-    <value>Confirmar Contrasenya:</value>
-  </data>
-  <data name="labelEmail" xml:space="preserve">
-    <value>Correu Electrónic:</value>
-  </data>
-  <data name="labelMusicians" xml:space="preserve">
-    <value>Musics</value>
-  </data>
-  <data name="labelName" xml:space="preserve">
-    <value>Nom:</value>
-  </data>
-  <data name="labelNewRestaurant" xml:space="preserve">
-    <value>NOU RESTAURANT</value>
-  </data>
-  <data name="labelNum" xml:space="preserve">
-    <value>Numero:</value>
-  </data>
-  <data name="labelPassword" xml:space="preserve">
-    <value>Contrasenya:</value>
-  </data>
-  <data name="labelRestaurants" xml:space="preserve">
-    <value>Restaurants</value>
-  </data>
-  <data name="labelUser" xml:space="preserve">
-    <value>Usuari:</value>
-  </data>
-  <data name="roundedButtonCancel" xml:space="preserve">
-    <value>Cancel·lar</value>
-  </data>
-  <data name="roundedButtonContinue" xml:space="preserve">
-    <value>Continuar</value>
-  </data>
-  <data name="roundedButtonCreate" xml:space="preserve">
-    <value>Crear</value>
-  </data>
-  <data name="roundedButtonDelete" xml:space="preserve">
-    <value>Eliminar</value>
-  </data>
-  <data name="roundedButtonEdit" xml:space="preserve">
-    <value>Modificar</value>
-  </data>
-  <data name="roundedButtonOpen" xml:space="preserve">
-    <value>Obrir</value>
-  </data>
-  <data name="labelLongitut" xml:space="preserve">
-    <value>Longitut:</value>
-  </data>
-  <data name="labelLatitut" xml:space="preserve">
-    <value>Latitut:</value>
-  </data>
-  <data name="roundedButtonOpenCalendar" xml:space="preserve">
-    <value>Obrir Calendari</value>
-  </data>
-  <data name="roundedButtonBack" xml:space="preserve">
-    <value>Enrere</value>
-  </data>
-  <data name="labelEditMusician" xml:space="preserve">
-    <value>MODIFICAR MÚSIC</value>
-  </data>
-  <data name="labelNumAddress" xml:space="preserve">
-    <value>Num. Direcció:</value>
-  </data>
-  <data name="roundedButtonModify" xml:space="preserve">
-    <value>Modificar</value>
-  </data>
-  <data name="labelNewMusician" xml:space="preserve">
-    <value>&#x8;NOU MÚSIC</value>
-  </data>
-  <data name="labelEditRestaurant" xml:space="preserve">
-    <value>MODIFICAR RESTAURANT</value>
-  </data>
-  <data name="labelEditAdmin" xml:space="preserve">
-    <value>MODIFICAR ADMIN</value>
-  </data>
-  <data name="labelNewAdmin" xml:space="preserve">
-    <value>NOU ADMIN</value>
-  </data>
 </root>

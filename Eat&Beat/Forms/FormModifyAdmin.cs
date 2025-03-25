@@ -11,13 +11,15 @@ using Eat_Beat.Logic.Entities;
 
 namespace Eat_Beat.Forms
 {
-    public partial class FormNewMusician : Form
+    public partial class FormModifyAdmin : Form
     {
         private FormLogin formLogin;
-        public FormNewMusician(FormLogin formLogin)
+        private User selectedUser;
+        public FormModifyAdmin(FormLogin formLogin)
         {
             InitializeComponent();
             this.formLogin = formLogin;
+            this.selectedUser = formLogin.selectedUser;
             LoadLanguage();
             LanguageManager.LanguageChanged += LoadLanguage;
         }
@@ -27,42 +29,43 @@ namespace Eat_Beat.Forms
             base.OnVisibleChanged(e);
             if (Visible)
             {
-                LoadData();
+                LoadAdminData();
             }
-        }
-
-        private void LoadData()
-        {
-            roundedTextBoxName.Texts = "";
-            roundedTextBoxEmail.Texts = "";
-            roundedTextBoxPassword.Texts = "";
-            roundedTextBoxConfPassword.Texts = "";
         }
 
         private void LoadLanguage()
         {
+            labelEditAdmin.Text = LanguageManager.GetText("labelEditAdmin");
             labelName.Text = LanguageManager.GetText("labelName");
             labelEmail.Text = LanguageManager.GetText("labelEmail");
             labelPassword.Text = LanguageManager.GetText("labelPassword");
-            labelConfPassword.Text = LanguageManager.GetText("labelConfPassword");
+            labelRol.Text = LanguageManager.GetText("labelRol");
             roundedButtonCancel.Text = LanguageManager.GetText("roundedButtonCancel");
-            roundedButtonContinue.Text = LanguageManager.GetText("roundedButtonContinue");
+            roundedButtonModify.Text = LanguageManager.GetText("roundedButtonModify");
         }
 
-        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        private void LoadAdminData()
         {
-            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+            selectedUser = formLogin.selectedUser;
+            roundedTextBoxName.Texts = selectedUser.name;
+            roundedTextBoxEmail.Texts = selectedUser.email;
+            roundedTextBoxPassword.Texts = selectedUser.password;
+            roundedComboBoxRol.SelectedIndex = selectedUser.idRol - 3;
         }
 
-        private void roundedButtonContinue_Click(object sender, EventArgs e)
+        private void roundedButton2_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
+        }
+
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
             string name = roundedTextBoxName.Texts;
             string email = roundedTextBoxEmail.Texts;
             string password = roundedTextBoxPassword.Texts;
-            string confPassword = roundedTextBoxConfPassword.Texts;
+            int idRol = roundedComboBoxRol.SelectedIndex + 3;
 
-
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confPassword))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please fill all the fields");
                 return;
@@ -74,24 +77,18 @@ namespace Eat_Beat.Forms
                 return;
             }
 
-            if (password != confPassword)
+            foreach (User user in formLogin.Admins)
             {
-                MessageBox.Show("Passwords do not match");
-                return;
+                if (user.idUser == selectedUser.idUser)
+                {
+                    selectedUser.name = name;
+                    selectedUser.email = email;
+                    selectedUser.password = password;
+                    selectedUser.idRol = idRol;
+                }
             }
-
-            formLogin.selectedMusician = new Musician()
-            {
-                idUser = formLogin.AllUsers.Max(r => r.idUser) + 1,
-                idRol = 1,
-                name = name,
-                email = email,
-                password = password
-            };
-
-            formLogin.LoadFormIntoPanel("FormNewMusician2", true);
+            formLogin.LoadFormIntoPanel("FormAdminUsers", true);
         }
-
         private bool IsValidEmail(string email)
         {
             try

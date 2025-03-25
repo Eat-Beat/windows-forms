@@ -181,7 +181,7 @@
     <value>Atras</value>
   </data>
   <data name="labelEditMusician" xml:space="preserve">
-    <value>MODIFICAR MÚSICO:</value>
+    <value>MODIFICAR MÚSICO</value>
   </data>
   <data name="labelNumAddress" xml:space="preserve">
     <value>Num. Dirección</value>
@@ -194,5 +194,11 @@
   </data>
   <data name="labelEditRestaurant" xml:space="preserve">
     <value>MODIFICAR RESTAURANTE</value>
+  </data>
+  <data name="labelEditAdmin" xml:space="preserve">
+    <value>MODIFICAR ADMIN</value>
+  </data>
+  <data name="labelNewAdmin" xml:space="preserve">
+    <value>NUEVO ADMIN</value>
   </data>
 </root>

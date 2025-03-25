@@ -29,6 +29,22 @@ namespace Eat_Beat.Forms
             LanguageManager.LanguageChanged += LoadLanguage;
         }
 
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (Visible)
+            {
+                LoadData();
+            }
+        }
+
+        private void LoadData()
+        {
+            SendCoords(41.38868, 2.17328, 5);
+            roundedTextBoxLatitut.Texts = "41.38868";
+            roundedTextBoxLongitut.Texts = "2.17328";
+            roundedComboBoxKm.SelectedIndex = 0;
+        }
         private void LoadLanguage()
         {
             labelLongitut.Text = LanguageManager.GetText("labelLongitut");
@@ -107,7 +123,12 @@ namespace Eat_Beat.Forms
 
         private void roundedButtonContinue_Click(object sender, EventArgs e)
         {
-
+            formLogin.selectedMusician.longitude = double.Parse(roundedTextBoxLongitut.Texts, System.Globalization.CultureInfo.InvariantCulture);
+            formLogin.selectedMusician.latitude = double.Parse(roundedTextBoxLatitut.Texts, System.Globalization.CultureInfo.InvariantCulture);
+            
+            formLogin.Musicians.Add(formLogin.selectedMusician);
+            formLogin.LoadFormIntoPanel("FormMusicianUsers", true);
+            //formLogin.LoadFormIntoPanel("FormNewMusician3", false);
         }
 
         private void roundedComboBoxKm_OnSelectedIndexChanged(object sender, EventArgs e)

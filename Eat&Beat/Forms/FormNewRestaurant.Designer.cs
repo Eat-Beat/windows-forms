@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             labelNewRestaurant = new Label();
-            roundedButtonCancel = new Controls.RoundedButton();
-            roundedButtonContinue = new Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonContinue = new Eat_Beat.Controls.RoundedButton();
             labelConfPassword = new Label();
             labelPassword = new Label();
             labelEmail = new Label();
             labelName = new Label();
-            roundedTextBoxPassword = new Controls.RoundedTextBox();
-            roundedTextBoxConfPassword = new Controls.RoundedTextBox();
-            roundedTextBoxName = new Controls.RoundedTextBox();
-            roundedTextBoxEmail = new Controls.RoundedTextBox();
-          
+            roundedTextBoxPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxConfPassword = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxName = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxEmail = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // labelNewRestaurant
@@ -50,7 +49,7 @@
             labelNewRestaurant.Location = new Point(67, 46);
             labelNewRestaurant.Name = "labelNewRestaurant";
             labelNewRestaurant.Size = new Size(406, 37);
-            labelNewRestaurant.TabIndex = 7;
+            labelNewRestaurant.TabIndex = 1;
             labelNewRestaurant.Text = "NUEVO RESTAURANTE:";
             // 
             // roundedButtonCancel
@@ -60,10 +59,10 @@
             roundedButtonCancel.FlatStyle = FlatStyle.Flat;
             roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCancel.Location = new Point(648, 358);
+            roundedButtonCancel.Location = new Point(686, 354);
             roundedButtonCancel.Name = "roundedButtonCancel";
             roundedButtonCancel.Size = new Size(115, 45);
-            roundedButtonCancel.TabIndex = 12;
+            roundedButtonCancel.TabIndex = 10;
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
             roundedButtonCancel.Click += roundedButtonCancel_Click;
@@ -75,10 +74,10 @@
             roundedButtonContinue.FlatStyle = FlatStyle.Flat;
             roundedButtonContinue.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonContinue.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonContinue.Location = new Point(769, 358);
+            roundedButtonContinue.Location = new Point(807, 354);
             roundedButtonContinue.Name = "roundedButtonContinue";
             roundedButtonContinue.Size = new Size(115, 45);
-            roundedButtonContinue.TabIndex = 13;
+            roundedButtonContinue.TabIndex = 11;
             roundedButtonContinue.Text = "Continuar";
             roundedButtonContinue.UseVisualStyleBackColor = false;
             roundedButtonContinue.Click += roundedButtonContinue_Click;
@@ -91,7 +90,7 @@
             labelConfPassword.Location = new Point(67, 260);
             labelConfPassword.Name = "labelConfPassword";
             labelConfPassword.Size = new Size(202, 24);
-            labelConfPassword.TabIndex = 61;
+            labelConfPassword.TabIndex = 8;
             labelConfPassword.Text = "Confirmar Contraseña:";
             // 
             // labelPassword
@@ -102,7 +101,7 @@
             labelPassword.Location = new Point(67, 211);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(113, 24);
-            labelPassword.TabIndex = 60;
+            labelPassword.TabIndex = 6;
             labelPassword.Text = "Contraseña:";
             // 
             // labelEmail
@@ -113,7 +112,7 @@
             labelEmail.Location = new Point(67, 164);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(176, 24);
-            labelEmail.TabIndex = 59;
+            labelEmail.TabIndex = 4;
             labelEmail.Text = "Correo Electronico:";
             // 
             // labelName
@@ -124,7 +123,7 @@
             labelName.Location = new Point(67, 117);
             labelName.Name = "labelName";
             labelName.Size = new Size(84, 24);
-            labelName.TabIndex = 58;
+            labelName.TabIndex = 2;
             labelName.Text = "Nombre:";
             // 
             // roundedTextBoxPassword
@@ -145,7 +144,7 @@
             roundedTextBoxPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxPassword.PlaceholderText = "";
             roundedTextBoxPassword.Size = new Size(485, 37);
-            roundedTextBoxPassword.TabIndex = 66;
+            roundedTextBoxPassword.TabIndex = 7;
             roundedTextBoxPassword.Texts = "";
             roundedTextBoxPassword.UnderlinedStyle = false;
             // 
@@ -167,7 +166,7 @@
             roundedTextBoxConfPassword.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxConfPassword.PlaceholderText = "";
             roundedTextBoxConfPassword.Size = new Size(485, 37);
-            roundedTextBoxConfPassword.TabIndex = 65;
+            roundedTextBoxConfPassword.TabIndex = 9;
             roundedTextBoxConfPassword.Texts = "";
             roundedTextBoxConfPassword.UnderlinedStyle = false;
             // 
@@ -189,7 +188,7 @@
             roundedTextBoxName.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxName.PlaceholderText = "";
             roundedTextBoxName.Size = new Size(485, 37);
-            roundedTextBoxName.TabIndex = 64;
+            roundedTextBoxName.TabIndex = 3;
             roundedTextBoxName.Texts = "";
             roundedTextBoxName.UnderlinedStyle = false;
             // 
@@ -211,7 +210,7 @@
             roundedTextBoxEmail.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxEmail.PlaceholderText = "";
             roundedTextBoxEmail.Size = new Size(485, 37);
-            roundedTextBoxEmail.TabIndex = 63;
+            roundedTextBoxEmail.TabIndex = 5;
             roundedTextBoxEmail.Texts = "";
             roundedTextBoxEmail.UnderlinedStyle = false;
             // 
@@ -220,7 +219,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 31);
-            ClientSize = new Size(915, 415);
+            ClientSize = new Size(934, 411);
             Controls.Add(roundedTextBoxPassword);
             Controls.Add(roundedTextBoxConfPassword);
             Controls.Add(roundedTextBoxName);

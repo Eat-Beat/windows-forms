@@ -68,7 +68,7 @@
             dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewUsers.EnableHeadersVisualStyles = false;
             dataGridViewUsers.GridColor = Color.FromArgb(239, 230, 220);
-            dataGridViewUsers.Location = new Point(8, 77);
+            dataGridViewUsers.Location = new Point(2, 77);
             dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
@@ -83,7 +83,7 @@
             dataGridViewUsers.RowHeadersVisible = false;
             dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(1151, 451);
-            dataGridViewUsers.TabIndex = 0;
+            dataGridViewUsers.TabIndex = 8;
             // 
             // labelRestaurants
             // 
@@ -133,7 +133,7 @@
             roundedButtonCreate.Location = new Point(903, 17);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
-            roundedButtonCreate.TabIndex = 5;
+            roundedButtonCreate.TabIndex = 6;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
             roundedButtonCreate.Click += roundedButtonCreate_Click;
@@ -163,7 +163,7 @@
             roundedButtonEdit.Location = new Point(784, 17);
             roundedButtonEdit.Name = "roundedButtonEdit";
             roundedButtonEdit.Size = new Size(115, 45);
-            roundedButtonEdit.TabIndex = 6;
+            roundedButtonEdit.TabIndex = 5;
             roundedButtonEdit.Text = "Modificar";
             roundedButtonEdit.UseVisualStyleBackColor = false;
             roundedButtonEdit.Click += roundedButtonEdit_Click;
@@ -176,7 +176,7 @@
             labelAdmins.Location = new Point(358, 27);
             labelAdmins.Name = "labelAdmins";
             labelAdmins.Size = new Size(72, 24);
-            labelAdmins.TabIndex = 19;
+            labelAdmins.TabIndex = 3;
             labelAdmins.Text = "Admins";
             labelAdmins.Click += labelAdmins_Click;
             // 
