@@ -18,6 +18,7 @@ namespace Eat_Beat
         public FormNewMusician2 formNewMusician2;
         public FormModifyMusician formModifyMusician;
         public FormOpenMusician formOpenMusician;
+        public FormNewAdmin formNewAdmin;
         public CalendarPopup calendarPopup;
 
 
@@ -90,6 +91,7 @@ namespace Eat_Beat
                     typeof(FormNewMusician2),
                     typeof(FormModifyMusician),
                     typeof(FormOpenMusician),
+                    typeof(FormNewAdmin),
                     typeof(CalendarPopup)
             };
 

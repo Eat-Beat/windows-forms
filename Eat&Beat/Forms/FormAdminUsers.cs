@@ -22,6 +22,37 @@ namespace Eat_Beat.Forms
             LanguageManager.LanguageChanged += LoadLanguage;
         }
 
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (Visible)
+            {
+                LoadAdmins();
+            }
+        }
+
+        private void LoadAdmins()
+        {
+            dataGridViewUsers.DataSource = null;
+
+
+            var adminsData = formLogin
+                .Admins
+                .Select(a => new
+                {
+                    a.idUser,
+                    rol = a.idRol == 3 ? "Superadmin" :
+                          a.idRol == 4 ? "Admin" :
+                          a.idRol == 5 ? "Mantenimiento" : "User",
+                    a.name,
+                    a.email
+                })
+                .ToList();
+
+
+            dataGridViewUsers.DataSource = adminsData;
+        }
+
         private void LoadLanguage()
         {
             labelRestaurants.Text = LanguageManager.GetText("labelRestaurants");
@@ -44,24 +75,17 @@ namespace Eat_Beat.Forms
 
         private void FormAdminUsers_Load(object sender, EventArgs e)
         {
-            dataGridViewUsers.DataSource = null;
+            LoadAdmins();
+        }
 
+        private void roundedButtonCreate_Click(object sender, EventArgs e)
+        {
+            formLogin.LoadFormIntoPanel("FormNewAdmin", false);
+        }
 
-            var adminsData = formLogin
-                .Admins
-                .Select(a => new
-                {
-                    a.idUser,
-                    rol = a.idRol == 3 ? "Superadmin":
-                          a.idRol == 4 ? "Admin" :
-                          a.idRol == 5 ? "Mantenimiento" : "User",
-                    a.name,
-                    a.email
-                })
-                .ToList();
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
 
-
-            dataGridViewUsers.DataSource = adminsData;
         }
     }
 }

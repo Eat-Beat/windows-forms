@@ -48,7 +48,7 @@
             webView2MapBox.Location = new Point(0, 83);
             webView2MapBox.Name = "webView2MapBox";
             webView2MapBox.Size = new Size(1150, 362);
-            webView2MapBox.TabIndex = 0;
+            webView2MapBox.TabIndex = 7;
             webView2MapBox.ZoomFactor = 1D;
             // 
             // roundedButtonContinue
@@ -89,7 +89,7 @@
             labelLongitut.Location = new Point(50, 32);
             labelLongitut.Name = "labelLongitut";
             labelLongitut.Size = new Size(91, 24);
-            labelLongitut.TabIndex = 51;
+            labelLongitut.TabIndex = 1;
             labelLongitut.Text = "Longitud:";
             // 
             // labelLatitut
@@ -100,7 +100,7 @@
             labelLatitut.Location = new Point(470, 32);
             labelLatitut.Name = "labelLatitut";
             labelLatitut.Size = new Size(77, 24);
-            labelLatitut.TabIndex = 53;
+            labelLatitut.TabIndex = 3;
             labelLatitut.Text = "Latitud:";
             // 
             // labelRangeKm
@@ -111,7 +111,7 @@
             labelRangeKm.Location = new Point(873, 32);
             labelRangeKm.Name = "labelRangeKm";
             labelRangeKm.Size = new Size(99, 24);
-            labelRangeKm.TabIndex = 55;
+            labelRangeKm.TabIndex = 5;
             labelRangeKm.Text = "Rango KM:";
             // 
             // roundedTextBoxLongitut
@@ -129,9 +129,12 @@
             roundedTextBoxLongitut.Name = "roundedTextBoxLongitut";
             roundedTextBoxLongitut.Padding = new Padding(8);
             roundedTextBoxLongitut.PasswordChar = false;
+            roundedTextBoxLongitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLongitut.PlaceholderText = "";
             roundedTextBoxLongitut.Size = new Size(307, 37);
-            roundedTextBoxLongitut.TabIndex = 57;
+            roundedTextBoxLongitut.TabIndex = 2;
             roundedTextBoxLongitut.Texts = "";
+            roundedTextBoxLongitut.UnderlinedStyle = false;
             // 
             // roundedTextBoxLatitut
             // 
@@ -148,9 +151,12 @@
             roundedTextBoxLatitut.Name = "roundedTextBoxLatitut";
             roundedTextBoxLatitut.Padding = new Padding(8);
             roundedTextBoxLatitut.PasswordChar = false;
+            roundedTextBoxLatitut.PlaceholderColor = Color.FromArgb(252, 158, 79);
+            roundedTextBoxLatitut.PlaceholderText = "";
             roundedTextBoxLatitut.Size = new Size(307, 37);
-            roundedTextBoxLatitut.TabIndex = 58;
+            roundedTextBoxLatitut.TabIndex = 4;
             roundedTextBoxLatitut.Texts = "";
+            roundedTextBoxLatitut.UnderlinedStyle = false;
             // 
             // roundedComboBoxKm
             // 
@@ -169,7 +175,7 @@
             roundedComboBoxKm.Name = "roundedComboBoxKm";
             roundedComboBoxKm.Padding = new Padding(2);
             roundedComboBoxKm.Size = new Size(100, 37);
-            roundedComboBoxKm.TabIndex = 61;
+            roundedComboBoxKm.TabIndex = 6;
             roundedComboBoxKm.Texts = "";
             roundedComboBoxKm.OnSelectedIndexChanged += roundedComboBoxKm_OnSelectedIndexChanged;
             // 

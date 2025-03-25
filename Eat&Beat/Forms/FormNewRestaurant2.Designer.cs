@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             labelNewRestaurant = new Label();
-            roundedButtonCancel = new Controls.RoundedButton();
-            roundedButtonCreate = new Controls.RoundedButton();
+            roundedButtonCancel = new Eat_Beat.Controls.RoundedButton();
+            roundedButtonCreate = new Eat_Beat.Controls.RoundedButton();
             labelPostalCode = new Label();
             labelNum = new Label();
             labelAddress = new Label();
-            roundedTextBoxAddress = new Controls.RoundedTextBox();
-            roundedTextBoxNum = new Controls.RoundedTextBox();
-            roundedTextBoxPostalCode = new Controls.RoundedTextBox();
+            roundedTextBoxAddress = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxNum = new Eat_Beat.Controls.RoundedTextBox();
+            roundedTextBoxPostalCode = new Eat_Beat.Controls.RoundedTextBox();
             SuspendLayout();
             // 
             // labelNewRestaurant
@@ -44,10 +44,10 @@
             labelNewRestaurant.AutoSize = true;
             labelNewRestaurant.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNewRestaurant.ForeColor = Color.FromArgb(239, 230, 220);
-            labelNewRestaurant.Location = new Point(67, 44);
+            labelNewRestaurant.Location = new Point(86, 44);
             labelNewRestaurant.Name = "labelNewRestaurant";
             labelNewRestaurant.Size = new Size(406, 37);
-            labelNewRestaurant.TabIndex = 7;
+            labelNewRestaurant.TabIndex = 1;
             labelNewRestaurant.Text = "NUEVO RESTAURANTE:";
             // 
             // roundedButtonCancel
@@ -57,10 +57,10 @@
             roundedButtonCancel.FlatStyle = FlatStyle.Flat;
             roundedButtonCancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCancel.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCancel.Location = new Point(648, 358);
+            roundedButtonCancel.Location = new Point(667, 358);
             roundedButtonCancel.Name = "roundedButtonCancel";
             roundedButtonCancel.Size = new Size(115, 45);
-            roundedButtonCancel.TabIndex = 12;
+            roundedButtonCancel.TabIndex = 8;
             roundedButtonCancel.Text = "Cancelar";
             roundedButtonCancel.UseVisualStyleBackColor = false;
             roundedButtonCancel.Click += roundedButtonCancel_Click;
@@ -72,10 +72,10 @@
             roundedButtonCreate.FlatStyle = FlatStyle.Flat;
             roundedButtonCreate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roundedButtonCreate.ForeColor = Color.FromArgb(32, 32, 31);
-            roundedButtonCreate.Location = new Point(769, 358);
+            roundedButtonCreate.Location = new Point(788, 358);
             roundedButtonCreate.Name = "roundedButtonCreate";
             roundedButtonCreate.Size = new Size(115, 45);
-            roundedButtonCreate.TabIndex = 13;
+            roundedButtonCreate.TabIndex = 9;
             roundedButtonCreate.Text = "Crear";
             roundedButtonCreate.UseVisualStyleBackColor = false;
             roundedButtonCreate.Click += roundedButtonCreate_Click;
@@ -88,7 +88,7 @@
             labelPostalCode.Location = new Point(67, 243);
             labelPostalCode.Name = "labelPostalCode";
             labelPostalCode.Size = new Size(133, 24);
-            labelPostalCode.TabIndex = 60;
+            labelPostalCode.TabIndex = 6;
             labelPostalCode.Text = "Código Postal:";
             // 
             // labelNum
@@ -99,7 +99,7 @@
             labelNum.Location = new Point(67, 193);
             labelNum.Name = "labelNum";
             labelNum.Size = new Size(84, 24);
-            labelNum.TabIndex = 59;
+            labelNum.TabIndex = 4;
             labelNum.Text = "Número:";
             // 
             // labelAddress
@@ -110,7 +110,7 @@
             labelAddress.Location = new Point(67, 146);
             labelAddress.Name = "labelAddress";
             labelAddress.Size = new Size(97, 24);
-            labelAddress.TabIndex = 58;
+            labelAddress.TabIndex = 2;
             labelAddress.Text = "Dirección:";
             // 
             // roundedTextBoxAddress
@@ -131,7 +131,7 @@
             roundedTextBoxAddress.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxAddress.PlaceholderText = "";
             roundedTextBoxAddress.Size = new Size(485, 37);
-            roundedTextBoxAddress.TabIndex = 66;
+            roundedTextBoxAddress.TabIndex = 3;
             roundedTextBoxAddress.Texts = "";
             roundedTextBoxAddress.UnderlinedStyle = false;
             // 
@@ -153,7 +153,7 @@
             roundedTextBoxNum.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxNum.PlaceholderText = "";
             roundedTextBoxNum.Size = new Size(485, 37);
-            roundedTextBoxNum.TabIndex = 65;
+            roundedTextBoxNum.TabIndex = 5;
             roundedTextBoxNum.Texts = "";
             roundedTextBoxNum.UnderlinedStyle = false;
             // 
@@ -175,7 +175,7 @@
             roundedTextBoxPostalCode.PlaceholderColor = Color.FromArgb(252, 158, 79);
             roundedTextBoxPostalCode.PlaceholderText = "";
             roundedTextBoxPostalCode.Size = new Size(485, 37);
-            roundedTextBoxPostalCode.TabIndex = 67;
+            roundedTextBoxPostalCode.TabIndex = 7;
             roundedTextBoxPostalCode.Texts = "";
             roundedTextBoxPostalCode.UnderlinedStyle = false;
             // 
